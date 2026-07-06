@@ -57,7 +57,7 @@ const trustPoints = [
 ];
 
 const steps = [
-  { n: "01", icon: ClipboardList, title: "Tell us what needs cleaning", copy: "Share the space, service, and timing — takes about a minute." },
+  { n: "01", icon: ClipboardList, title: "Tell us what needs cleaning", copy: "Share the space, service, and timing, takes about a minute." },
   { n: "02", icon: CalendarCheck, title: "Get a quote and schedule", copy: "We follow up quickly with pricing and available times." },
   { n: "03", icon: Sparkles, title: "Enjoy a cleaner space", copy: "Trained staff show up on time and get the job done right." },
 ];
@@ -65,7 +65,7 @@ const steps = [
 const reviews = [
   { name: "S. M.", role: "Homeowner, Grande Prairie", text: "Booked a deep clean before family visited. The team was on time, thorough, and left every room spotless. Easiest hire we've made all year." },
   { name: "D. R.", role: "Office Manager", text: "Reliable weekly service for our clinic. Communication is clear, staff are professional, and the space always looks presentable for clients." },
-  { name: "K. L.", role: "Truck Owner", text: "Interior detail on my work truck was next level — carpets, seats, dash, all like new. Fair price for the amount of work." },
+  { name: "K. L.", role: "Truck Owner", text: "Interior detail on my work truck was next level, carpets, seats, dash, all like new. Fair price for the amount of work." },
 ];
 
 const Index = () => {
@@ -207,7 +207,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-5xl font-bold max-w-2xl">Choose the service you need</h2>
             </div>
             <p className="text-muted-foreground max-w-md">
-              One team for the spaces you live, work, drive, and relax in. Book one — or bundle a few.
+              One team for the spaces you live, work, drive, and relax in. Book one, or bundle a few.
             </p>
           </div>
 
@@ -369,7 +369,7 @@ const Index = () => {
                   <h3 className="text-2xl font-bold">Vehicle Detailing</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Interior and exterior detail — mats, windows, vacuuming, deodorizing, and clear coat protectant.
+                  Interior and exterior detail, mats, windows, vacuuming, deodorizing, and clear coat protectant.
                 </p>
                 <p className="text-xs text-muted-foreground italic">Note: larger vehicles may cost more.</p>
               </div>
@@ -400,12 +400,12 @@ const Index = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
             <p className="text-lg text-muted-foreground mb-4">
               JAMI Cleaning Inc is owned and operated by <strong className="text-foreground">Ramin Jami</strong> and{" "}
-              <strong className="text-foreground">Leila Jami</strong> — a Grande Prairie team with 10+ years in the
+              <strong className="text-foreground">Leila Jami</strong>, a Grande Prairie team with 10+ years in the
               cleaning industry and a commitment to ongoing training and high service standards.
             </p>
             <p className="text-muted-foreground mb-6">
               Certifications include WHMIS, Personal Protective Equipment, Bloodborne Pathogens, Ladder Safety,
-              and Pandemic Awareness — because doing the job right starts with knowing the job.
+              and Pandemic Awareness, because doing the job right starts with knowing the job.
             </p>
             <div className="grid grid-cols-3 gap-4">
               <div className="p-4 rounded-lg bg-muted border border-border text-center">
@@ -427,7 +427,7 @@ const Index = () => {
             <div className="relative bg-primary rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold">
               <div className="text-6xl font-bold text-accent leading-none mb-4">"</div>
               <p className="text-xl md:text-2xl font-medium leading-snug mb-6">
-                We treat every home and every business like it's our own — because our name is on the door.
+                We treat every home and every business like it's our own, because our name is on the door.
               </p>
               <div className="flex items-center gap-3 pt-6 border-t border-primary-foreground/20">
                 <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold">RJ</div>
@@ -522,7 +522,7 @@ const Index = () => {
                 <div className="p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10">
                   <Clock className="h-4 w-4 text-accent mb-2" />
                   <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Hours</div>
-                  <div className="font-semibold text-sm">Mon–Fri · 8AM–8PM</div>
+                  <div className="font-semibold text-sm">Mon-Fri · 8AM–8PM</div>
                 </div>
                 <div className="p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10">
                   <MapPin className="h-4 w-4 text-accent mb-2" />
