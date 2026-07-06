@@ -522,7 +522,7 @@ const Index = () => {
                 <div className="p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10">
                   <Clock className="h-4 w-4 text-accent mb-2" />
                   <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Hours</div>
-                  <div className="font-semibold text-sm">Mon–Fri · 8AM–8PM</div>
+                  <div className="font-semibold text-sm">Mon-Fri · 8AM–8PM</div>
                 </div>
                 <div className="p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10">
                   <MapPin className="h-4 w-4 text-accent mb-2" />
