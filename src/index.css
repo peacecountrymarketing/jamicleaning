@@ -74,9 +74,9 @@
 }
 
 @layer utilities {
-  .bg-hero-gradient { background: var(--gradient-hero); }
-  .bg-electric-gradient { background: var(--gradient-electric); }
-  .bg-navy-gradient { background: var(--gradient-navy); }
+  .bg-hero-gradient { background-image: var(--gradient-hero); }
+  .bg-electric-gradient { background-image: var(--gradient-electric); }
+  .bg-navy-gradient { background-image: var(--gradient-navy); }
   .shadow-bold { box-shadow: var(--shadow-bold); }
   .shadow-card-bold { box-shadow: var(--shadow-card); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
