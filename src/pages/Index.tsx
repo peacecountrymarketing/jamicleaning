@@ -332,7 +332,7 @@ const Index = () => {
 
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
-            <div className="relative bg-primary rounded-2xl overflow-hidden text-primary-foreground shadow-bold">
+            <div className="relative bg-primary rounded-2xl overflow-hidden text-primary-foreground shadow-bold border border-primary-foreground/15">
               <div className="grid md:grid-cols-5">
                 <div className="md:col-span-2 h-64 md:h-auto">
                   <img
