@@ -19,6 +19,8 @@ import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
 import logoFullAsset from "@/assets/logo-full.png.asset.json";
+import teamJamiImg from "@/assets/team-jami.png.asset.json";
+
 
 
 
