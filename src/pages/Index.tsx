@@ -343,11 +343,11 @@ const Index = () => {
                 </div>
                 <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
                   <div>
-                    <div className="text-5xl font-bold text-secondary leading-none mb-2 ml-[-10px]">"</div>
+                    <div className="text-6xl font-bold bg-electric-gradient bg-clip-text text-transparent leading-none mb-2 ml-[-10px]">"</div>
                     <p className="text-lg md:text-xl font-medium leading-relaxed">
                       Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home.
                     </p>
-                    <div className="text-5xl font-bold text-secondary leading-none text-right mt-2">"</div>
+                    <div className="text-6xl font-bold bg-electric-gradient bg-clip-text text-transparent leading-none text-right mt-2">"</div>
                   </div>
                   <div className="flex items-center gap-3 pt-6 mt-4 border-t border-border">
                     <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold text-white">RJ</div>
