@@ -249,7 +249,7 @@ const Index = () => {
       {/* PROCESS */}
       <section id="process" className="py-10 md:py-14 bg-muted/50 relative overflow-hidden">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">How It Works</div>
             <h2 className="text-3xl md:text-5xl font-bold">Three steps. Zero guesswork.</h2>
           </div>
@@ -313,7 +313,7 @@ const Index = () => {
       {/* PRICING */}
       <section id="pricing" className="py-10 md:py-14 bg-muted/50">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Pricing Guidance</div>
             <h2 className="text-3xl md:text-5xl font-bold">Transparent Pricing</h2>
             <p className="text-muted-foreground mt-4">
@@ -467,7 +467,7 @@ const Index = () => {
       {/* SPLIT: Homes vs Businesses */}
       <section className="py-10 md:py-14">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Built For Both</div>
             <h2 className="text-3xl md:text-5xl font-bold">Homes and businesses, handled with the same care.</h2>
           </div>
@@ -513,7 +513,7 @@ const Index = () => {
       {/* Vehicle & Yard add-on */}
       <section className="py-10 md:py-14 bg-muted/50">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Add-On Services</div>
             <h2 className="text-3xl md:text-5xl font-bold">More convenience. One call.</h2>
           </div>
