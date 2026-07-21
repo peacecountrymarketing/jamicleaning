@@ -19,7 +19,7 @@ import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
 import logoFullAsset from "@/assets/logo-full.png.asset.json";
-
+import ownersJamiAsset from "@/assets/owners-jami.png.asset.json";
 
 
 const PHONE_1 = "780-897-3077";
@@ -545,17 +545,22 @@ const Index = () => {
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
-            <div className="relative bg-primary rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold">
-              <div className="text-6xl font-bold text-accent leading-none mb-0">“</div>
-              <p className="text-xl md:text-2xl font-medium leading-snug mb-0">
-                Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home. Trusted residential cleaning services for Grande Prairie families.
-              </p>
-              <div className="text-6xl font-bold text-accent leading-none text-right">”</div>
-              <div className="flex items-center gap-3 pt-6 border-t border-primary-foreground/20">
-                <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold">RJ</div>
-                <div>
-                  <div className="font-bold">Ramin &amp; Leila Jami</div>
-                  <div className="text-sm text-primary-foreground/70">Owner / Operators</div>
+            <div
+              className="relative rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold overflow-hidden bg-cover bg-center"
+              style={{ backgroundImage: `linear-gradient(to right, rgba(0,31,63,0.92), rgba(0,31,63,0.75)), url(${ownersJamiAsset.url})` }}
+            >
+              <div className="relative z-10">
+                <div className="text-6xl font-bold text-accent leading-none mb-0">“</div>
+                <p className="text-xl md:text-2xl font-medium leading-snug mb-0">
+                  Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home. Trusted residential cleaning services for Grande Prairie families.
+                </p>
+                <div className="text-6xl font-bold text-accent leading-none text-right">”</div>
+                <div className="flex items-center gap-3 pt-6 border-t border-primary-foreground/20">
+                  <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold">RJ</div>
+                  <div>
+                    <div className="font-bold">Ramin &amp; Leila Jami</div>
+                    <div className="text-sm text-primary-foreground/70">Owner / Operators</div>
+                  </div>
                 </div>
               </div>
             </div>
