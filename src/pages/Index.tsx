@@ -552,23 +552,37 @@ const Index = () => {
 
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
-            <div className="relative bg-primary rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold">
-              <div className="text-6xl font-bold text-accent leading-none mb-0">“</div>
-              <p className="text-xl md:text-2xl font-medium leading-snug mb-0">
-                Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home. Trusted residential cleaning services for Grande Prairie families.
-              </p>
-              <div className="text-6xl font-bold text-accent leading-none text-right">”</div>
-              <div className="flex items-center gap-3 pt-6 border-t border-primary-foreground/20">
-                <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold">RJ</div>
-                <div>
-                  <div className="font-bold">Ramin &amp; Leila Jami</div>
-                  <div className="text-sm text-primary-foreground/70">Owner / Operators</div>
+            <div className="relative bg-primary rounded-2xl overflow-hidden text-primary-foreground shadow-bold">
+              <div className="grid md:grid-cols-5">
+                <div className="md:col-span-2 h-64 md:h-auto">
+                  <img
+                    src={teamJamiImg.url}
+                    alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
+                  <div>
+                    <div className="text-5xl font-bold text-accent leading-none mb-2">"</div>
+                    <p className="text-lg md:text-xl font-medium leading-relaxed">
+                      Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home.
+                    </p>
+                    <div className="text-5xl font-bold text-accent leading-none text-right mt-2">"</div>
+                  </div>
+                  <div className="flex items-center gap-3 pt-6 mt-4 border-t border-primary-foreground/20">
+                    <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold">RJ</div>
+                    <div>
+                      <div className="font-bold">Ramin &amp; Leila Jami</div>
+                      <div className="text-sm text-primary-foreground/70">Owner / Operators</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
 
       {/* REVIEWS */}
