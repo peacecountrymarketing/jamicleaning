@@ -190,7 +190,7 @@ const Index = () => {
           {/* Trust panel */}
           <div className="lg:col-span-2">
             <div className="bg-background/95 backdrop-blur text-foreground rounded-xl p-6 md:p-7 shadow-bold border border-border">
-              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-4">Instant Trust</div>
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-4">Why choose us</div>
               <div className="grid grid-cols-1 gap-4">
                 {trustPoints.map((t) => (
                   <div key={t.label} className="flex items-center gap-3">
