@@ -63,9 +63,9 @@ const steps = [
 ];
 
 const reviews = [
-  { name: "S. M.", role: "Homeowner, Grande Prairie", text: "Booked a deep clean before family visited. The team was on time, thorough, and left every room spotless. Easiest hire we've made all year." },
-  { name: "D. R.", role: "Office Manager", text: "Reliable weekly service for our clinic. Communication is clear, staff are professional, and the space always looks presentable for clients." },
-  { name: "K. L.", role: "Truck Owner", text: "Interior detail on my work truck was next level, carpets, seats, dash, all like new. Fair price for the amount of work." },
+  { name: "Katie Gaucher", role: "Google review, Local Guide", text: "We always have great experiences with Jami Cleaning. They are dependable, professional, and consistently provide high-quality work. It's clear they take pride in what they do, and it shows in the results every time. I would absolutely recommend their services to anyone looking for a trustworthy cleaning company!" },
+  { name: "Karson Millier", role: "Google review", text: "10/10 work definitely gunna keep going back got the carpet looking like new not a speck of dirt to be found" },
+  { name: "Jesse Arnold", role: "Facebook recommendation", text: "Employees are very professional got the job done in a timely matter and the pricing was very affordable liable would definitely recommend using them" },
 ];
 
 const Index = () => {
