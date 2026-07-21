@@ -545,9 +545,9 @@ const Index = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
             <div className="relative bg-primary rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold">
-              <div className="text-6xl font-bold text-accent leading-none mb-4">"</div>
-              <p className="text-xl md:text-2xl font-medium leading-snug mb-6">
-                Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home. Trusted residential cleaning services for Grande Prairie families.
+              <div className="text-6xl font-bold text-accent leading-none mb-0">"</div>
+              <p className="text-xl md:text-2xl font-medium leading-snug mb-4">
+                Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home. Trusted residential cleaning services for Grande Prairie families."
               </p>
               <div className="flex items-center gap-3 pt-6 border-t border-primary-foreground/20">
                 <div className="h-12 w-12 rounded-full bg-electric-gradient flex items-center justify-center font-bold">RJ</div>
