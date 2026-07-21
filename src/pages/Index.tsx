@@ -547,7 +547,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="relative h-full min-h-[320px] lg:min-h-[460px] rounded-2xl overflow-hidden shadow-bold">
+          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-bold flex-shrink-0">
             <img
               src={teamJamiImg.url}
               alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
