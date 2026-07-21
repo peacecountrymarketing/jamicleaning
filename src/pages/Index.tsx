@@ -355,7 +355,7 @@ const Index = () => {
       </section>
 
       {/* Vehicle & Yard add-on */}
-      <section className="py-20 md:py-28 bg-muted/50">
+      <section className="pt-12 pb-20 md:pt-16 md:pb-28 bg-muted/50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Add-On Services</div>
