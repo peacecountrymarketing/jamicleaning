@@ -567,7 +567,32 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TEAM GRAPHIC */}
+      <section className="py-10 md:py-14">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute -inset-3 bg-electric-gradient rounded-2xl opacity-25 blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden border-4 border-secondary/20 shadow-bold bg-primary">
+                <img
+                  src={teamOwners.url}
+                  alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc, in branded JAMI Cleaning shirts"
+                  className="w-full h-auto object-cover object-top"
+                  loading="lazy"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/95 via-primary/70 to-transparent p-6 md:p-8">
+                  <div className="text-accent font-bold text-sm uppercase tracking-widest mb-1">Owner / Operators</div>
+                  <div className="text-2xl md:text-3xl font-bold text-primary-foreground">Ramin &amp; Leila Jami</div>
+                  <p className="text-primary-foreground/80 text-sm md:text-base mt-2">Proudly serving Grande Prairie, Clairmont, and the County of Grande Prairie.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* REVIEWS */}
+
       <section className="py-10 md:py-14 bg-muted/50">
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
