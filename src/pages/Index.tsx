@@ -111,6 +111,7 @@ const Index = () => {
 
           <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
+            <a href="#pricing" className="hover:text-secondary transition-colors">Pricing</a>
             <a href="#process" className="hover:text-secondary transition-colors">Process</a>
             <a href="#guarantee" className="hover:text-secondary transition-colors">Guarantee</a>
             <a href="#about" className="hover:text-secondary transition-colors">About</a>
@@ -134,6 +135,7 @@ const Index = () => {
           <div className="lg:hidden border-t border-border bg-background">
             <nav className="container flex flex-col py-4 gap-3 text-sm font-medium">
               <a href="#services" onClick={() => setMobileOpen(false)}>Services</a>
+              <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing</a>
               <a href="#process" onClick={() => setMobileOpen(false)}>Process</a>
               <a href="#guarantee" onClick={() => setMobileOpen(false)}>Guarantee</a>
               <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
@@ -304,6 +306,82 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section id="pricing" className="py-20 md:py-28 bg-muted/50">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Pricing Guidance</div>
+            <h2 className="text-3xl md:text-5xl font-bold">Transparent Pricing</h2>
+            <p className="text-muted-foreground mt-4">
+              Know what to expect before requesting your quote. Final pricing may vary depending on the size, condition, and specific needs of the property.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 items-start">
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Window Care</div>
+              <h3 className="text-2xl font-bold mb-2">Exterior Window Cleaning</h3>
+              <p className="text-muted-foreground text-sm mb-6">Exterior glass and window-track cleaning.</p>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-center justify-between">
+                  <span className="text-muted-foreground">Up to 1,500 sq. ft.</span>
+                  <span className="font-bold">$150 + GST</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span className="text-muted-foreground">Up to 3,000 sq. ft.</span>
+                  <span className="font-bold">$250 + GST</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span className="text-muted-foreground">Up to 5,000 sq. ft.</span>
+                  <span className="font-bold">$400 + GST</span>
+                </li>
+              </ul>
+            </article>
+
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Window Care</div>
+              <h3 className="text-2xl font-bold mb-2">Interior and Exterior Window Cleaning</h3>
+              <p className="text-muted-foreground text-sm mb-6">Interior and exterior glass, tracks, and screen cleaning.</p>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-center justify-between">
+                  <span className="text-muted-foreground">Up to 1,500 sq. ft.</span>
+                  <span className="font-bold">$300 + GST</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span className="text-muted-foreground">Up to 3,000 sq. ft.</span>
+                  <span className="font-bold">$500 + GST</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span className="text-muted-foreground">Up to 5,000 sq. ft.</span>
+                  <span className="font-bold">$700 + GST</span>
+                </li>
+              </ul>
+            </article>
+
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Auto</div>
+              <h3 className="text-2xl font-bold mb-2">Vehicle Detailing</h3>
+              <p className="text-muted-foreground text-sm mb-6">Custom quote based on vehicle size, condition, and service needs.</p>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-4xl font-bold text-secondary">Custom quote</span>
+              </div>
+              <p className="text-xs text-muted-foreground italic">
+                Additional charges may apply if the vehicle is very dirty or requires extra cleaning time.
+              </p>
+            </article>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
+              <a href="#contact">Request an Exact Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
+            </Button>
+            <p className="text-xs text-muted-foreground mt-4">
+              Prices are starting guidelines in Canadian dollars. Every job is reviewed and confirmed before work begins.
+            </p>
           </div>
         </div>
       </section>
