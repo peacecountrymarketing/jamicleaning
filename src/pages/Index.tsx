@@ -19,7 +19,8 @@ import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
 import logoFullAsset from "@/assets/logo-full.png.asset.json";
-import teamJamiImg from "@/assets/team-jami.png.asset.json";
+
+
 
 
 
@@ -519,7 +520,7 @@ const Index = () => {
       {/* ABOUT */}
       <section id="about" className="py-10 md:py-14">
         <div className="container grid lg:grid-cols-2 gap-12 items-center">
-          <div className="lg:col-span-2">
+          <div>
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
             <p className="text-lg text-muted-foreground mb-4">
@@ -545,14 +546,6 @@ const Index = () => {
                 <div className="text-xs text-muted-foreground mt-1">Re-clean window</div>
               </div>
             </div>
-          </div>
-
-          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-bold flex-shrink-0">
-            <img
-              src={teamJamiImg.url}
-              alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
-              className="absolute inset-0 w-full h-full object-cover object-top"
-            />
           </div>
 
           <div className="relative">
