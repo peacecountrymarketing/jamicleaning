@@ -151,7 +151,7 @@ const Index = () => {
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-secondary/30 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-accent/20 blur-3xl" />
 
-        <div className="container relative py-16 md:py-28 grid lg:grid-cols-5 gap-10 items-center">
+        <div className="container relative pt-8 pb-16 md:pt-12 md:pb-28 grid lg:grid-cols-5 gap-10 items-center">
           <div className="lg:col-span-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-xs font-semibold uppercase tracking-wider mb-6">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
