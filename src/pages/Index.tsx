@@ -340,7 +340,7 @@ const Index = () => {
                 { t: "Licensed, bonded & insured", d: "Fully covered for your peace of mind." },
                 { t: "Re-cleaning guarantee", d: "Within 24 hours if you're dissatisfied." },
                 { t: "No late fees", d: "Simple, predictable billing without surprise penalties." },
-                { t: "Zero cancellation fees", d: "Ask about our zero cancellation fee policy." },
+                { t: "Easy scheduling", d: "Book, reschedule, or update your visit without hassle." },
                 { t: "Certified operators", d: "WHMIS, PPE, Bloodborne Pathogens, Ladder Safety." },
               ].map((f) => (
                 <div key={f.t} className="p-5 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 hover:border-secondary transition-colors">
