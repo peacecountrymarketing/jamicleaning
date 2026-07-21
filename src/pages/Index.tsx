@@ -111,6 +111,7 @@ const Index = () => {
 
           <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
+            <a href="#pricing" className="hover:text-secondary transition-colors">Pricing</a>
             <a href="#process" className="hover:text-secondary transition-colors">Process</a>
             <a href="#guarantee" className="hover:text-secondary transition-colors">Guarantee</a>
             <a href="#about" className="hover:text-secondary transition-colors">About</a>
@@ -134,6 +135,7 @@ const Index = () => {
           <div className="lg:hidden border-t border-border bg-background">
             <nav className="container flex flex-col py-4 gap-3 text-sm font-medium">
               <a href="#services" onClick={() => setMobileOpen(false)}>Services</a>
+              <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing</a>
               <a href="#process" onClick={() => setMobileOpen(false)}>Process</a>
               <a href="#guarantee" onClick={() => setMobileOpen(false)}>Guarantee</a>
               <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
