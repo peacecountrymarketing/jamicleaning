@@ -546,12 +546,12 @@ const Index = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
             <div
-              className="relative rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold overflow-hidden bg-cover bg-center"
-              style={{ backgroundImage: `linear-gradient(to right, rgba(0,31,63,0.88), rgba(0,31,63,0.65)), url(${ownersJamiAsset.url})` }}
+              className="relative rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold overflow-hidden bg-cover bg-[position:30%_center]"
+              style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.70), rgba(0,0,0,0.40)), url(${ownersJamiAsset.url})` }}
             >
               <div className="relative z-10">
                 <div className="text-6xl font-bold text-accent leading-none mb-0">“</div>
-                <p className="text-xl md:text-2xl font-medium leading-snug mb-0" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.4)" }}>
+                <p className="text-xl md:text-2xl font-medium leading-snug mb-0" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
                   Our team handles the details so you can focus on what matters most. From sparkling kitchens to spotless bathrooms, we make sure every corner feels like home. Trusted residential cleaning services for Grande Prairie families.
                 </p>
                 <div className="text-6xl font-bold text-accent leading-none text-right">”</div>
