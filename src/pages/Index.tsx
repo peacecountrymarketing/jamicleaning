@@ -462,14 +462,14 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 items-start">
             {reviews.map((r) => (
-              <div key={r.name} className="bg-card p-7 rounded-xl border border-border shadow-card-bold">
-                <div className="flex items-center gap-1 text-accent mb-4">
+              <div key={r.name} className="bg-card p-5 rounded-xl border border-border shadow-card-bold">
+                <div className="flex items-center gap-1 text-accent mb-3">
                   {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                 </div>
-                <p className="text-foreground/90 mb-6 leading-relaxed">"{r.text}"</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border">
+                <p className="text-foreground/90 mb-4 leading-relaxed">"{r.text}"</p>
+                <div className="flex items-center gap-3 pt-3 border-t border-border">
                   <div className="h-10 w-10 rounded-full bg-electric-gradient flex items-center justify-center text-primary-foreground font-bold text-sm">
                     {r.name.replace(/[^A-Z]/g, "")}
                   </div>
