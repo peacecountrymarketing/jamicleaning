@@ -444,13 +444,21 @@ const Index = () => {
       {/* REVIEWS */}
       <section className="py-20 md:py-28 bg-muted/50">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">What Clients Say</div>
               <h2 className="text-3xl md:text-5xl font-bold">Trusted across Grande Prairie.</h2>
+              <div className="mt-5 inline-flex items-center gap-3 bg-card border border-border rounded-full pl-2 pr-4 py-2 shadow-card-bold">
+                <div className="flex items-center gap-0.5 text-accent">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+                </div>
+                <div className="text-sm font-bold">4.6 out of 5</div>
+                <div className="h-4 w-px bg-border" />
+                <div className="text-sm text-muted-foreground">9 Google reviews</div>
+              </div>
             </div>
             <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <a href="#">Read Google Reviews</a>
+              <a href="https://www.google.com/maps/place/Jami+Cleaning+Inc/data=!4m2!3m1!1s0x0:0x84c452305105715e" target="_blank" rel="noopener noreferrer">Read Google Reviews</a>
             </Button>
           </div>
 
