@@ -203,7 +203,7 @@ const Index = () => {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="pt-12 pb-20 md:pt-16 md:pb-28">
+      <section id="services" className="py-10 md:py-14">
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
@@ -247,9 +247,9 @@ const Index = () => {
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="pt-12 pb-20 md:pt-16 md:pb-28 bg-muted/50 relative overflow-hidden">
+      <section id="process" className="py-10 md:py-14 bg-muted/50 relative overflow-hidden">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">How It Works</div>
             <h2 className="text-3xl md:text-5xl font-bold">Three steps. Zero guesswork.</h2>
           </div>
@@ -275,7 +275,7 @@ const Index = () => {
       </section>
 
       {/* GUARANTEE */}
-      <section id="guarantee" className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden">
+      <section id="guarantee" className="py-10 md:py-14 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
         <div className="container relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -311,9 +311,9 @@ const Index = () => {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="py-20 md:py-28 bg-muted/50">
+      <section id="pricing" className="py-10 md:py-14 bg-muted/50">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Pricing Guidance</div>
             <h2 className="text-3xl md:text-5xl font-bold">Transparent Pricing</h2>
             <p className="text-muted-foreground mt-4">
@@ -465,9 +465,9 @@ const Index = () => {
       </section>
 
       {/* SPLIT: Homes vs Businesses */}
-      <section className="py-20 md:py-28">
+      <section className="py-10 md:py-14">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Built For Both</div>
             <h2 className="text-3xl md:text-5xl font-bold">Homes and businesses, handled with the same care.</h2>
           </div>
@@ -511,9 +511,9 @@ const Index = () => {
       </section>
 
       {/* Vehicle & Yard add-on */}
-      <section className="pt-12 pb-20 md:pt-16 md:pb-28 bg-muted/50">
+      <section className="py-10 md:py-14 bg-muted/50">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Add-On Services</div>
             <h2 className="text-3xl md:text-5xl font-bold">More convenience. One call.</h2>
           </div>
@@ -551,7 +551,7 @@ const Index = () => {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-20 md:py-28">
+      <section id="about" className="py-10 md:py-14">
         <div className="container grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">About JAMI</div>
@@ -600,7 +600,7 @@ const Index = () => {
       </section>
 
       {/* REVIEWS */}
-      <section className="py-20 md:py-28 bg-muted/50">
+      <section className="py-10 md:py-14 bg-muted/50">
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
@@ -643,7 +643,7 @@ const Index = () => {
       </section>
 
       {/* CONVERSION / CONTACT */}
-      <section id="contact" className="py-20 md:py-28 bg-hero-gradient text-primary-foreground relative overflow-hidden">
+      <section id="contact" className="py-10 md:py-14 bg-hero-gradient text-primary-foreground relative overflow-hidden">
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary/30 blur-3xl" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
         <div className="container relative grid lg:grid-cols-5 gap-10">
