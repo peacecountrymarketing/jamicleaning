@@ -516,8 +516,8 @@ const Index = () => {
       {/* ABOUT */}
       <section
         id="about"
-        className="relative py-10 md:py-14 bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `linear-gradient(to right, rgba(0,31,63,0.72), rgba(0,31,63,0.52)), url(${ownersJamiAsset.url})` }}
+        className="relative py-10 md:py-14 bg-cover bg-[position:55%_center] overflow-hidden"
+        style={{ backgroundImage: `linear-gradient(to right, rgba(0,31,63,0.55), rgba(0,31,63,0.30)), url(${ownersJamiAsset.url})` }}
       >
         <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           <div className="p-6 md:p-8 rounded-2xl bg-background/95 backdrop-blur-sm shadow-bold">
