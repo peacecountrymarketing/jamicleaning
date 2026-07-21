@@ -19,7 +19,7 @@ import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
 import logoFullAsset from "@/assets/logo-full.png.asset.json";
-
+import ownersJamiAsset from "@/assets/owners-jami.png.asset.json";
 
 
 const PHONE_1 = "780-897-3077";
@@ -514,9 +514,13 @@ const Index = () => {
 
 
       {/* ABOUT */}
-      <section id="about" className="py-10 md:py-14">
-        <div className="container grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+      <section
+        id="about"
+        className="relative py-10 md:py-14 bg-cover bg-[position:55%_center] overflow-hidden"
+        style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.40), rgba(0,0,0,0.15)), url(${ownersJamiAsset.url})` }}
+      >
+        <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="p-6 md:p-8 rounded-2xl bg-background/95 backdrop-blur-sm shadow-bold">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
             <p className="text-lg text-muted-foreground mb-4">
