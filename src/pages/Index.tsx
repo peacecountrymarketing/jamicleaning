@@ -104,8 +104,8 @@ const Index = () => {
           <a href="#" className="flex items-center gap-2">
             <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-9 w-auto" />
             <div className="leading-tight">
-              <div className="font-bold text-lg tracking-tight">JAMI Cleaning</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Inc · Grande Prairie</div>
+              <div className="font-bold text-lg tracking-tight">JAMI Cleaning Inc.</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">GRANDE PRAIRIE, AB</div>
             </div>
           </a>
 
