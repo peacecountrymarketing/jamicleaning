@@ -600,7 +600,7 @@ const Index = () => {
       <footer className="bg-background text-foreground py-10 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2">
-            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-10 w-auto" />
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-20 w-auto" />
             <span className="text-muted-foreground">· Grande Prairie, AB</span>
           </div>
           <div className="text-muted-foreground">
