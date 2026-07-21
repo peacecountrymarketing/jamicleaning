@@ -245,7 +245,7 @@ const Index = () => {
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="py-20 md:py-28 bg-muted/50 relative overflow-hidden">
+      <section id="process" className="pt-12 pb-20 md:pt-16 md:pb-28 bg-muted/50 relative overflow-hidden">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">How It Works</div>
