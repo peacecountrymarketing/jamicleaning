@@ -597,13 +597,13 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-primary text-primary-foreground py-10">
+      <footer className="bg-background text-foreground py-10 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2">
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-10 w-auto" />
-            <span className="text-primary-foreground/60">· Grande Prairie, AB</span>
+            <span className="text-muted-foreground">· Grande Prairie, AB</span>
           </div>
-          <div className="text-primary-foreground/60">
+          <div className="text-muted-foreground">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved
           </div>
         </div>
