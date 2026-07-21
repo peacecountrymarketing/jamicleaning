@@ -300,39 +300,39 @@ const Index = () => {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-10 md:py-14">
+      <section id="about" className="py-10 md:py-14 bg-navy-gradient text-primary-foreground">
         <div className="container grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">About JAMI</div>
+            <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
-            <p className="text-lg text-muted-foreground mb-4">
-              JAMI Cleaning Inc is owned and operated by <strong className="text-foreground">Ramin</strong> and{" "}
-              <strong className="text-foreground">Leila Jami</strong>, a Grande Prairie team with 10+ years in the
+            <p className="text-lg text-primary-foreground/80 mb-4">
+              JAMI Cleaning Inc is owned and operated by <strong className="text-primary-foreground">Ramin</strong> and{" "}
+              <strong className="text-primary-foreground">Leila Jami</strong>, a Grande Prairie team with 10+ years in the
               cleaning industry and a commitment to ongoing training and high service standards.
             </p>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-primary-foreground/70 mb-6">
               Certifications include WHMIS, Personal Protective Equipment, Bloodborne Pathogens, Ladder Safety,
               and Pandemic Awareness, because doing the job right starts with knowing the job.
             </p>
             <div className="grid grid-cols-3 gap-4 max-w-xl">
-              <div className="p-4 rounded-lg bg-muted border border-border text-center">
-                <div className="text-3xl font-bold text-secondary">10+</div>
-                <div className="text-xs text-muted-foreground mt-1">Years experience</div>
+              <div className="p-4 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-center">
+                <div className="text-3xl font-bold text-accent">10+</div>
+                <div className="text-xs text-primary-foreground/70 mt-1">Years experience</div>
               </div>
-              <div className="p-4 rounded-lg bg-muted border border-border text-center">
-                <div className="text-3xl font-bold text-secondary">5+</div>
-                <div className="text-xs text-muted-foreground mt-1">Certifications</div>
+              <div className="p-4 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-center">
+                <div className="text-3xl font-bold text-accent">5+</div>
+                <div className="text-xs text-primary-foreground/70 mt-1">Certifications</div>
               </div>
-              <div className="p-4 rounded-lg bg-muted border border-border text-center">
-                <div className="text-3xl font-bold text-secondary">24h</div>
-                <div className="text-xs text-muted-foreground mt-1">Re-clean window</div>
+              <div className="p-4 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-center">
+                <div className="text-3xl font-bold text-accent">24h</div>
+                <div className="text-xs text-primary-foreground/70 mt-1">Re-clean window</div>
               </div>
             </div>
           </div>
 
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
-            <div className="relative bg-primary rounded-2xl overflow-hidden text-primary-foreground shadow-bold">
+            <div className="relative bg-primary rounded-2xl overflow-hidden text-primary-foreground shadow-bold border border-primary-foreground/15">
               <div className="grid md:grid-cols-5">
                 <div className="md:col-span-2 h-64 md:h-auto">
                   <img
