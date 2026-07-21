@@ -508,51 +508,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SPLIT: Homes vs Businesses */}
-      <section className="py-10 md:py-14">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Built For Both</div>
-            <h2 className="text-3xl md:text-5xl font-bold">Homes and businesses, handled with the same care.</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative rounded-xl overflow-hidden group min-h-[380px]">
-              <img src={residentialImg} alt="Clean modern living room" loading="lazy" width={1200} height={900}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-primary/20" />
-              <div className="relative p-8 md:p-10 flex flex-col justify-end h-full min-h-[380px] text-primary-foreground">
-                <Home className="h-8 w-8 text-accent mb-3" />
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">For homes</h3>
-                <p className="text-primary-foreground/85 mb-5">
-                  Detailed cleaning of kitchens, bathrooms, and floors. Recurring or one-time support
-                  built around your schedule.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-accent hover:gap-3 transition-all">
-                  Book a home clean <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
-
-            <div className="relative rounded-xl overflow-hidden group min-h-[380px]">
-              <img src={commercialImg} alt="Modern professional office" loading="lazy" width={1200} height={900}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20" />
-              <div className="relative p-8 md:p-10 flex flex-col justify-end h-full min-h-[380px] text-secondary-foreground">
-                <Building2 className="h-8 w-8 mb-3" />
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">For businesses</h3>
-                <p className="text-secondary-foreground/90 mb-5">
-                  Offices that look professional every day. Dependable scheduling and sanitation-focused
-                  work your clients and team will notice.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all">
-                  Schedule a walkthrough <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* ABOUT */}
