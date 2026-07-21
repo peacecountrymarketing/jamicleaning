@@ -339,7 +339,7 @@ const Index = () => {
                 { t: "Trained staff", d: "Reliable team held to high service standards." },
                 { t: "Licensed, bonded & insured", d: "Fully covered for your peace of mind." },
                 { t: "Re-cleaning guarantee", d: "Within 24 hours if you're dissatisfied." },
-                { t: "Competitive rates", d: "Fair pricing with price matching available." },
+                { t: "No late fees", d: "Simple, predictable billing without surprise penalties." },
                 { t: "Zero cancellation fees", d: "Ask about our zero cancellation fee policy." },
                 { t: "Certified operators", d: "WHMIS, PPE, Bloodborne Pathogens, Ladder Safety." },
               ].map((f) => (
