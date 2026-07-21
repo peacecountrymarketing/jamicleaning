@@ -17,6 +17,8 @@ import residentialImg from "@/assets/residential.jpg";
 import commercialImg from "@/assets/commercial.jpg";
 import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
+
 
 const PHONE_1 = "780-897-3077";
 const PHONE_2 = "780-897-7444";
@@ -98,9 +100,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16 sm:h-20">
           <a href="#" className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-md bg-electric-gradient flex items-center justify-center shadow-glow">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
-            </div>
+            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-9 w-auto" />
             <div className="leading-tight">
               <div className="font-bold text-lg tracking-tight">JAMI Cleaning</div>
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Inc · Grande Prairie</div>
