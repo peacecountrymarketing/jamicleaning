@@ -517,7 +517,7 @@ const Index = () => {
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              JAMI Cleaning Inc is owned and operated by <strong className="text-foreground">Ramin Jami</strong> and{" "}
+              JAMI Cleaning Inc is owned and operated by <strong className="text-foreground">Ramin</strong> and{" "}
               <strong className="text-foreground">Leila Jami</strong>, a Grande Prairie team with 10+ years in the
               cleaning industry and a commitment to ongoing training and high service standards.
             </p>
