@@ -331,8 +331,7 @@ const Index = () => {
               <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">Our Promise</div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6">Reliable service, backed by standards.</h2>
               <p className="text-primary-foreground/80 text-lg mb-8">
-                Why choose us? We take on the details so you don't have to worry about them. If something's not right,
-                we come back within 24 hours and make it right.
+                Why choose JAMI Cleaning? We handle every detail, so you can enjoy a clean space without the stress. If something is not right, we will return within 24 hours to make it right. With transparent pricing, zero late or cancellation fees, and our Re-Cleaning Guarantee trying JAMI Cleaning is practically risk-free.
               </p>
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
                 <a href="#contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
