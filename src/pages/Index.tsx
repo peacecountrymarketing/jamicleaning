@@ -597,7 +597,7 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-background text-foreground py-10 border-t border-border">
+      <footer className="bg-background text-foreground py-4 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2">
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 w-auto" />
