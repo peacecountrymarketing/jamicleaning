@@ -201,7 +201,7 @@ const Index = () => {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-20 md:py-28">
+      <section id="services" className="pt-12 pb-20 md:pt-16 md:pb-28">
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
