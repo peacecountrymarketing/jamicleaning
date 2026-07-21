@@ -510,45 +510,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Vehicle & Yard add-on */}
-      <section className="py-10 md:py-14 bg-muted/50">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Add-On Services</div>
-            <h2 className="text-3xl md:text-5xl font-bold">More convenience. One call.</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-xl overflow-hidden shadow-card-bold border border-border">
-              <img src={vehicleImg} alt="Detailed vehicle interior" loading="lazy" width={1200} height={900} className="w-full h-56 object-cover" />
-              <div className="p-7">
-                <div className="flex items-center gap-3 mb-3">
-                  <Car className="h-6 w-6 text-secondary" />
-                  <h3 className="text-2xl font-bold">Vehicle Detailing</h3>
-                </div>
-                <p className="text-muted-foreground mb-4">
-                  Interior and exterior detail, mats, windows, vacuuming, deodorizing, and clear coat protectant.
-                </p>
-                <p className="text-xs text-muted-foreground italic">Note: larger vehicles may cost more.</p>
-              </div>
-            </div>
-
-            <div className="bg-card rounded-xl overflow-hidden shadow-card-bold border border-border">
-              <img src={yardImg} alt="Well-maintained yard" loading="lazy" width={1200} height={900} className="w-full h-56 object-cover" />
-              <div className="p-7">
-                <div className="flex items-center gap-3 mb-3">
-                  <Trees className="h-6 w-6 text-secondary" />
-                  <h3 className="text-2xl font-bold">Yard Maintenance</h3>
-                </div>
-                <p className="text-muted-foreground mb-4">
-                  Mowing, edging, trimming, lawn aeration, dethatching, weed removal, snow removal, and garbage cleanup.
-                </p>
-                <p className="text-xs text-muted-foreground italic">Seasonal service available year-round.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ABOUT */}
       <section id="about" className="py-10 md:py-14">
