@@ -105,6 +105,7 @@ const FAQ = () => {
             <a href="/#guarantee" className="hover:text-secondary transition-colors">Guarantee</a>
             <a href="/#about" className="hover:text-secondary transition-colors">About</a>
             <a href="/faq" className="text-secondary transition-colors">FAQ</a>
+            <a href="/blog" className="hover:text-secondary transition-colors">Blog</a>
             <a href="/#contact" className="hover:text-secondary transition-colors">Contact</a>
           </nav>
 
@@ -130,6 +131,7 @@ const FAQ = () => {
               <a href="/#guarantee" onClick={() => setMobileOpen(false)}>Guarantee</a>
               <a href="/#about" onClick={() => setMobileOpen(false)}>About</a>
               <a href="/faq" onClick={() => setMobileOpen(false)} className="text-secondary">FAQ</a>
+              <a href="/blog" onClick={() => setMobileOpen(false)}>Blog</a>
               <a href="/#contact" onClick={() => setMobileOpen(false)}>Contact</a>
             </nav>
           </div>
