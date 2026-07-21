@@ -540,7 +540,7 @@ const Index = () => {
                 <div className="text-xs text-muted-foreground mt-1">Years experience</div>
               </div>
               <div className="p-4 rounded-lg bg-muted border border-border text-center">
-                <div className="text-3xl font-bold text-secondary">5</div>
+                <div className="text-3xl font-bold text-secondary">5+</div>
                 <div className="text-xs text-muted-foreground mt-1">Certifications</div>
               </div>
               <div className="p-4 rounded-lg bg-muted border border-border text-center">
