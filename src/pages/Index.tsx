@@ -303,7 +303,7 @@ const Index = () => {
       <section id="about" className="py-10 md:py-14 bg-navy-gradient text-primary-foreground">
         <div className="container grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">About JAMI</div>
+            <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3 -mt-5">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
             <p className="text-lg text-primary-foreground/80 mb-4">
               JAMI Cleaning Inc is owned and operated by <strong className="text-primary-foreground">Ramin</strong> and{" "}
