@@ -321,6 +321,84 @@ const Index = () => {
             </p>
           </div>
 
+          <div className="grid md:grid-cols-2 gap-6 items-start mb-6">
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-2">Residential</div>
+                  <h3 className="text-2xl font-bold">Home Cleaning</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-4xl font-bold text-secondary leading-none">$45</div>
+                  <div className="text-xs text-muted-foreground mt-1">/ hour</div>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm mb-5">Recurring cleans priced by home size and frequency. Deep and move-in / move-out cleans are quoted as flat rates.</p>
+              <ul className="space-y-2 text-sm border-t border-border pt-4">
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Standard recurring clean</span><span className="font-bold">from $140</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Deep clean (whole home)</span><span className="font-bold">from $320</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Move-in / move-out</span><span className="font-bold">from $380</span></li>
+              </ul>
+            </article>
+
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-2">Commercial</div>
+                  <h3 className="text-2xl font-bold">Business Cleaning</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-3xl font-bold text-secondary leading-none">Custom</div>
+                  <div className="text-xs text-muted-foreground mt-1">per contract</div>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm mb-5">Priced per visit on a schedule that fits your space. Longer commitments unlock better rates.</p>
+              <ul className="space-y-2 text-sm border-t border-border pt-4">
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Small office (under 1,500 sq ft)</span><span className="font-bold">from $120 / visit</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Mid-size space (1,500 to 5,000 sq ft)</span><span className="font-bold">from $220 / visit</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Larger / specialty spaces</span><span className="font-bold">quoted on-site</span></li>
+              </ul>
+            </article>
+
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-2">Auto</div>
+                  <h3 className="text-2xl font-bold">Vehicle Detailing</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-4xl font-bold text-secondary leading-none">$120</div>
+                  <div className="text-xs text-muted-foreground mt-1">starting</div>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm mb-5">Priced by vehicle size and package. Larger vehicles and heavier condition may add to the estimate.</p>
+              <ul className="space-y-2 text-sm border-t border-border pt-4">
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Interior detail (car / SUV)</span><span className="font-bold">from $120</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Full interior + exterior</span><span className="font-bold">from $220</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Trucks, vans & fleet</span><span className="font-bold">quoted individually</span></li>
+              </ul>
+            </article>
+
+            <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-2">Outdoor</div>
+                  <h3 className="text-2xl font-bold">Yard & Seasonal</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-4xl font-bold text-secondary leading-none">$65</div>
+                  <div className="text-xs text-muted-foreground mt-1">/ visit</div>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm mb-5">Priced per visit or per season. Snow removal can be booked per event or on a seasonal plan.</p>
+              <ul className="space-y-2 text-sm border-t border-border pt-4">
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Lawn mow & trim (residential)</span><span className="font-bold">from $65 / visit</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Aeration or dethatching</span><span className="font-bold">from $140</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Snow removal (per event)</span><span className="font-bold">from $50</span></li>
+              </ul>
+            </article>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-6 items-start">
             <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
               <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Window Care</div>
