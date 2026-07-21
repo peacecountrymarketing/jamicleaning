@@ -547,7 +547,7 @@ const Index = () => {
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
-            <div className="relative rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${teamOwners.url})` }}>
+            <div className="relative rounded-2xl p-8 md:p-10 text-primary-foreground shadow-bold overflow-hidden bg-cover" style={{ backgroundImage: `url(${teamOwners.url})`, backgroundPosition: "center 22%" }}>
               <div className="absolute inset-0 bg-primary/80" />
               <div className="relative">
                 <div className="text-6xl font-bold text-accent leading-none mb-0">“</div>
