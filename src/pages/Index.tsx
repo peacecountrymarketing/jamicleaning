@@ -18,6 +18,8 @@ import commercialImg from "@/assets/commercial.jpg";
 import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
+import logoFullAsset from "@/assets/logo-full.png.asset.json";
+
 
 
 const PHONE_1 = "780-897-3077";
@@ -598,10 +600,7 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground py-10">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-md bg-electric-gradient flex items-center justify-center">
-              <Sparkles className="h-4 w-4" />
-            </div>
-            <span className="font-bold">JAMI Cleaning Inc</span>
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-10 w-auto" />
             <span className="text-primary-foreground/60">· Grande Prairie, AB</span>
           </div>
           <div className="text-primary-foreground/60">
