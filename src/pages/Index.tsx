@@ -340,7 +340,7 @@ const Index = () => {
               {[
                 { t: "Trained staff", d: "Reliable team held to high service standards." },
                 { t: "Licensed, bonded & insured", d: "Fully covered for your peace of mind." },
-                { t: "Re-cleaning guarantee", d: "Within 24 hours if you're dissatisfied." },
+                { t: "Re-cleaning guarantee", d: "We will come back to ensure cleanliness within 24 hours if you're dissatisfied." },
                 { t: "No late fees", d: "Simple, predictable billing without surprise penalties." },
                 { t: "Easy scheduling", d: "Book, reschedule, or update your visit without hassle." },
                 { t: "Certified operators", d: "WHMIS, PPE, Bloodborne Pathogens, Ladder Safety." },
