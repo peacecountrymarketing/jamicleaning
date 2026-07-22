@@ -429,7 +429,7 @@ const Index = () => {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="py-10 md:py-14 bg-muted/50">
+      <section id="pricing" className="hidden md:block py-10 md:py-14 bg-muted/50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Pricing Guidance</div>
