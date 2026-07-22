@@ -635,7 +635,7 @@ const Index = () => {
       <section id="contact" className="py-10 md:py-14 bg-hero-gradient text-primary-foreground relative overflow-hidden">
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary/30 blur-3xl" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
-        <div className="container relative grid lg:grid-cols-5 gap-10">
+        <div className="container relative grid lg:grid-cols-5 gap-10 items-center">
           <div className="lg:col-span-2">
             <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">Get In Touch</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
