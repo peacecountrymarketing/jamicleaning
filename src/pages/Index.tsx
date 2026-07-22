@@ -338,7 +338,7 @@ const Index = () => {
                   <img
                     src={teamJamiImg.url}
                     alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
