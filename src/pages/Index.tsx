@@ -21,17 +21,15 @@ import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import teamJamiImg from "@/assets/team-jami.png.asset.json";
+import mapleLeafAsset from "@/assets/maple-leaf.png.asset.json";
 
 const MapleLeaf = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
+  <img
+    src={mapleLeafAsset.url}
+    alt="Canadian maple leaf"
     className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M12 2.25 12.8 6.3 15.4 4.6 14.6 7.9 18.1 8 15.8 10.5 19.4 12.4 16 13.5 18.3 16.7 14.7 15.9 15 20 12.3 16.8 12 21.75 11.7 16.8 9 20 9.3 15.9 5.7 16.7 8 13.5 4.6 12.4 8.2 10.5 5.9 8 9.4 7.9 8.6 4.6 11.2 6.3 12 2.25z" />
-  </svg>
+    loading="lazy"
+  />
 );
 
 const PHONE_1 = "780-897-3077";
