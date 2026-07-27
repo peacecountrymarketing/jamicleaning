@@ -7,28 +7,32 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFullAsset from "@/assets/logo-full.png.asset.json";
+import logoAsset from "@/assets/jami-logo-new.png.asset.json";
+import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 
 const PHONE_1 = "780-897-3077";
-const PHONE_2 = "780-897-7444";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
 const faqs = [
   {
     question: "What services does JAMI Cleaning Inc offer?",
     answer:
-      "We offer residential cleaning, commercial cleaning, vehicle detailing, yard maintenance, lawn services, snow removal, and garbage cleanup throughout Grande Prairie and the surrounding area.",
+      "We offer residential cleaning, commercial cleaning, vehicle detailing, yard maintenance, lawn services, weed spraying, pressure washing, snow removal, and garbage cleanup throughout Grande Prairie, Wembley, Clairmont, and the County of Grande Prairie.",
   },
   {
     question: "How do I get a quote?",
     answer:
-      "You can request a quote by filling out the contact form on our website, calling us at 780-897-3077, or emailing Accounting@jamicleaninginc.com. We typically respond within one business day.",
+      "Fill out the contact form, call 780-897-3077, or email Accounting@jamicleaninginc.com. We typically respond within one business day.",
+  },
+  {
+    question: "Do you charge cancellation fees?",
+    answer:
+      "No. We have zero cancellation fees. Reschedule or cancel your visit without hassle, ever.",
   },
   {
     question: "Do you serve both homes and businesses?",
     answer:
-      "Yes. We clean houses, apartments, offices, retail spaces, and other commercial properties. Our team is trained to handle different environments with the right products and standards.",
+      "Yes. We clean homes, offices, retail spaces, oilfield and industrial sites, healthcare facilities, Airbnb turnovers, post-construction sites, and more.",
   },
   {
     question: "What is your re-cleaning guarantee?",
@@ -38,32 +42,32 @@ const faqs = [
   {
     question: "Are you licensed, bonded, and insured?",
     answer:
-      "Yes. JAMI Cleaning Inc is licensed, bonded, and insured for your protection and peace of mind.",
+      "Yes. JAMI Cleaning Inc is licensed, bonded, and insured for your protection and peace of mind. We are also proudly Canadian owned and operated.",
   },
   {
     question: "What are your operating hours?",
     answer:
-      "Our standard hours are Monday through Friday, 8:00 AM to 8:00 PM. We can also accommodate special scheduling requests when needed.",
+      "Our standard hours are Monday through Friday, 8:00 AM to 10:00 PM. We can also accommodate special scheduling requests when needed.",
   },
   {
-    question: "Do you charge late fees?",
+    question: "How much does residential cleaning cost?",
     answer:
-      "No. We keep billing simple and predictable without surprise late fees.",
+      "Residential cleaning is $45 per hour, per employee. Choose a basic recurring clean or a deep clean, whichever fits your home.",
   },
   {
     question: "What is included in vehicle detailing?",
     answer:
-      "Interior and exterior cleaning, vacuuming, mats, windows, deodorizing, and clear coat protectant. Larger vehicles or vehicles that are very dirty may require additional time and cost.",
+      "Interior and exterior cleaning, vacuuming, mats, windows, deodorizing, and clear coat protectant. Larger or very dirty vehicles may require additional time and cost.",
   },
   {
     question: "What areas do you serve?",
     answer:
-      "We are based in Grande Prairie, Alberta and serve homes, businesses, vehicles, and yards in the local area.",
+      "We are based in Grande Prairie, Alberta and serve Grande Prairie, Wembley, Clairmont, and the surrounding County of Grande Prairie.",
   },
   {
     question: "Who owns JAMI Cleaning Inc?",
     answer:
-      "JAMI Cleaning Inc is locally owned and operated by Ramin and Leila Jami, who are committed to ongoing training, safety certifications, and high service standards.",
+      "JAMI Cleaning Inc is locally and Canadian owned and operated by Ramin and Leila Jami, committed to ongoing training, safety certifications, and high service standards.",
   },
 ];
 

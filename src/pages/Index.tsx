@@ -2,7 +2,8 @@ import { useState } from "react";
 import {
   Phone, Mail, MapPin, Clock, Shield, Award, CheckCircle2, ArrowRight,
   Home, Building2, Car, Trees, Star, Sparkles, ClipboardList, CalendarCheck,
-  Menu, X,
+  Menu, X, Infinity as InfinityIcon, Droplets, Hotel, HardHat, Stethoscope,
+  Briefcase, ShoppingBag, Truck, Hammer,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,19 +18,11 @@ import residentialImg from "@/assets/residential.jpg";
 import commercialImg from "@/assets/commercial.jpg";
 import vehicleImg from "@/assets/vehicle.jpg";
 import yardImg from "@/assets/yard.jpg";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFullAsset from "@/assets/logo-full.png.asset.json";
+import logoAsset from "@/assets/jami-logo-new.png.asset.json";
+import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import teamJamiImg from "@/assets/team-jami.png.asset.json";
 
-
-
-
-
-
-
-
 const PHONE_1 = "780-897-3077";
-const PHONE_2 = "780-897-7444";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
 const services = [
@@ -43,7 +36,7 @@ const services = [
     icon: Building2,
     title: "Commercial Cleaning",
     img: commercialImg,
-    items: ["Offices & retail spaces", "Sanitation-focused work", "Dependable scheduling"],
+    items: ["Offices, retail & oilfield", "Sanitation-focused work", "Dependable scheduling"],
   },
   {
     icon: Car,
@@ -55,7 +48,13 @@ const services = [
     icon: Trees,
     title: "Yard & Seasonal",
     img: yardImg,
-    items: ["Mowing, edging & trimming", "Aeration & dethatching", "Snow removal & cleanup"],
+    items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
+  },
+  {
+    icon: Droplets,
+    title: "Pressure Washing",
+    img: commercialImg,
+    items: ["Driveways & sidewalks", "Drive-thrus & entrances", "Building exteriors"],
   },
 ];
 
@@ -92,7 +91,9 @@ const Index = () => {
       {/* Announcement bar */}
       <div className="bg-navy-gradient text-primary-foreground text-xs sm:text-sm">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 py-2">
-          <p className="opacity-90">Serving Grande Prairie homes, businesses, vehicles &amp; yards</p>
+          <p className="opacity-90 flex items-center gap-2">
+            <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
+          </p>
           <div className="flex items-center gap-4">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
@@ -107,11 +108,11 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16 sm:h-20">
-          <a href="#" className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-9 w-auto" />
-            <div className="leading-tight">
-              <div className="font-bold text-lg tracking-tight">JAMI Cleaning Inc.</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">GRANDE PRAIRIE, AB</div>
+          <a href="#" className="flex items-center gap-3">
+            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-12 sm:h-14 w-auto" />
+            <div className="hidden sm:block leading-tight border-l border-border pl-3">
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Grande Prairie, AB</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🇨🇦 Canadian Owned</div>
             </div>
           </a>
 
@@ -225,7 +226,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {services.map((s) => (
               <article key={s.title} className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-44 overflow-hidden">
@@ -256,39 +257,71 @@ const Index = () => {
 
           <div className="mt-12">
             <div className="text-center max-w-2xl mx-auto mb-8">
-              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Built For Both</div>
-              <h2 className="text-3xl md:text-5xl font-bold">Homes and businesses, handled with the same care.</h2>
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3 flex items-center justify-center gap-2">
+                <InfinityIcon className="h-4 w-4 text-secondary" /> Built For Both <InfinityIcon className="h-4 w-4 text-secondary" />
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold">Every space, one trusted team.</h2>
+              <p className="text-muted-foreground mt-3">From homes to hospitals, oilfield camps to Airbnbs, we clean it all.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="relative rounded-xl overflow-hidden group min-h-[380px]">
-                <img src={residentialImg} alt="Clean modern living room" loading="lazy" width={1200} height={900}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-primary/20" />
-                <div className="relative p-8 md:p-10 flex flex-col justify-end h-full min-h-[380px] text-primary-foreground">
-                  <Home className="h-8 w-8 text-accent mb-3" />
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3">For homes</h3>
-                  <p className="text-primary-foreground/85 mb-5">
-                    Detailed cleaning of kitchens, bathrooms, and floors. Recurring or one-time support
-                    built around your schedule.
-                  </p>
+              {/* For Homes */}
+              <div className="rounded-xl overflow-hidden bg-primary text-primary-foreground shadow-bold">
+                <div className="p-6 md:p-8 border-b border-primary-foreground/10 flex items-center gap-3">
+                  <Home className="h-8 w-8 text-accent" />
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-accent font-bold">Residential</div>
+                    <h3 className="text-2xl md:text-3xl font-bold">For homes</h3>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-px bg-primary-foreground/10">
+                  {[
+                    { icon: Home, label: "Recurring home cleans" },
+                    { icon: Sparkles, label: "Deep cleaning" },
+                    { icon: Truck, label: "Move-in / move-out" },
+                    { icon: Hotel, label: "Airbnb turnovers" },
+                    { icon: Hammer, label: "Post-construction" },
+                    { icon: Droplets, label: "Window cleaning" },
+                  ].map((s) => (
+                    <div key={s.label} className="bg-primary p-4 flex items-center gap-3">
+                      <s.icon className="h-5 w-5 text-accent flex-shrink-0" />
+                      <span className="text-sm font-semibold">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="p-6 md:p-8">
                   <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-accent hover:gap-3 transition-all">
                     Book a home clean <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>
 
-              <div className="relative rounded-xl overflow-hidden group min-h-[380px]">
-                <img src={commercialImg} alt="Modern professional office" loading="lazy" width={1200} height={900}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/20" />
-                <div className="relative p-8 md:p-10 flex flex-col justify-end h-full min-h-[380px] text-secondary-foreground">
-                  <Building2 className="h-8 w-8 mb-3" />
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3">For businesses</h3>
-                  <p className="text-secondary-foreground/90 mb-5">
-                    Offices that look professional every day. Dependable scheduling and sanitation-focused
-                    work your clients and team will notice.
-                  </p>
+              {/* For Businesses */}
+              <div className="rounded-xl overflow-hidden bg-secondary text-secondary-foreground shadow-bold">
+                <div className="p-6 md:p-8 border-b border-secondary-foreground/10 flex items-center gap-3">
+                  <Building2 className="h-8 w-8" />
+                  <div>
+                    <div className="text-xs uppercase tracking-widest font-bold opacity-80">Commercial & Industrial</div>
+                    <h3 className="text-2xl md:text-3xl font-bold">For businesses</h3>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-px bg-secondary-foreground/10">
+                  {[
+                    { icon: Briefcase, label: "Office cleaning" },
+                    { icon: ShoppingBag, label: "Retail spaces" },
+                    { icon: HardHat, label: "Oilfield & industrial" },
+                    { icon: Stethoscope, label: "Healthcare facilities*" },
+                    { icon: Hammer, label: "Post-construction" },
+                    { icon: Droplets, label: "Pressure washing" },
+                  ].map((s) => (
+                    <div key={s.label} className="bg-secondary p-4 flex items-center gap-3">
+                      <s.icon className="h-5 w-5 flex-shrink-0" />
+                      <span className="text-sm font-semibold">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="p-6 md:p-8">
+                  <p className="text-xs opacity-80 mb-3">*Owner/operators hold Bloodborne Pathogens certification.</p>
                   <a href="#contact" className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all">
                     Schedule a walkthrough <ArrowRight className="h-4 w-4" />
                   </a>
@@ -414,7 +447,7 @@ const Index = () => {
                 { t: "Licensed, bonded & insured", d: "Fully covered for your peace of mind." },
                 { t: "Re-cleaning guarantee", d: "We will come back to ensure cleanliness within 24 hours if you're dissatisfied." },
                 { t: "No late fees", d: "Simple, predictable billing without surprise penalties." },
-                { t: "Easy scheduling", d: "Book, reschedule, or update your visit without hassle." },
+                { t: "No cancellation fees", d: "Reschedule or cancel without hassle, ever." },
                 { t: "Certified operators", d: "WHMIS, PPE, Bloodborne Pathogens, Ladder Safety." },
               ].map((f) => (
                 <div key={f.t} className="p-5 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 hover:border-secondary transition-colors">
@@ -448,15 +481,34 @@ const Index = () => {
                 </div>
                 <div className="text-right">
                   <div className="text-4xl font-bold text-secondary leading-none">$45</div>
-                  <div className="text-xs text-muted-foreground mt-1">/ hour</div>
+                  <div className="text-xs text-muted-foreground mt-1">/ hour, per employee</div>
                 </div>
               </div>
-              <p className="text-muted-foreground text-sm mb-5">Recurring cleans priced by home size and frequency. Deep and move-in / move-out cleans are quoted as flat rates.</p>
-              <ul className="space-y-2 text-sm border-t border-border pt-4">
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Standard recurring clean</span><span className="font-bold">from $140</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Deep clean (whole home)</span><span className="font-bold">from $320</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Move-in / move-out</span><span className="font-bold">from $380</span></li>
-              </ul>
+              <p className="text-muted-foreground text-sm mb-5">
+                Straightforward hourly pricing. Choose a basic recurring clean or a full deep clean, whichever fits your home.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3 border-t border-border pt-4">
+                <div className="rounded-lg border border-border p-4 bg-muted/40">
+                  <div className="text-xs uppercase tracking-widest font-bold text-primary mb-2">Basic Clean</div>
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Kitchen surfaces & appliances (exterior)</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Bathrooms: toilets, sinks, tubs</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Vacuum & mop all floors</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Dusting reachable surfaces</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Trash & light tidy</span></li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border-2 border-secondary p-4 bg-secondary/5">
+                  <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-2">Deep Clean</div>
+                  <ul className="space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Everything in Basic, plus:</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Inside oven, fridge & microwave</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Baseboards, doors & light fixtures</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Tile grout, showerheads, hard-water spots</span></li>
+                    <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" /><span>Interior windows & tracks</span></li>
+                  </ul>
+                </div>
+              </div>
             </article>
 
             <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
@@ -472,9 +524,9 @@ const Index = () => {
               </div>
               <p className="text-muted-foreground text-sm mb-5">Priced per visit on a schedule that fits your space. Longer commitments unlock better rates.</p>
               <ul className="space-y-2 text-sm border-t border-border pt-4">
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Small office (under 1,500 sq ft)</span><span className="font-bold">from $120 / visit</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Mid-size space (1,500 to 5,000 sq ft)</span><span className="font-bold">from $220 / visit</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Larger / specialty spaces</span><span className="font-bold">quoted on-site</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Offices, retail & clinics</span><span className="font-bold">custom quote</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Oilfield & industrial</span><span className="font-bold">custom quote</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Post-construction cleanup</span><span className="font-bold">custom quote</span></li>
               </ul>
             </article>
 
@@ -504,16 +556,20 @@ const Index = () => {
                   <h3 className="text-2xl font-bold">Yard & Seasonal</h3>
                 </div>
                 <div className="text-right">
-                  <div className="text-4xl font-bold text-secondary leading-none">$65</div>
-                  <div className="text-xs text-muted-foreground mt-1">/ visit</div>
+                  <div className="text-3xl font-bold text-secondary leading-none">Custom</div>
+                  <div className="text-xs text-muted-foreground mt-1">per property</div>
                 </div>
               </div>
-              <p className="text-muted-foreground text-sm mb-5">Priced per visit or per season. Snow removal can be booked per event or on a seasonal plan.</p>
+              <p className="text-muted-foreground text-sm mb-5">
+                Custom pricing based on the property. Contact us for a personalized quote.
+              </p>
               <ul className="space-y-2 text-sm border-t border-border pt-4">
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Lawn mow & trim (residential)</span><span className="font-bold">from $65 / visit</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Aeration or dethatching</span><span className="font-bold">from $140</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Snow removal (per event)</span><span className="font-bold">from $50</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Lawn mowing, edging & trimming</span><span className="font-bold">custom quote</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Weed spraying</span><span className="font-bold">custom quote</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Aeration & dethatching</span><span className="font-bold">custom quote</span></li>
+                <li className="flex items-center justify-between"><span className="text-muted-foreground">Snow removal & garbage cleanup</span><span className="font-bold">custom quote</span></li>
               </ul>
+              <p className="text-xs text-muted-foreground italic mt-3">Lawn edging is included with mowing and trimming service.</p>
             </article>
           </div>
 
@@ -559,15 +615,17 @@ const Index = () => {
             </article>
 
             <article className="bg-card rounded-xl p-7 border border-border shadow-card-bold">
-              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Auto</div>
-              <h3 className="text-2xl font-bold mb-2">Vehicle Detailing</h3>
-              <p className="text-muted-foreground text-sm mb-6">Custom quote based on vehicle size, condition, and service needs.</p>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-bold text-secondary">Custom quote</span>
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Exterior</div>
+              <h3 className="text-2xl font-bold mb-2">Pressure Washing</h3>
+              <p className="text-muted-foreground text-sm mb-6">Driveways, sidewalks, drive-thrus, commercial entrances, and building exteriors.</p>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-3xl font-bold text-secondary">Custom quote</span>
               </div>
-              <p className="text-xs text-muted-foreground italic">
-                Additional charges may apply if the vehicle is very dirty or requires extra cleaning time.
-              </p>
+              <ul className="space-y-2 text-sm border-t border-border pt-4 text-muted-foreground">
+                <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary mt-0.5" /><span>Residential driveways & walkways</span></li>
+                <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary mt-0.5" /><span>Commercial entrances & drive-thrus</span></li>
+                <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-secondary mt-0.5" /><span>Building exteriors & siding</span></li>
+              </ul>
             </article>
           </div>
 
@@ -655,15 +713,6 @@ const Index = () => {
                   <div className="font-bold text-lg">{PHONE_1}</div>
                 </div>
               </a>
-              <a href={`tel:${PHONE_2}`} className="flex items-center gap-4 p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 hover:border-secondary transition-colors">
-                <div className="h-11 w-11 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-5 w-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Secondary</div>
-                  <div className="font-bold text-lg">{PHONE_2}</div>
-                </div>
-              </a>
               <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 hover:border-secondary transition-colors">
                 <div className="h-11 w-11 rounded-lg bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="h-5 w-5" />
@@ -677,16 +726,21 @@ const Index = () => {
                 <div className="p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10">
                   <Clock className="h-4 w-4 text-accent mb-2" />
                   <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Hours</div>
-                  <div className="font-semibold text-sm">Mon-Fri · 8AM–8PM</div>
+                  <div className="font-semibold text-sm">Mon-Fri · 8AM–10PM</div>
                 </div>
                 <div className="p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10">
                   <MapPin className="h-4 w-4 text-accent mb-2" />
-                  <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Location</div>
-                  <div className="font-semibold text-sm">Grande Prairie, AB</div>
+                  <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Service Area</div>
+                  <div className="font-semibold text-sm">Grande Prairie · Wembley · Clairmont</div>
                 </div>
+              </div>
+              <div className="p-4 rounded-lg bg-secondary/10 border border-secondary/30 flex items-center gap-3">
+                <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0" />
+                <div className="text-sm font-semibold">No cancellation fees, ever.</div>
               </div>
             </div>
           </div>
+
 
           <div className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="bg-background text-foreground rounded-2xl p-6 md:p-8 shadow-bold">
@@ -708,6 +762,7 @@ const Index = () => {
                       <SelectItem value="commercial">Commercial Cleaning</SelectItem>
                       <SelectItem value="vehicle">Vehicle Detailing</SelectItem>
                       <SelectItem value="yard">Yard Maintenance</SelectItem>
+                      <SelectItem value="pressure">Pressure Washing</SelectItem>
                       <SelectItem value="snow">Snow Removal</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
@@ -742,18 +797,19 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-background text-foreground py-4 border-t border-border">
+      <footer className="bg-background text-foreground py-6 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-4">
-            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 w-auto" />
-            <span className="text-muted-foreground leading-relaxed whitespace-pre-line">
-              Grande Prairie, AB{"\n"}
-              Clairmont, AB{"\n"}
-              Country of Grande Prairie, AB{"\n"}
-              City of GP
-            </span>
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
+            <div className="text-muted-foreground leading-relaxed">
+              <div className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
+                <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated
+              </div>
+              Serving Grande Prairie, Wembley,{"\n"}
+              Clairmont & the County of Grande Prairie
+            </div>
           </div>
-          <div className="text-muted-foreground">
+          <div className="text-muted-foreground text-center md:text-right">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved
           </div>
         </div>
