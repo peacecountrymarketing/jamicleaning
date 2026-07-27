@@ -208,11 +208,16 @@ const FAQ = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-background text-foreground py-4 border-t border-border">
+      <footer className="bg-background text-foreground py-6 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-          <div className="flex items-center gap-2">
-            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 w-auto" />
-            <span className="text-muted-foreground">· Grande Prairie, AB</span>
+          <div className="flex items-center gap-4">
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
+            <div className="text-muted-foreground leading-relaxed">
+              <div className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
+                <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated
+              </div>
+              Grande Prairie · Wembley · Clairmont · County of GP
+            </div>
           </div>
           <div className="text-muted-foreground">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved
