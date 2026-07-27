@@ -74,7 +74,7 @@ const trustPoints = [
   { icon: Shield, label: "Licensed, Bonded & Insured" },
   { icon: CheckCircle2, label: "Re-Cleaning Guarantee" },
   { icon: Award, label: "10+ Years Experience" },
-  { icon: MapPin, label: "Canadian Owned & Operated\u00a0" },
+  { icon: MapleLeaf, label: "Canadian Owned & Operated\u00a0" },
 ];
 
 const steps = [
