@@ -206,7 +206,7 @@ const Index = () => {
                 {trustPoints.map((t) => (
                   <div key={t.label} className="flex items-center gap-3">
                     <div className="h-10 w-10 rounded-lg bg-electric-gradient flex items-center justify-center flex-shrink-0">
-                      <t.icon className="h-5 w-5 text-primary-foreground" />
+                      <t.icon className="h-5 w-5 brightness-0 invert" />
                     </div>
                     <div className="font-semibold">{t.label}</div>
                   </div>
