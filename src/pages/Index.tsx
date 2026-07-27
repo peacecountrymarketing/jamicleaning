@@ -112,7 +112,7 @@ const Index = () => {
             <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-12 sm:h-14 w-auto" />
             <div className="hidden sm:block leading-tight border-l border-border pl-3">
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Grande Prairie, AB</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🇨🇦 Canadian Owned</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🍁 PROUDLY CANADIAN</div>
             </div>
           </a>
 
