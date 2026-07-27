@@ -92,7 +92,7 @@ const Index = () => {
       <div className="bg-navy-gradient text-primary-foreground text-xs sm:text-sm">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 py-2">
           <p className="opacity-90 flex items-center gap-2">
-            <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
+            Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
           </p>
           <div className="flex items-center gap-4">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
