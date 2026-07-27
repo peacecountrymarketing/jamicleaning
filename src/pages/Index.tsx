@@ -22,6 +22,18 @@ import logoAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import teamJamiImg from "@/assets/team-jami.png.asset.json";
 
+const MapleLeaf = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M12 21.5 9.5 24 8 21.5 5 23 6 19 2 18 6 15 3 12 7 12 7 8 10 10 12 2 14 10 17 8 17 12 21 12 18 15 22 18 18 19 19 23 16 21.5 14.5 24 12 21.5z" />
+  </svg>
+);
+
 const PHONE_1 = "780-897-3077";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
@@ -62,7 +74,7 @@ const trustPoints = [
   { icon: Shield, label: "Licensed, Bonded & Insured" },
   { icon: CheckCircle2, label: "Re-Cleaning Guarantee" },
   { icon: Award, label: "10+ Years Experience" },
-  { icon: MapPin, label: "Canadian Owned & Operated\u00a0" },
+  { icon: MapleLeaf, label: "Canadian Owned & Operated\u00a0" },
 ];
 
 const steps = [
