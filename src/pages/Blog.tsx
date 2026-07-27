@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Phone, Mail, ArrowRight, Menu, X, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFullAsset from "@/assets/logo-full.png.asset.json";
+import logoAsset from "@/assets/jami-logo-new.png.asset.json";
+import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 
 const PHONE_1 = "780-897-3077";
 const EMAIL = "Accounting@jamicleaninginc.com";
@@ -104,7 +104,9 @@ const Blog = () => {
       {/* Announcement bar */}
       <div className="bg-navy-gradient text-primary-foreground text-xs sm:text-sm">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 py-2">
-          <p className="opacity-90">Serving Grande Prairie homes, businesses, vehicles &amp; yards</p>
+          <p className="opacity-90 flex items-center gap-2">
+            <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
+          </p>
           <div className="flex items-center gap-4">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
@@ -119,11 +121,11 @@ const Blog = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16 sm:h-20">
-          <a href="/" className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-9 w-auto" />
-            <div className="leading-tight">
-              <div className="font-bold text-lg tracking-tight">JAMI Cleaning Inc.</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">GRANDE PRAIRIE, AB</div>
+          <a href="/" className="flex items-center gap-3">
+            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-12 sm:h-14 w-auto" />
+            <div className="hidden sm:block leading-tight border-l border-border pl-3">
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Grande Prairie, AB</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🇨🇦 Canadian Owned</div>
             </div>
           </a>
 
@@ -262,11 +264,16 @@ const Blog = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-background text-foreground py-4 border-t border-border">
+      <footer className="bg-background text-foreground py-6 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-          <div className="flex items-center gap-2">
-            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 w-auto" />
-            <span className="text-muted-foreground">· Grande Prairie, AB</span>
+          <div className="flex items-center gap-4">
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
+            <div className="text-muted-foreground leading-relaxed">
+              <div className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
+                <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated
+              </div>
+              Grande Prairie · Wembley · Clairmont · County of GP
+            </div>
           </div>
           <div className="text-muted-foreground">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved

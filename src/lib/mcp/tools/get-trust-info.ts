@@ -3,13 +3,15 @@ import { defineTool } from "@lovable.dev/mcp-js";
 const TRUST = {
   credentials: [
     "Licensed, bonded, and insured",
+    "Proudly Canadian owned and operated",
     "10+ years in the cleaning industry",
     "Locally owned and operated in Grande Prairie",
   ],
   guarantees: [
     "Re-cleaning guarantee within 24 hours if you are not satisfied",
-    "Competitive rates with price matching",
-    "Ask about our zero cancellation fee policy",
+    "No cancellation fees",
+    "No late fees",
+    "Transparent pricing",
   ],
   certifications: [
     "WHMIS",

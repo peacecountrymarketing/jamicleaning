@@ -108,11 +108,12 @@ var CONTACT = {
   business_name: "JAMI Cleaning Inc",
   location: "Grande Prairie, Alberta",
   owners: ["Ramin Jami", "Leila Jami"],
-  phones: ["780-897-3077", "780-897-7444"],
+  phones: ["780-897-3077"],
   email: "Accounting@jamicleaninginc.com",
   social: { instagram: "@jamicleaninginc" },
-  hours: "Monday-Friday, 8:00 AM to 8:00 PM",
-  service_area: "Grande Prairie, Alberta and surrounding area"
+  hours: "Monday-Friday, 8:00 AM to 10:00 PM",
+  service_area: "Grande Prairie, Wembley, Clairmont, and the County of Grande Prairie, Alberta",
+  canadian_owned: true
 };
 var get_contact_info_default = defineTool3({
   name: "get_contact_info",
@@ -131,13 +132,15 @@ import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.24.0";
 var TRUST = {
   credentials: [
     "Licensed, bonded, and insured",
+    "Proudly Canadian owned and operated",
     "10+ years in the cleaning industry",
     "Locally owned and operated in Grande Prairie"
   ],
   guarantees: [
     "Re-cleaning guarantee within 24 hours if you are not satisfied",
-    "Competitive rates with price matching",
-    "Ask about our zero cancellation fee policy"
+    "No cancellation fees",
+    "No late fees",
+    "Transparent pricing"
   ],
   certifications: [
     "WHMIS",

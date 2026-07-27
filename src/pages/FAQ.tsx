@@ -7,28 +7,32 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFullAsset from "@/assets/logo-full.png.asset.json";
+import logoAsset from "@/assets/jami-logo-new.png.asset.json";
+import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 
 const PHONE_1 = "780-897-3077";
-const PHONE_2 = "780-897-7444";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
 const faqs = [
   {
     question: "What services does JAMI Cleaning Inc offer?",
     answer:
-      "We offer residential cleaning, commercial cleaning, vehicle detailing, yard maintenance, lawn services, snow removal, and garbage cleanup throughout Grande Prairie and the surrounding area.",
+      "We offer residential cleaning, commercial cleaning, vehicle detailing, yard maintenance, lawn services, weed spraying, pressure washing, snow removal, and garbage cleanup throughout Grande Prairie, Wembley, Clairmont, and the County of Grande Prairie.",
   },
   {
     question: "How do I get a quote?",
     answer:
-      "You can request a quote by filling out the contact form on our website, calling us at 780-897-3077, or emailing Accounting@jamicleaninginc.com. We typically respond within one business day.",
+      "Fill out the contact form, call 780-897-3077, or email Accounting@jamicleaninginc.com. We typically respond within one business day.",
+  },
+  {
+    question: "Do you charge cancellation fees?",
+    answer:
+      "No. We have zero cancellation fees. Reschedule or cancel your visit without hassle, ever.",
   },
   {
     question: "Do you serve both homes and businesses?",
     answer:
-      "Yes. We clean houses, apartments, offices, retail spaces, and other commercial properties. Our team is trained to handle different environments with the right products and standards.",
+      "Yes. We clean homes, offices, retail spaces, oilfield and industrial sites, healthcare facilities, Airbnb turnovers, post-construction sites, and more.",
   },
   {
     question: "What is your re-cleaning guarantee?",
@@ -38,32 +42,32 @@ const faqs = [
   {
     question: "Are you licensed, bonded, and insured?",
     answer:
-      "Yes. JAMI Cleaning Inc is licensed, bonded, and insured for your protection and peace of mind.",
+      "Yes. JAMI Cleaning Inc is licensed, bonded, and insured for your protection and peace of mind. We are also proudly Canadian owned and operated.",
   },
   {
     question: "What are your operating hours?",
     answer:
-      "Our standard hours are Monday through Friday, 8:00 AM to 8:00 PM. We can also accommodate special scheduling requests when needed.",
+      "Our standard hours are Monday through Friday, 8:00 AM to 10:00 PM. We can also accommodate special scheduling requests when needed.",
   },
   {
-    question: "Do you charge late fees?",
+    question: "How much does residential cleaning cost?",
     answer:
-      "No. We keep billing simple and predictable without surprise late fees.",
+      "Residential cleaning is $45 per hour, per employee. Choose a basic recurring clean or a deep clean, whichever fits your home.",
   },
   {
     question: "What is included in vehicle detailing?",
     answer:
-      "Interior and exterior cleaning, vacuuming, mats, windows, deodorizing, and clear coat protectant. Larger vehicles or vehicles that are very dirty may require additional time and cost.",
+      "Interior and exterior cleaning, vacuuming, mats, windows, deodorizing, and clear coat protectant. Larger or very dirty vehicles may require additional time and cost.",
   },
   {
     question: "What areas do you serve?",
     answer:
-      "We are based in Grande Prairie, Alberta and serve homes, businesses, vehicles, and yards in the local area.",
+      "We are based in Grande Prairie, Alberta and serve Grande Prairie, Wembley, Clairmont, and the surrounding County of Grande Prairie.",
   },
   {
     question: "Who owns JAMI Cleaning Inc?",
     answer:
-      "JAMI Cleaning Inc is locally owned and operated by Ramin and Leila Jami, who are committed to ongoing training, safety certifications, and high service standards.",
+      "JAMI Cleaning Inc is locally and Canadian owned and operated by Ramin and Leila Jami, committed to ongoing training, safety certifications, and high service standards.",
   },
 ];
 
@@ -75,7 +79,9 @@ const FAQ = () => {
       {/* Announcement bar */}
       <div className="bg-navy-gradient text-primary-foreground text-xs sm:text-sm">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 py-2">
-          <p className="opacity-90">Serving Grande Prairie homes, businesses, vehicles &amp; yards</p>
+          <p className="opacity-90 flex items-center gap-2">
+            <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
+          </p>
           <div className="flex items-center gap-4">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
@@ -90,11 +96,11 @@ const FAQ = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16 sm:h-20">
-          <a href="/" className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-9 w-auto" />
-            <div className="leading-tight">
-              <div className="font-bold text-lg tracking-tight">JAMI Cleaning Inc.</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">GRANDE PRAIRIE, AB</div>
+          <a href="/" className="flex items-center gap-3">
+            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-12 sm:h-14 w-auto" />
+            <div className="hidden sm:block leading-tight border-l border-border pl-3">
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Grande Prairie, AB</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🇨🇦 Canadian Owned</div>
             </div>
           </a>
 
@@ -202,11 +208,16 @@ const FAQ = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-background text-foreground py-4 border-t border-border">
+      <footer className="bg-background text-foreground py-6 border-t border-border">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-          <div className="flex items-center gap-2">
-            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 w-auto" />
-            <span className="text-muted-foreground">· Grande Prairie, AB</span>
+          <div className="flex items-center gap-4">
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
+            <div className="text-muted-foreground leading-relaxed">
+              <div className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
+                <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated
+              </div>
+              Grande Prairie · Wembley · Clairmont · County of GP
+            </div>
           </div>
           <div className="text-muted-foreground">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved
