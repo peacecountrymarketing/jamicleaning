@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Phone, Mail, ArrowRight, Menu, X, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/logo.png.asset.json";
-import logoFullAsset from "@/assets/logo-full.png.asset.json";
+import logoAsset from "@/assets/jami-logo-new.png.asset.json";
+import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 
 const PHONE_1 = "780-897-3077";
 const EMAIL = "Accounting@jamicleaninginc.com";
