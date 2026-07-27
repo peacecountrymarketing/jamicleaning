@@ -802,11 +802,11 @@ const Index = () => {
           <div className="flex items-center gap-4">
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
             <div className="text-muted-foreground leading-relaxed">
-              <div className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
-                <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated
+              <div className="font-semibold text-foreground mb-1 whitespace-pre-line">
+                🍁
+                {"\n"}Proudly Canadian owned & operated
+                {"\n"}Serving Grande Prairie, Wembley, Clairmont & the County of Grande Prairie
               </div>
-              Serving Grande Prairie, Wembley,{"\n"}
-              Clairmont & the County of Grande Prairie
             </div>
           </div>
           <div className="text-muted-foreground text-center md:text-right">
