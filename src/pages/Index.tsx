@@ -405,7 +405,7 @@ const Index = () => {
                     alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
                     className="w-full h-full object-cover object-top"
                   />
-                  <PhotoWatermark />
+                  <PhotoWatermark className="!top-3 !right-3 !bottom-auto" />
                 </div>
                 <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
                   <div>
