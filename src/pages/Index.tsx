@@ -15,6 +15,7 @@ import {
 import { toast } from "sonner";
 import heroImg from "@/assets/hero-cleaning.jpg";
 import residentialImg from "@/assets/residential.jpg";
+import residentialPhoto from "@/assets/residential-cleaning.jpg.asset.json";
 import commercialImg from "@/assets/commercial.jpg";
 import commercialPhoto from "@/assets/commercial-cleaning.jpg.asset.json";
 import vehicleImg from "@/assets/vehicle.jpg";
