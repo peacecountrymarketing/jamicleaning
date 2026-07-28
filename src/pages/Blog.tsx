@@ -195,6 +195,11 @@ const Blog = () => {
               </Button>
             </div>
           </div>
+          <div className="mt-10 flex justify-center">
+            <div className="rounded-full bg-white shadow-card-bold p-6 md:p-8">
+              <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-24 md:h-32 w-auto" />
+            </div>
+          </div>
         </div>
       </section>
 
