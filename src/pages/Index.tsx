@@ -502,6 +502,7 @@ const Index = () => {
       <section id="pricing" className="hidden md:block py-10 md:py-14 bg-muted/50">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-8">
+            <img src={logoIconAsset.url} alt="JAMI Cleaning Inc" className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-card shadow-card-bold mx-auto mb-4 p-1.5" />
             <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Pricing Guidance</div>
             <h2 className="text-3xl md:text-5xl font-bold">Transparent Pricing</h2>
             <p className="text-muted-foreground mt-4">
