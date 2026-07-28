@@ -37,6 +37,20 @@ const MapleLeaf = ({ className }: { className?: string }) => (
   />
 );
 
+const PhotoWatermark = ({ className = "" }: { className?: string }) => (
+  <div
+    className={`absolute bottom-2 right-2 md:bottom-3 md:right-3 z-10 h-9 w-9 md:h-10 md:w-10 rounded-full bg-background/95 backdrop-blur-sm shadow-card-bold ring-1 ring-primary/10 flex items-center justify-center p-1 ${className}`}
+    aria-hidden="true"
+  >
+    <img
+      src={logoAsset.url}
+      alt=""
+      className="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+);
+
 const PHONE_1 = "780-897-3077";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
