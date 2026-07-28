@@ -466,7 +466,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-20 w-20 md:h-24 md:w-24 rounded-full bg-primary-foreground/95 p-1.5 shadow-card-bold" />
+                <img src={logoIconAsset.url} alt="JAMI Cleaning Inc" className="h-20 w-20 md:h-24 md:w-24 rounded-full bg-primary-foreground/95 p-1.5 shadow-card-bold" />
                 <div className="text-xs uppercase tracking-widest font-bold text-accent">Our Promise</div>
               </div>
 
