@@ -197,8 +197,8 @@ const Blog = () => {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-full bg-white shadow-card-bold p-6 md:p-8">
-                <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-24 md:h-32 w-auto" />
+              <div className="rounded-full bg-white shadow-card-bold p-10 md:p-14">
+                <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 md:h-56 w-auto" />
               </div>
             </div>
           </div>
