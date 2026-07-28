@@ -42,7 +42,7 @@ const services = [
   {
     icon: Home,
     title: "Residential Cleaning",
-    img: residentialImg,
+    img: residentialPhoto.url,
     items: ["Kitchens, bathrooms & floors", "Recurring or one-time visits", "Move-in / move-out ready"],
   },
   {
