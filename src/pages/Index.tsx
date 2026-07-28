@@ -45,7 +45,7 @@ const PhotoWatermark = ({ className = "" }: { className?: string }) => (
     aria-hidden="true"
   >
     <img
-      src={logoAsset.url}
+      src={logoIconAsset.url}
       alt=""
       className="w-full h-full object-contain"
       loading="lazy"
