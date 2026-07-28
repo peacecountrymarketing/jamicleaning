@@ -265,6 +265,7 @@ const Index = () => {
                   <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                     <s.icon className="h-5 w-5 text-secondary" />
                   </div>
+                  <PhotoWatermark />
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-lg mb-3">{s.title}</h3>
