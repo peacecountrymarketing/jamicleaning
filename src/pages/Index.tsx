@@ -734,7 +734,7 @@ const Index = () => {
         <div className="container relative grid lg:grid-cols-5 gap-10 items-center">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-3">
-              <img src={logoIconAsset.url} alt="" aria-hidden="true" className="h-9 w-9 rounded-full bg-background/95 p-1 shadow-card-bold" />
+              <img src={logoIconAsset.url} alt="" aria-hidden="true" className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-background/95 p-1 shadow-card-bold" />
               <div className="text-xs uppercase tracking-widest font-bold text-accent">Get In Touch</div>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
