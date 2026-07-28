@@ -24,6 +24,7 @@ import yardImg from "@/assets/yard.jpg";
 import yardPhoto from "@/assets/yard-seasonal.jpg.asset.json";
 import logoAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
+import logoFullTransparentAsset from "@/assets/jami-logo-transparent.png.asset.json";
 import logoIconAsset from "@/assets/jami-icon.png.asset.json";
 
 import teamJamiImg from "@/assets/team-jami.png.asset.json";
