@@ -369,7 +369,7 @@ const Index = () => {
       <section id="about" className="py-10 md:py-14 bg-navy-gradient text-primary-foreground">
         <div className="container grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img src={logoIconAsset.url} alt="JAMI Cleaning logo" className="h-12 w-12 md:h-14 md:w-14 mb-3 -mt-[50px]" />
+            <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-16 md:h-20 w-auto mb-3 -mt-[50px] rounded-md bg-white p-2" />
             <div className="hidden md:block text-xs uppercase tracking-widest font-bold text-accent mb-3">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
             <p className="text-lg text-primary-foreground/80 mb-4">
