@@ -37,6 +37,20 @@ const MapleLeaf = ({ className }: { className?: string }) => (
   />
 );
 
+const PhotoWatermark = ({ className = "" }: { className?: string }) => (
+  <div
+    className={`absolute bottom-2 right-2 md:bottom-3 md:right-3 z-10 h-9 w-9 md:h-10 md:w-10 rounded-full bg-background/95 backdrop-blur-sm shadow-card-bold ring-1 ring-primary/10 flex items-center justify-center p-1 ${className}`}
+    aria-hidden="true"
+  >
+    <img
+      src={logoAsset.url}
+      alt=""
+      className="w-full h-full object-contain"
+      loading="lazy"
+    />
+  </div>
+);
+
 const PHONE_1 = "780-897-3077";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
@@ -251,6 +265,7 @@ const Index = () => {
                   <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                     <s.icon className="h-5 w-5 text-secondary" />
                   </div>
+                  <PhotoWatermark />
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-lg mb-3">{s.title}</h3>
@@ -382,12 +397,13 @@ const Index = () => {
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
             <div className="relative bg-background rounded-2xl overflow-hidden text-foreground shadow-bold border border-border">
               <div className="grid md:grid-cols-5">
-                <div className="md:col-span-2 h-64 md:h-auto">
+                <div className="md:col-span-2 h-64 md:h-auto relative">
                   <img
                     src={teamJamiImg.url}
                     alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
                     className="w-full h-full object-cover object-top"
                   />
+                  <PhotoWatermark />
                 </div>
                 <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
                   <div>
@@ -710,7 +726,10 @@ const Index = () => {
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
         <div className="container relative grid lg:grid-cols-5 gap-10 items-center">
           <div className="lg:col-span-2">
-            <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">Get In Touch</div>
+            <div className="flex items-center gap-3 mb-3">
+              <img src={logoAsset.url} alt="" aria-hidden="true" className="h-9 w-9 rounded-full bg-background/95 p-1 shadow-card-bold" />
+              <div className="text-xs uppercase tracking-widest font-bold text-accent">Get In Touch</div>
+            </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
               Ready to get your space handled?
             </h2>
