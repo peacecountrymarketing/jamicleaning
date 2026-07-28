@@ -68,7 +68,7 @@ const services = [
   {
     icon: Droplets,
     title: "Pressure Washing",
-    img: commercialImg,
+    img: pressureWashingPhoto.url,
     items: ["Driveways & sidewalks", "Drive-thrus & entrances", "Building exteriors"],
   },
 ];
