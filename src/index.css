@@ -19,8 +19,8 @@
     --primary: 222 55% 14%;
     --primary-foreground: 0 0% 100%;
 
-    /* Electric blue */
-    --secondary: 214 100% 52%;
+    /* Electric blue - matches logo */
+    --secondary: 207 100% 38%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 215 25% 96%;
@@ -35,7 +35,7 @@
 
     --border: 215 25% 90%;
     --input: 215 25% 90%;
-    --ring: 214 100% 52%;
+    --ring: 207 100% 38%;
 
     --charcoal: 220 15% 22%;
 
