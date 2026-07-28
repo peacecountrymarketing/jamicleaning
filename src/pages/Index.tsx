@@ -18,6 +18,7 @@ import residentialImg from "@/assets/residential.jpg";
 import commercialImg from "@/assets/commercial.jpg";
 import commercialPhoto from "@/assets/commercial-cleaning.jpg.asset.json";
 import vehicleImg from "@/assets/vehicle.jpg";
+import vehiclePhoto from "@/assets/vehicle-detailing.jpg.asset.json";
 import yardImg from "@/assets/yard.jpg";
 import logoAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
@@ -52,7 +53,7 @@ const services = [
   {
     icon: Car,
     title: "Vehicle Detailing",
-    img: vehicleImg,
+    img: vehiclePhoto.url,
     items: ["Interior & exterior detail", "Mats, windows, vacuuming", "Clear coat protectant"],
   },
   {
