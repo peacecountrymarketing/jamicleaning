@@ -463,7 +463,11 @@ const Index = () => {
         <div className="container relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">Our Promise</div>
+              <div className="flex items-center gap-3 mb-3">
+                <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-12 w-12 rounded-full bg-primary-foreground/95 p-1 shadow-card-bold" />
+                <div className="text-xs uppercase tracking-widest font-bold text-accent">Our Promise</div>
+              </div>
+
               <h2 className="text-3xl md:text-5xl font-bold mb-6">Reliable service, backed by standards.</h2>
               <p className="text-primary-foreground/80 text-lg mb-8">
                 Why choose JAMI Cleaning? We handle every detail, so you can enjoy a clean space without the stress. If something is not right, we will return within 24 hours to make it right. With transparent pricing, zero late or cancellation fees, and our Re-Cleaning Guarantee trying JAMI Cleaning is practically risk-free.
