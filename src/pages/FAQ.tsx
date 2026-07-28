@@ -221,7 +221,7 @@ const FAQ = () => {
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
             <div className="text-muted-foreground leading-relaxed">
               <div className="font-semibold text-foreground flex items-center gap-1.5 mb-1">
-                <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated
+                <span aria-hidden="true" className="hidden md:inline">🇨🇦</span> Proudly Canadian owned & operated
               </div>
               Grande Prairie · Wembley · Clairmont · County of GP
             </div>
