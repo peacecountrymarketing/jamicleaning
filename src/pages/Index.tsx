@@ -53,7 +53,7 @@ const services = [
   {
     icon: Car,
     title: "Vehicle Detailing",
-    img: vehicleImg,
+    img: vehiclePhoto.url,
     items: ["Interior & exterior detail", "Mats, windows, vacuuming", "Clear coat protectant"],
   },
   {
