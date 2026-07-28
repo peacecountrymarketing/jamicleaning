@@ -844,8 +844,7 @@ const Index = () => {
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-32 md:h-40 w-auto" />
             <div className="text-muted-foreground leading-relaxed">
               <div className="font-semibold text-foreground mb-1 whitespace-pre-line">
-                🍁
-                {"\n"}Proudly Canadian owned & operated
+                🍁 Proudly Canadian owned & operated
                 {"\n"}Serving Grande Prairie, Wembley, Clairmont & the County of Grande Prairie
               </div>
             </div>
