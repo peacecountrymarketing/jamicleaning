@@ -122,7 +122,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Announcement bar */}
       <div className="bg-navy-gradient text-primary-foreground text-xs sm:text-sm">
-        <div className="container flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 py-2">
+        <div className="container flex flex-col sm:flex-row items-end sm:items-center justify-between gap-1 sm:gap-4 py-2">
           <p className="opacity-90 hidden sm:flex items-center gap-2">
             Serving Grande Prairie, Wembley, Clairmont & the County of Grande Prairie, AB
           </p>
