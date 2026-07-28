@@ -26,6 +26,7 @@ import logoAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import teamJamiImg from "@/assets/team-jami.png.asset.json";
 import mapleLeafAsset from "@/assets/maple-leaf.png.asset.json";
+import pressureWashingPhoto from "@/assets/pressure-washing.jpg.asset.json";
 
 const MapleLeaf = ({ className }: { className?: string }) => (
   <img
@@ -67,7 +68,7 @@ const services = [
   {
     icon: Droplets,
     title: "Pressure Washing",
-    img: commercialImg,
+    img: pressureWashingPhoto.url,
     items: ["Driveways & sidewalks", "Drive-thrus & entrances", "Building exteriors"],
   },
 ];
