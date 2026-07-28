@@ -21,6 +21,7 @@ import commercialPhoto from "@/assets/commercial-cleaning.jpg.asset.json";
 import vehicleImg from "@/assets/vehicle.jpg";
 import vehiclePhoto from "@/assets/vehicle-detailing.jpg.asset.json";
 import yardImg from "@/assets/yard.jpg";
+import yardPhoto from "@/assets/yard-seasonal.jpg.asset.json";
 import logoAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import teamJamiImg from "@/assets/team-jami.png.asset.json";
@@ -60,7 +61,7 @@ const services = [
   {
     icon: Trees,
     title: "Yard & Seasonal",
-    img: yardImg,
+    img: yardPhoto.url,
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
   },
   {
