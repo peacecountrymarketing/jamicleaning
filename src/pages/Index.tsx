@@ -46,7 +46,7 @@ const services = [
   {
     icon: Building2,
     title: "Commercial Cleaning",
-    img: commercialImg,
+    img: commercialPhoto.url,
     items: ["Offices, retail & oilfield", "Sanitation-focused work", "Dependable scheduling"],
   },
   {
