@@ -174,30 +174,32 @@ const Blog = () => {
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-secondary/30 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-accent/20 blur-3xl" />
         <div className="container relative pt-8 pb-16 md:pt-12 md:pb-28">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-xs font-semibold uppercase tracking-wider mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              Cleaning Insights
+          <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-center">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                Cleaning Insights
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-6">
+                Cleaning Tips &amp; Insights for{" "}
+                <span className="bg-electric-gradient bg-clip-text text-transparent">Grande Prairie</span>
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8">
+                Practical advice for homes, businesses, vehicles, and yards in Grande Prairie, Alberta. Learn how to maintain a cleaner space and when to call the professionals.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
+                  <a href="/#contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base">
+                  <a href={`tel:${PHONE_1}`}><Phone className="mr-2 h-4 w-4" /> Call {PHONE_1}</a>
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-6">
-              Cleaning Tips &amp; Insights for{" "}
-              <span className="bg-electric-gradient bg-clip-text text-transparent">Grande Prairie</span>
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8">
-              Practical advice for homes, businesses, vehicles, and yards in Grande Prairie, Alberta. Learn how to maintain a cleaner space and when to call the professionals.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
-                <a href="/#contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base">
-                <a href={`tel:${PHONE_1}`}><Phone className="mr-2 h-4 w-4" /> Call {PHONE_1}</a>
-              </Button>
-            </div>
-          </div>
-          <div className="mt-10 flex justify-center">
-            <div className="rounded-full bg-white shadow-card-bold p-6 md:p-8">
-              <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-24 md:h-32 w-auto" />
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-full bg-white shadow-card-bold p-6 md:p-8">
+                <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-24 md:h-32 w-auto" />
+              </div>
             </div>
           </div>
         </div>
