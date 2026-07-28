@@ -726,7 +726,10 @@ const Index = () => {
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
         <div className="container relative grid lg:grid-cols-5 gap-10 items-center">
           <div className="lg:col-span-2">
-            <div className="text-xs uppercase tracking-widest font-bold text-accent mb-3">Get In Touch</div>
+            <div className="flex items-center gap-3 mb-3">
+              <img src={logoAsset.url} alt="" aria-hidden="true" className="h-9 w-9 rounded-full bg-background/95 p-1 shadow-card-bold" />
+              <div className="text-xs uppercase tracking-widest font-bold text-accent">Get In Touch</div>
+            </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
               Ready to get your space handled?
             </h2>
