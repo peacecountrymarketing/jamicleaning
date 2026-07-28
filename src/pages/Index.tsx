@@ -61,7 +61,7 @@ const services = [
   {
     icon: Trees,
     title: "Yard & Seasonal",
-    img: yardImg,
+    img: yardPhoto.url,
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
   },
   {
