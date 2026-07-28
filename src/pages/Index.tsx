@@ -397,12 +397,13 @@ const Index = () => {
             <div className="absolute -inset-4 bg-electric-gradient rounded-2xl opacity-20 blur-2xl" />
             <div className="relative bg-background rounded-2xl overflow-hidden text-foreground shadow-bold border border-border">
               <div className="grid md:grid-cols-5">
-                <div className="md:col-span-2 h-64 md:h-auto">
+                <div className="md:col-span-2 h-64 md:h-auto relative">
                   <img
                     src={teamJamiImg.url}
                     alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
                     className="w-full h-full object-cover object-top"
                   />
+                  <PhotoWatermark />
                 </div>
                 <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-between">
                   <div>
