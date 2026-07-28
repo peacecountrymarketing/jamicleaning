@@ -149,24 +149,31 @@ const FAQ = () => {
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-secondary/30 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-accent/20 blur-3xl" />
         <div className="container relative pt-8 pb-16 md:pt-12 md:pb-28">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-xs font-semibold uppercase tracking-wider mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              Questions &amp; Answers
+          <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-center">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                Questions &amp; Answers
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-6">
+                Frequently Asked <span className="bg-electric-gradient bg-clip-text text-transparent">Questions</span>
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8">
+                Quick answers about our services, pricing, and how we work in Grande Prairie. Still have a question? Call or email us directly.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
+                  <a href="/#contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base">
+                  <a href={`tel:${PHONE_1}`}><Phone className="mr-2 h-4 w-4" /> Call {PHONE_1}</a>
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-6">
-              Frequently Asked <span className="bg-electric-gradient bg-clip-text text-transparent">Questions</span>
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8">
-              Quick answers about our services, pricing, and how we work in Grande Prairie. Still have a question? Call or email us directly.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
-                <a href="/#contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base">
-                <a href={`tel:${PHONE_1}`}><Phone className="mr-2 h-4 w-4" /> Call {PHONE_1}</a>
-              </Button>
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-full bg-white shadow-card-bold p-10 md:p-14">
+                <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-40 md:h-56 w-auto" />
+              </div>
             </div>
           </div>
         </div>
