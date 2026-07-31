@@ -168,6 +168,7 @@ const Index = () => {
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
             <a href="#pricing" className="hover:text-secondary transition-colors">Pricing</a>
             <a href="#process" className="hover:text-secondary transition-colors">Process</a>
+            <a href="#results" className="hover:text-secondary transition-colors">Results</a>
             <a href="#guarantee" className="hover:text-secondary transition-colors">Guarantee</a>
             <a href="#about" className="hover:text-secondary transition-colors">About</a>
             <a href="/faq" className="hover:text-secondary transition-colors">FAQ</a>
@@ -194,6 +195,7 @@ const Index = () => {
               <a href="#services" onClick={() => setMobileOpen(false)}>Services</a>
               <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing</a>
               <a href="#process" onClick={() => setMobileOpen(false)}>Process</a>
+              <a href="#results" onClick={() => setMobileOpen(false)}>Results</a>
               <a href="#guarantee" onClick={() => setMobileOpen(false)}>Guarantee</a>
               <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
               <a href="/faq" onClick={() => setMobileOpen(false)}>FAQ</a>
