@@ -108,6 +108,7 @@ const beforeAfter = [
   {
     title: "Commercial Office Cleaning",
     caption: "Offices, floors, and washrooms restored after hours.",
+    beforeUrl: commercialBeforeImg.url,
   },
   {
     title: "Lawn Care & Mowing",
