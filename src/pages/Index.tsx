@@ -92,9 +92,25 @@ const services = [
 
 const trustPoints = [
   { icon: Shield, label: "Licensed, Bonded & Insured" },
+  { icon: Users, label: "Locally & Family Owned" },
   { icon: CheckCircle2, label: "No Cancellation Fees" },
-  { icon: Award, label: "10+ Years Experience" },
+  { icon: Award, label: "10+ Years of Experience" },
   { icon: MapleLeaf, label: "Canadian Owned & Operated\u00a0" },
+];
+
+const beforeAfter = [
+  {
+    title: "Residential Kitchen Deep Clean",
+    caption: "Grande Prairie home, full kitchen reset.",
+  },
+  {
+    title: "Vehicle Interior Detailing",
+    caption: "Interior detail with mats, seats, and glass.",
+  },
+  {
+    title: "Driveway Pressure Washing",
+    caption: "Exterior concrete restored with pressure washing.",
+  },
 ];
 
 const steps = [
