@@ -27,7 +27,7 @@ import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullTransparentAsset from "@/assets/jami-logo-transparent.png.asset.json";
 import logoIconAsset from "@/assets/jami-icon.png.asset.json";
 
-import teamJamiImg from "@/assets/team-owners-photo.png.asset.json";
+import teamJamiImg from "@/assets/team-owners-logo.png.asset.json";
 import mapleLeafAsset from "@/assets/maple-leaf.png.asset.json";
 import lawnBeforeImg from "@/assets/lawn-before.jpg.asset.json";
 import pressureWashingPhoto from "@/assets/pressure-washing.jpg.asset.json";
