@@ -109,6 +109,7 @@ const beforeAfter = [
     title: "New Build Construction Clean",
     caption: "Post-construction dust, debris, and paint haul-out, handed over move-in ready.",
     beforeUrl: newBuildBeforeImg.url,
+    afterUrl: newBuildAfterImg.url,
   },
   {
     title: "Commercial Office Cleaning",
