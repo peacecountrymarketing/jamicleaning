@@ -105,7 +105,7 @@ const trustPoints = [
 const beforeAfter = [
   {
     title: "New Build Construction Clean",
-    caption: "Post-construction dust, debris, and paint haul-out — handed over move-in ready.",
+    caption: "Post-construction dust, debris, and paint haul-out, handed over move-in ready.",
   },
   {
     title: "Commercial Office Cleaning",
