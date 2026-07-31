@@ -78,7 +78,7 @@ const services = [
   },
   {
     icon: Trees,
-    title: "Yard & Seasonal",
+    title: "Lawn Care",
     img: yardPhoto.url,
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
   },
@@ -619,7 +619,7 @@ const Index = () => {
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-2">Outdoor</div>
-                  <h3 className="text-2xl font-bold">Yard & Seasonal</h3>
+                  <h3 className="text-2xl font-bold">Lawn Care</h3>
                 </div>
                 <div className="text-right">
                   <div className="text-3xl font-bold text-secondary leading-none">Custom</div>
@@ -872,7 +872,7 @@ const Index = () => {
                       <SelectItem value="residential">Residential Cleaning</SelectItem>
                       <SelectItem value="commercial">Commercial Cleaning</SelectItem>
                       <SelectItem value="vehicle">Vehicle Detailing</SelectItem>
-                      <SelectItem value="yard">Yard Maintenance</SelectItem>
+                      <SelectItem value="yard">Lawn Care</SelectItem>
                       <SelectItem value="pressure">Pressure Washing</SelectItem>
                       <SelectItem value="snow">Snow Removal</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
