@@ -393,7 +393,7 @@ const Index = () => {
             <div className="hidden md:block text-xs uppercase tracking-widest font-bold text-accent mb-3">About JAMI</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Locally and Family Owned</h2>
             <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent mb-5">
-              <Users className="h-4 w-4" /> Locally and Family Owned
+              <Users className="h-4 w-4" /> Owner Operated in Grande Prairie
             </div>
             <p className="text-lg text-primary-foreground/80 mb-4">
               JAMI Cleaning Inc is a locally and family owned business, owned and operated by{" "}
