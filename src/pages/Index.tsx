@@ -30,6 +30,7 @@ import logoIconAsset from "@/assets/jami-icon.png.asset.json";
 import teamJamiImg from "@/assets/team-owners-logo.png.asset.json";
 import mapleLeafAsset from "@/assets/maple-leaf.png.asset.json";
 import lawnBeforeImg from "@/assets/lawn-before.jpg.asset.json";
+import lawnAfterImg from "@/assets/lawn-after.jpg.asset.json";
 import commercialBefore2Img from "@/assets/commercial-before-2.jpg.asset.json";
 import pressureWashingPhoto from "@/assets/pressure-washing.jpg.asset.json";
 
@@ -114,6 +115,7 @@ const beforeAfter = [
     title: "Lawn Care & Mowing",
     caption: "Overgrown yard mowed, edged, and cleaned up.",
     beforeUrl: lawnBeforeImg.url,
+    afterUrl: lawnAfterImg.url,
   },
 ];
 
