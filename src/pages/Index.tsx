@@ -310,7 +310,9 @@ const Index = () => {
                 <InfinityIcon className="h-4 w-4 text-secondary" /> Built For Both <InfinityIcon className="h-4 w-4 text-secondary" />
               </div>
               <h2 className="text-3xl md:text-5xl font-bold">Every space, one trusted team.</h2>
-              <p className="text-muted-foreground mt-3">From homes to hospitals, oilfield camps to Airbnbs, we clean it all.</p>
+              <p className="text-muted-foreground mt-3 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+                From homes and Airbnbs to offices, hospitals, and oilfield camps, we clean it all.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
