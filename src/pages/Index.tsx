@@ -176,11 +176,10 @@ const Index = () => {
             </div>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 text-base font-medium whitespace-nowrap">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 text-[21px] font-medium whitespace-nowrap">
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
             <a href="#pricing" className="hover:text-secondary transition-colors">Pricing</a>
             <a href="#process" className="hover:text-secondary transition-colors">Process</a>
-            <a href="#results" className="hover:text-secondary transition-colors">Results</a>
             <a href="#guarantee" className="hover:text-secondary transition-colors">Guarantee</a>
             <a href="#about" className="hover:text-secondary transition-colors">About</a>
             <a href="/faq" className="hover:text-secondary transition-colors">FAQ</a>
