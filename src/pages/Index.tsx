@@ -105,8 +105,8 @@ const beforeAfter = [
     caption: "Grande Prairie home, full kitchen reset.",
   },
   {
-    title: "Vehicle Interior Detailing",
-    caption: "Interior detail with mats, seats, and glass.",
+    title: "Commercial Office Cleaning",
+    caption: "Offices, floors, and washrooms restored after hours.",
   },
   {
     title: "Lawn Care & Mowing",
