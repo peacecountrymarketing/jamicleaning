@@ -765,10 +765,6 @@ const Index = () => {
               </article>
             ))}
           </div>
-
-          <p className="text-xs text-muted-foreground text-center mt-6">
-            Placeholder images shown. Approved JAMI Cleaning before-and-after photos will replace these.
-          </p>
         </div>
       </section>
 
