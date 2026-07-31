@@ -188,8 +188,8 @@ const Index = () => {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button asChild className="hidden sm:inline-flex bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
-              <a href="#contact">Request a Quote <ArrowRight className="ml-1 h-4 w-4" /></a>
+            <Button asChild size="lg" className="hidden sm:inline-flex bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-[19px] h-12 px-6">
+              <a href="#contact">Request a Quote <ArrowRight className="ml-1 h-5 w-5" /></a>
             </Button>
             <button
               className="lg:hidden p-2"
