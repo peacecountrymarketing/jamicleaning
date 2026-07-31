@@ -322,7 +322,7 @@ const Index = () => {
                   <Home className="h-8 w-8 text-accent" />
                   <div>
                     <div className="text-xs uppercase tracking-widest text-accent font-bold">Residential</div>
-                    <h3 className="text-2xl md:text-3xl font-bold">For homes</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold">For Homes</h3>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-px bg-primary-foreground/10">
