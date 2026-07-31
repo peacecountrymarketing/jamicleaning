@@ -728,19 +728,28 @@ const Index = () => {
             {beforeAfter.map((item) => (
               <article key={item.title} className="rounded-xl overflow-hidden bg-card border border-border shadow-card-bold">
                 <div className="grid grid-cols-2 gap-px bg-border">
-                  {["Before", "After"].map((phase) => (
-                    <div key={phase} className="relative bg-muted aspect-[4/5] sm:aspect-square flex flex-col items-center justify-center gap-2 text-center px-3">
-                      <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
-                      <span className="text-xs text-muted-foreground">
-                        {phase} photo
-                        <br />
-                        coming soon
-                      </span>
-                      <span className={`absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider ${phase === "Before" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
-                        {phase}
-                      </span>
-                    </div>
-                  ))}
+                  {(["Before", "After"] as const).map((phase) => {
+                    const photo = phase === "Before" ? (item as { beforeUrl?: string }).beforeUrl : (item as { afterUrl?: string }).afterUrl;
+                    return (
+                      <div key={phase} className="relative bg-muted aspect-[4/5] sm:aspect-square flex flex-col items-center justify-center gap-2 text-center px-3 overflow-hidden">
+                        {photo ? (
+                          <img src={photo} alt={`${phase} - ${item.title} by JAMI Cleaning Inc`} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                        ) : (
+                          <>
+                            <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
+                            <span className="text-xs text-muted-foreground">
+                              {phase} photo
+                              <br />
+                              coming soon
+                            </span>
+                          </>
+                        )}
+                        <span className={`absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider ${phase === "Before" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
+                          {phase}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-lg mb-1">{item.title}</h3>
