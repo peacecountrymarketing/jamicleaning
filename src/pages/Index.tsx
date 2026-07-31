@@ -108,8 +108,8 @@ const beforeAfter = [
     caption: "Interior detail with mats, seats, and glass.",
   },
   {
-    title: "Driveway Pressure Washing",
-    caption: "Exterior concrete restored with pressure washing.",
+    title: "Lawn Care & Mowing",
+    caption: "Overgrown yard mowed, edged, and cleaned up.",
   },
 ];
 
