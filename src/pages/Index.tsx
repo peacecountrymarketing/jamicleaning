@@ -111,6 +111,7 @@ const beforeAfter = [
   {
     title: "Lawn Care & Mowing",
     caption: "Overgrown yard mowed, edged, and cleaned up.",
+    beforeUrl: lawnBeforeImg.url,
   },
 ];
 
