@@ -327,12 +327,12 @@ const Index = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-px bg-primary-foreground/10">
                   {[
-                    { icon: Home, label: "Recurring home cleans" },
-                    { icon: Sparkles, label: "Deep cleaning" },
-                    { icon: Truck, label: "Move-in / move-out" },
-                    { icon: Hotel, label: "Airbnb turnovers" },
-                    { icon: Hammer, label: "Post-construction" },
-                    { icon: Droplets, label: "Window cleaning" },
+                    { icon: Home, label: "Recurring Home Cleans" },
+                    { icon: Sparkles, label: "Deep Cleaning" },
+                    { icon: Truck, label: "Move-In / Move-Out Cleaning" },
+                    { icon: Hotel, label: "Airbnb Turnovers" },
+                    { icon: Hammer, label: "Post-Construction Cleaning" },
+                    { icon: Droplets, label: "Window Cleaning" },
                   ].map((s) => (
                     <div key={s.label} className="bg-primary p-4 flex items-center gap-3">
                       <s.icon className="h-5 w-5 text-accent flex-shrink-0" />
