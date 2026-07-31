@@ -709,6 +709,49 @@ const Index = () => {
 
 
 
+      {/* BEFORE & AFTER */}
+      <section id="results" className="py-10 md:py-14">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Our Work</div>
+            <h2 className="text-3xl md:text-5xl font-bold">See the JAMI Difference</h2>
+            <p className="text-muted-foreground mt-4 text-base md:text-lg">
+              Real results from the homes, businesses, and properties we care for.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {beforeAfter.map((item) => (
+              <article key={item.title} className="rounded-xl overflow-hidden bg-card border border-border shadow-card-bold">
+                <div className="grid grid-cols-2 gap-px bg-border">
+                  {["Before", "After"].map((phase) => (
+                    <div key={phase} className="relative bg-muted aspect-[4/5] sm:aspect-square flex flex-col items-center justify-center gap-2 text-center px-3">
+                      <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
+                      <span className="text-xs text-muted-foreground">
+                        {phase} photo
+                        <br />
+                        coming soon
+                      </span>
+                      <span className={`absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider ${phase === "Before" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
+                        {phase}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.caption}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="text-xs text-muted-foreground text-center mt-6">
+            Placeholder images shown. Approved JAMI Cleaning before-and-after photos will replace these.
+          </p>
+        </div>
+      </section>
+
       {/* REVIEWS */}
 
       <section className="py-10 md:py-14 bg-muted/50">
