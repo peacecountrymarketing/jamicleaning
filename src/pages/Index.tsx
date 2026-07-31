@@ -94,7 +94,7 @@ const services = [
 
 const trustPoints = [
   { icon: Shield, label: "Licensed, Bonded & Insured" },
-  { icon: Users, label: "Locally & Family Owned" },
+  { icon: Users, label: "Locally Owned & Family Run" },
   { icon: CheckCircle2, label: "No Cancellation Fees" },
   { icon: Award, label: "10+ Years of Experience" },
   { icon: MapleLeaf, label: "Canadian Owned & Operated\u00a0" },
