@@ -635,10 +635,10 @@ const Index = () => {
                 Custom pricing based on the property. Contact us for a personalized quote.
               </p>
               <ul className="space-y-2 text-sm border-t border-border pt-4">
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Lawn mowing, edging & trimming</span><span className="font-bold">custom quote</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Weed spraying</span><span className="font-bold">custom quote</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Aeration & dethatching</span><span className="font-bold">custom quote</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Snow removal & garbage cleanup</span><span className="font-bold">custom quote</span></li>
+                <li className="text-muted-foreground">Lawn mowing, edging & trimming</li>
+                <li className="text-muted-foreground">Weed spraying</li>
+                <li className="text-muted-foreground">Aeration & dethatching</li>
+                <li className="text-muted-foreground">Snow removal & garbage cleanup</li>
               </ul>
               <p className="text-xs text-muted-foreground italic mt-3">Lawn edging is included with mowing and trimming service.</p>
             </article>
