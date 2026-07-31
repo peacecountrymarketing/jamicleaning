@@ -104,8 +104,8 @@ const trustPoints = [
 
 const beforeAfter = [
   {
-    title: "Residential Kitchen Deep Clean",
-    caption: "Grande Prairie home, full kitchen reset.",
+    title: "New Build Construction Clean",
+    caption: "Post-construction dust, debris, and paint haul-out — handed over move-in ready.",
   },
   {
     title: "Commercial Office Cleaning",
