@@ -176,7 +176,7 @@ const Index = () => {
             </div>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 text-[21px] font-medium whitespace-nowrap">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 text-[19px] font-medium whitespace-nowrap">
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
             <a href="#pricing" className="hover:text-secondary transition-colors">Pricing</a>
             <a href="#process" className="hover:text-secondary transition-colors">Process</a>
