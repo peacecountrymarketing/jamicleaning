@@ -452,7 +452,7 @@ const Index = () => {
                     </p>
                     <div className="text-6xl font-bold bg-electric-gradient bg-clip-text text-transparent leading-none text-right mt-2">"</div>
                   </div>
-                  <div className="flex items-center gap-3 pt-6 mt-4 border-t border-border">
+                  <div className="flex items-center gap-3 pt-6 mt-4 border-t border-border md:-ml-8">
                     <img src={logoIconAsset.url} alt="JAMI Cleaning Inc" className="h-16 w-16 rounded-full bg-background border border-border p-0.5 shadow-sm" />
                     <div>
                       <div className="font-bold">Ramin &amp; Leila Jami</div>
