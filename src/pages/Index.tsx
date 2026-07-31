@@ -27,7 +27,7 @@ import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
 import logoFullTransparentAsset from "@/assets/jami-logo-transparent.png.asset.json";
 import logoIconAsset from "@/assets/jami-icon.png.asset.json";
 
-import teamJamiImg from "@/assets/team-jami.png.asset.json";
+import teamJamiImg from "@/assets/team-owners-photo.png.asset.json";
 import mapleLeafAsset from "@/assets/maple-leaf.png.asset.json";
 import pressureWashingPhoto from "@/assets/pressure-washing.jpg.asset.json";
 
@@ -431,7 +431,7 @@ const Index = () => {
                   <img
                     src={teamJamiImg.url}
                     alt="Ramin and Leila Jami, owners of JAMI Cleaning Inc"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[center_25%]"
                   />
                   
                 </div>
