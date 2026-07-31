@@ -353,17 +353,17 @@ const Index = () => {
                   <Building2 className="h-8 w-8" />
                   <div>
                     <div className="text-xs uppercase tracking-widest font-bold opacity-80">Commercial & Industrial</div>
-                    <h3 className="text-2xl md:text-3xl font-bold">For businesses</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold">For Businesses</h3>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-px bg-secondary-foreground/10">
                   {[
-                    { icon: Briefcase, label: "Office cleaning" },
-                    { icon: ShoppingBag, label: "Retail spaces" },
-                    { icon: HardHat, label: "Oilfield & industrial" },
-                    { icon: Stethoscope, label: "Healthcare facilities*" },
-                    { icon: Hammer, label: "Post-construction" },
-                    { icon: Droplets, label: "Pressure washing" },
+                    { icon: Briefcase, label: "Office Cleaning" },
+                    { icon: ShoppingBag, label: "Retail Spaces" },
+                    { icon: HardHat, label: "Oilfield & Industrial" },
+                    { icon: Stethoscope, label: "Healthcare Facility Cleaning" },
+                    { icon: Hammer, label: "Post-Construction Cleaning" },
+                    { icon: Droplets, label: "Pressure Washing" },
                   ].map((s) => (
                     <div key={s.label} className="bg-secondary p-4 flex items-center gap-3">
                       <s.icon className="h-5 w-5 flex-shrink-0" />
@@ -372,9 +372,11 @@ const Index = () => {
                   ))}
                 </div>
                 <div className="p-6 md:p-8">
-                  <p className="text-xs opacity-80 mb-3">*Owner/operators hold Bloodborne Pathogens certification.</p>
+                  <p className="text-sm opacity-90 mb-3">
+                    Healthcare Facility Cleaning: our owners are certified in Bloodborne Pathogens safety training.
+                  </p>
                   <a href="#contact" className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all">
-                    Schedule a walkthrough <ArrowRight className="h-4 w-4" />
+                    Schedule a Walkthrough <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>
