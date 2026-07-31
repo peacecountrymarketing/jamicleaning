@@ -595,9 +595,9 @@ const Index = () => {
               </div>
               <p className="text-muted-foreground text-sm mb-5">Priced per visit on a schedule that fits your space. Longer commitments unlock better rates.</p>
               <ul className="space-y-2 text-sm border-t border-border pt-4">
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Offices, retail & clinics</span><span className="font-bold">custom quote</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Oilfield & industrial</span><span className="font-bold">custom quote</span></li>
-                <li className="flex items-center justify-between"><span className="text-muted-foreground">Post-construction cleanup</span><span className="font-bold">custom quote</span></li>
+                <li className="text-muted-foreground">Offices, retail & clinics</li>
+                <li className="text-muted-foreground">Oilfield & industrial</li>
+                <li className="text-muted-foreground">Post-construction cleanup</li>
               </ul>
             </article>
 
