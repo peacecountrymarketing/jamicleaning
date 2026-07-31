@@ -640,7 +640,7 @@ const Index = () => {
                 <li className="text-muted-foreground">Aeration & dethatching</li>
                 <li className="text-muted-foreground">Snow removal & garbage cleanup</li>
               </ul>
-              <p className="text-xs text-muted-foreground italic mt-3">Lawn edging is included with mowing and trimming service.</p>
+              
             </article>
           </div>
 
