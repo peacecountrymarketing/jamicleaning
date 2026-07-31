@@ -391,10 +391,14 @@ const Index = () => {
           <div>
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-16 md:h-20 w-auto mb-3 -mt-[50px] rounded-md bg-white p-2" />
             <div className="hidden md:block text-xs uppercase tracking-widest font-bold text-accent mb-3">About JAMI</div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Locally and Family Owned</h2>
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent mb-5">
+              <Users className="h-4 w-4" /> Locally and Family Owned
+            </div>
             <p className="text-lg text-primary-foreground/80 mb-4">
-              JAMI Cleaning Inc is owned and operated by <strong className="text-primary-foreground">Ramin</strong> and{" "}
-              <strong className="text-primary-foreground">Leila Jami</strong>, a Grande Prairie team with 10+ years in the
+              JAMI Cleaning Inc is a locally and family owned business, owned and operated by{" "}
+              <strong className="text-primary-foreground">Ramin</strong> and{" "}
+              <strong className="text-primary-foreground">Leila Jami</strong>, a Grande Prairie couple with 10+ years in the
               cleaning industry and a commitment to ongoing training and high service standards.
             </p>
             <p className="text-primary-foreground/70 mb-6">
