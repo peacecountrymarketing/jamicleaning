@@ -33,6 +33,7 @@ import lawnBeforeImg from "@/assets/lawn-before.jpg.asset.json";
 import lawnAfterImg from "@/assets/lawn-after.jpg.asset.json";
 import commercialBefore2Img from "@/assets/commercial-before-2.jpg.asset.json";
 import commercialBefore3Img from "@/assets/commercial-before-3.jpg.asset.json";
+import newBuildBeforeImg from "@/assets/newbuild-before.jpg.asset.json";
 import pressureWashingPhoto from "@/assets/pressure-washing.jpg.asset.json";
 
 const MapleLeaf = ({ className }: { className?: string }) => (
@@ -106,6 +107,7 @@ const beforeAfter = [
   {
     title: "New Build Construction Clean",
     caption: "Post-construction dust, debris, and paint haul-out, handed over move-in ready.",
+    beforeUrl: newBuildBeforeImg.url,
   },
   {
     title: "Commercial Office Cleaning",
