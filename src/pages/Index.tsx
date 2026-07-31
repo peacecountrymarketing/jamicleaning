@@ -3,7 +3,7 @@ import {
   Phone, Mail, MapPin, Clock, Shield, Award, CheckCircle2, ArrowRight,
   Home, Building2, Car, Trees, Star, Sparkles, ClipboardList, CalendarCheck,
   Menu, X, Infinity as InfinityIcon, Droplets, Hotel, HardHat, Stethoscope,
-  Briefcase, ShoppingBag, Truck, Hammer,
+  Briefcase, ShoppingBag, Truck, Hammer, Users, ImageIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -92,9 +92,25 @@ const services = [
 
 const trustPoints = [
   { icon: Shield, label: "Licensed, Bonded & Insured" },
+  { icon: Users, label: "Locally & Family Owned" },
   { icon: CheckCircle2, label: "No Cancellation Fees" },
-  { icon: Award, label: "10+ Years Experience" },
+  { icon: Award, label: "10+ Years of Experience" },
   { icon: MapleLeaf, label: "Canadian Owned & Operated\u00a0" },
+];
+
+const beforeAfter = [
+  {
+    title: "Residential Kitchen Deep Clean",
+    caption: "Grande Prairie home, full kitchen reset.",
+  },
+  {
+    title: "Vehicle Interior Detailing",
+    caption: "Interior detail with mats, seats, and glass.",
+  },
+  {
+    title: "Driveway Pressure Washing",
+    caption: "Exterior concrete restored with pressure washing.",
+  },
 ];
 
 const steps = [
@@ -139,19 +155,20 @@ const Index = () => {
 
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container flex items-center justify-between h-16 sm:h-20">
-          <a href="#" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-12 sm:h-14 w-auto" />
-            <div className="hidden sm:block leading-tight border-l border-border pl-3">
+        <div className="container flex items-center justify-between gap-3 h-20 sm:h-24">
+          <a href="#" className="flex items-center gap-3 min-w-0">
+            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-14 sm:h-16 lg:h-[72px] w-auto max-w-[210px] object-contain" />
+            <div className="hidden sm:block lg:hidden xl:block leading-tight border-l border-border pl-3">
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Grande Prairie, AB</div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🍁 PROUDLY CANADIAN</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🍁 Proudly Canadian</div>
             </div>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium whitespace-nowrap">
             <a href="#services" className="hover:text-secondary transition-colors">Services</a>
             <a href="#pricing" className="hover:text-secondary transition-colors">Pricing</a>
             <a href="#process" className="hover:text-secondary transition-colors">Process</a>
+            <a href="#results" className="hover:text-secondary transition-colors">Results</a>
             <a href="#guarantee" className="hover:text-secondary transition-colors">Guarantee</a>
             <a href="#about" className="hover:text-secondary transition-colors">About</a>
             <a href="/faq" className="hover:text-secondary transition-colors">FAQ</a>
@@ -178,6 +195,7 @@ const Index = () => {
               <a href="#services" onClick={() => setMobileOpen(false)}>Services</a>
               <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing</a>
               <a href="#process" onClick={() => setMobileOpen(false)}>Process</a>
+              <a href="#results" onClick={() => setMobileOpen(false)}>Results</a>
               <a href="#guarantee" onClick={() => setMobileOpen(false)}>Guarantee</a>
               <a href="#about" onClick={() => setMobileOpen(false)}>About</a>
               <a href="/faq" onClick={() => setMobileOpen(false)}>FAQ</a>
@@ -294,7 +312,9 @@ const Index = () => {
                 <InfinityIcon className="h-4 w-4 text-secondary" /> Built For Both <InfinityIcon className="h-4 w-4 text-secondary" />
               </div>
               <h2 className="text-3xl md:text-5xl font-bold">Every space, one trusted team.</h2>
-              <p className="text-muted-foreground mt-3">From homes to hospitals, oilfield camps to Airbnbs, we clean it all.</p>
+              <p className="text-muted-foreground mt-3 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+                From homes and Airbnbs to offices, hospitals, and oilfield camps, we clean it all.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -304,17 +324,17 @@ const Index = () => {
                   <Home className="h-8 w-8 text-accent" />
                   <div>
                     <div className="text-xs uppercase tracking-widest text-accent font-bold">Residential</div>
-                    <h3 className="text-2xl md:text-3xl font-bold">For homes</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold">For Homes</h3>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-px bg-primary-foreground/10">
                   {[
-                    { icon: Home, label: "Recurring home cleans" },
-                    { icon: Sparkles, label: "Deep cleaning" },
-                    { icon: Truck, label: "Move-in / move-out" },
-                    { icon: Hotel, label: "Airbnb turnovers" },
-                    { icon: Hammer, label: "Post-construction" },
-                    { icon: Droplets, label: "Window cleaning" },
+                    { icon: Home, label: "Recurring Home Cleans" },
+                    { icon: Sparkles, label: "Deep Cleaning" },
+                    { icon: Truck, label: "Move-In / Move-Out Cleaning" },
+                    { icon: Hotel, label: "Airbnb Turnovers" },
+                    { icon: Hammer, label: "Post-Construction Cleaning" },
+                    { icon: Droplets, label: "Window Cleaning" },
                   ].map((s) => (
                     <div key={s.label} className="bg-primary p-4 flex items-center gap-3">
                       <s.icon className="h-5 w-5 text-accent flex-shrink-0" />
@@ -335,17 +355,17 @@ const Index = () => {
                   <Building2 className="h-8 w-8" />
                   <div>
                     <div className="text-xs uppercase tracking-widest font-bold opacity-80">Commercial & Industrial</div>
-                    <h3 className="text-2xl md:text-3xl font-bold">For businesses</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold">For Businesses</h3>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-px bg-secondary-foreground/10">
                   {[
-                    { icon: Briefcase, label: "Office cleaning" },
-                    { icon: ShoppingBag, label: "Retail spaces" },
-                    { icon: HardHat, label: "Oilfield & industrial" },
-                    { icon: Stethoscope, label: "Healthcare facilities*" },
-                    { icon: Hammer, label: "Post-construction" },
-                    { icon: Droplets, label: "Pressure washing" },
+                    { icon: Briefcase, label: "Office Cleaning" },
+                    { icon: ShoppingBag, label: "Retail Spaces" },
+                    { icon: HardHat, label: "Oilfield & Industrial" },
+                    { icon: Stethoscope, label: "Healthcare Facility Cleaning" },
+                    { icon: Hammer, label: "Post-Construction Cleaning" },
+                    { icon: Droplets, label: "Pressure Washing" },
                   ].map((s) => (
                     <div key={s.label} className="bg-secondary p-4 flex items-center gap-3">
                       <s.icon className="h-5 w-5 flex-shrink-0" />
@@ -354,9 +374,11 @@ const Index = () => {
                   ))}
                 </div>
                 <div className="p-6 md:p-8">
-                  <p className="text-xs opacity-80 mb-3">*Owner/operators hold Bloodborne Pathogens certification.</p>
+                  <p className="text-sm opacity-90 mb-3">
+                    Healthcare Facility Cleaning: our owners are certified in Bloodborne Pathogens safety training.
+                  </p>
                   <a href="#contact" className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all">
-                    Schedule a walkthrough <ArrowRight className="h-4 w-4" />
+                    Schedule a Walkthrough <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>
@@ -371,10 +393,14 @@ const Index = () => {
           <div>
             <img src={logoFullAsset.url} alt="JAMI Cleaning Inc" className="h-16 md:h-20 w-auto mb-3 -mt-[50px] rounded-md bg-white p-2" />
             <div className="hidden md:block text-xs uppercase tracking-widest font-bold text-accent mb-3">About JAMI</div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Owner-operated, locally rooted.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Locally and Family Owned</h2>
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent mb-5">
+              <Users className="h-4 w-4" /> Owner Operated in Grande Prairie
+            </div>
             <p className="text-lg text-primary-foreground/80 mb-4">
-              JAMI Cleaning Inc is owned and operated by <strong className="text-primary-foreground">Ramin</strong> and{" "}
-              <strong className="text-primary-foreground">Leila Jami</strong>, a Grande Prairie team with 10+ years in the
+              JAMI Cleaning Inc is a locally and family owned business, owned and operated by{" "}
+              <strong className="text-primary-foreground">Ramin</strong> and{" "}
+              <strong className="text-primary-foreground">Leila Jami</strong>, a Grande Prairie couple with 10+ years in the
               cleaning industry and a commitment to ongoing training and high service standards.
             </p>
             <p className="text-primary-foreground/70 mb-6">
@@ -684,6 +710,49 @@ const Index = () => {
 
 
 
+
+      {/* BEFORE & AFTER */}
+      <section id="results" className="py-10 md:py-14">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Our Work</div>
+            <h2 className="text-3xl md:text-5xl font-bold">See the JAMI Difference</h2>
+            <p className="text-muted-foreground mt-4 text-base md:text-lg">
+              Real results from the homes, businesses, and properties we care for.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {beforeAfter.map((item) => (
+              <article key={item.title} className="rounded-xl overflow-hidden bg-card border border-border shadow-card-bold">
+                <div className="grid grid-cols-2 gap-px bg-border">
+                  {["Before", "After"].map((phase) => (
+                    <div key={phase} className="relative bg-muted aspect-[4/5] sm:aspect-square flex flex-col items-center justify-center gap-2 text-center px-3">
+                      <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
+                      <span className="text-xs text-muted-foreground">
+                        {phase} photo
+                        <br />
+                        coming soon
+                      </span>
+                      <span className={`absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider ${phase === "Before" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
+                        {phase}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.caption}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="text-xs text-muted-foreground text-center mt-6">
+            Placeholder images shown. Approved JAMI Cleaning before-and-after photos will replace these.
+          </p>
+        </div>
+      </section>
 
       {/* REVIEWS */}
 
