@@ -169,7 +169,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between gap-3 h-14 sm:h-16">
           <a href="#" className="flex items-center gap-3 min-w-0">
-            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-14 sm:h-16 lg:h-[72px] w-auto max-w-[210px] object-contain" />
+            <img src={logoAsset.url} alt="JAMI Cleaning Inc" className="h-10 sm:h-12 lg:h-14 w-auto max-w-[210px] object-contain" />
             <div className="hidden sm:block lg:hidden xl:block leading-tight border-l border-border pl-3">
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Grande Prairie, AB</div>
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">🍁 Proudly Canadian</div>
