@@ -275,9 +275,9 @@ const Index = () => {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-10 md:py-14">
+      <section id="services" className="py-6 md:py-10">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
               <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Our Services</div>
               <h2 className="text-3xl md:text-5xl font-bold max-w-2xl">Choose the service you need</h2>
