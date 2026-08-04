@@ -1,0 +1,8 @@
+{
+  "name": "jamicleaning",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
