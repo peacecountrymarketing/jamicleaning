@@ -13,29 +13,29 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import heroImg from "@/assets/hero-cleaning.jpg";
-import residentialImg from "@/assets/residential.jpg";
-import residentialPhoto from "@/assets/residential-cleaning.jpg.asset.json";
-import commercialImg from "@/assets/commercial.jpg";
-import commercialPhoto from "@/assets/commercial-cleaning.jpg.asset.json";
-import vehicleImg from "@/assets/vehicle.jpg";
-import vehiclePhoto from "@/assets/vehicle-detailing.jpg.asset.json";
-import yardImg from "@/assets/yard.jpg";
-import yardPhoto from "@/assets/yard-seasonal.jpg.asset.json";
-import logoAsset from "@/assets/jami-logo-new.png.asset.json";
-import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
-import logoFullTransparentAsset from "@/assets/jami-logo-transparent.png.asset.json";
-import logoIconAsset from "@/assets/jami-icon.png.asset.json";
+const heroImg = "/assets/images/hero-cleaning.jpg";
+const residentialImg = "/assets/images/residential.jpg";
+const residentialPhoto = { url: "/assets/images/residential-cleaning.jpg" };
+const commercialImg = "/assets/images/commercial.jpg";
+const commercialPhoto = { url: "/assets/images/commercial-cleaning.jpg" };
+const vehicleImg = "/assets/images/vehicle.jpg";
+const vehiclePhoto = { url: "/assets/images/vehicle-detailing.jpg" };
+const yardImg = "/assets/images/yard.jpg";
+const yardPhoto = { url: "/assets/images/yard-seasonal.jpg" };
+const logoAsset = { url: "/assets/logos/jami-logo-new.png" };
+const logoFullAsset = { url: "/assets/logos/jami-logo-new.png" };
+const logoFullTransparentAsset = { url: "/assets/logos/jami-logo-transparent.png" };
+const logoIconAsset = { url: "/assets/logos/jami-icon.png" };
 
-import teamJamiImg from "@/assets/team-owners-logo.png.asset.json";
-import mapleLeafAsset from "@/assets/maple-leaf.png.asset.json";
-import lawnBeforeImg from "@/assets/lawn-before.jpg.asset.json";
-import lawnAfterImg from "@/assets/lawn-after.jpg.asset.json";
-import commercialBefore2Img from "@/assets/commercial-before-2.jpg.asset.json";
-import commercialBefore3Img from "@/assets/commercial-before-3.jpg.asset.json";
-import newBuildBeforeImg from "@/assets/newbuild-before.jpg.asset.json";
-import newBuildAfterImg from "@/assets/newbuild-after.jpg.asset.json";
-import pressureWashingPhoto from "@/assets/pressure-washing.jpg.asset.json";
+const teamJamiImg = { url: "/assets/images/team-owners-logo.png" };
+const mapleLeafAsset = { url: "/assets/logos/maple-leaf.png" };
+const lawnBeforeImg = { url: "/assets/images/lawn-before.jpg" };
+const lawnAfterImg = { url: "/assets/images/lawn-after.jpg" };
+const commercialBefore2Img = { url: "/assets/images/commercial-before-2.jpg" };
+const commercialBefore3Img = { url: "/assets/images/commercial-before-3.jpg" };
+const newBuildBeforeImg = { url: "/assets/images/newbuild-before.jpg" };
+const newBuildAfterImg = { url: "/assets/images/newbuild-after.jpg" };
+const pressureWashingPhoto = { url: "/assets/images/pressure-washing.jpg" };
 
 const MapleLeaf = ({ className }: { className?: string }) => (
   <img

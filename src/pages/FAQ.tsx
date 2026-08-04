@@ -7,8 +7,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import logoAsset from "@/assets/jami-logo-new.png.asset.json";
-import logoFullAsset from "@/assets/jami-logo-new.png.asset.json";
+const logoAsset = { url: "/assets/logos/jami-logo-new.png" };
+const logoFullAsset = { url: "/assets/logos/jami-logo-new.png" };
 
 const PHONE_1 = "780-897-3077";
 const EMAIL = "Accounting@jamicleaninginc.com";
