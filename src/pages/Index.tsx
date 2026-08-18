@@ -84,10 +84,28 @@ const services = [
     items: ["Interior & exterior detail", "Mats, windows, vacuuming", "Clear coat protectant"],
   },
   {
+    icon: Bus,
+    title: "RV Cleaning",
+    img: vehiclePhoto.url,
+    items: ["Interior & exterior RV cleaning", "Cab, living & sleeping areas", "Ready for the road or season"],
+  },
+  {
+    icon: Plane,
+    title: "Aviation Cleaning",
+    img: vehiclePhoto.url,
+    items: ["Aircraft interior cleaning", "Cabin, cockpit & galley care", "Detailed, careful service"],
+  },
+  {
     icon: Trees,
     title: "Lawn Care",
     img: yardPhoto.url,
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
+  },
+  {
+    icon: Target,
+    title: "Carpet Spot Cleaning",
+    img: residentialPhoto.url,
+    items: ["Targeted stain treatment", "Stair cleaning available", "Full carpet cleaning not offered"],
   },
   {
     icon: Droplets,
