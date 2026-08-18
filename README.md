@@ -46,7 +46,13 @@ Create four bold cards with icons or imagery:
 - Residential Cleaning
 - Commercial Cleaning
 - Vehicle Detailing
-- Yard & Seasonal Maintenance
+- RV Cleaning
+- Aviation Cleaning
+- Lawn Care
+- Pressure Washing
+- Carpet Spot Cleaning
+- Specialty Cleaning (Hat & Shoe Cleaning)
+- Snow Removal & Garbage Cleanup
 Each card should have 3 included-items bullets and a CTA.
 
 5. “How it works” section

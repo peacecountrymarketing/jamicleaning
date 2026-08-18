@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "What services does JAMI Cleaning Inc offer?",
     answer:
-      "We offer residential cleaning, commercial cleaning, vehicle detailing, yard maintenance, lawn services, weed spraying, pressure washing, snow removal, and garbage cleanup throughout Grande Prairie, Wembley, Clairmont, and the County of Grande Prairie.",
+      "We offer residential cleaning, commercial cleaning, vehicle detailing, RV cleaning, aviation cleaning, lawn care, pressure washing, carpet spot and stair cleaning, snow removal, garbage cleanup, and specialty cleaning for hats and shoes throughout Grande Prairie, Wembley, Clairmont, and the County of Grande Prairie. Please note that we do not currently offer full carpet cleaning.",
   },
   {
     question: "How do I get a quote?",

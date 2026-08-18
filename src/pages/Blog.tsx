@@ -255,7 +255,7 @@ const Blog = () => {
             <div className="mt-10 p-6 md:p-8 rounded-2xl bg-navy-gradient text-primary-foreground">
               <h2 className="text-xl font-bold mb-2">Need cleaning help in Grande Prairie?</h2>
               <p className="text-primary-foreground/80 mb-4">
-                JAMI Cleaning Inc provides residential, commercial, vehicle, and yard services throughout Grande Prairie and surrounding areas. Request a quote or call us directly.
+                JAMI Cleaning Inc provides residential, commercial, vehicle, RV, aviation, yard, pressure washing, carpet spot cleaning, and specialty hat and shoe cleaning services throughout Grande Prairie and surrounding areas. Request a quote or call us directly.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">

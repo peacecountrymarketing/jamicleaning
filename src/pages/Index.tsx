@@ -3,7 +3,8 @@ import {
   Phone, Mail, MapPin, Clock, Shield, Award, CheckCircle2, ArrowRight,
   Home, Building2, Car, Trees, Star, Sparkles, ClipboardList, CalendarCheck,
   Menu, X, Infinity as InfinityIcon, Droplets, Hotel, HardHat, Stethoscope,
-  Briefcase, ShoppingBag, Truck, Hammer, Users, ImageIcon,
+  Briefcase, ShoppingBag, Truck, Hammer, Users, ImageIcon, Plane, Bus, Target,
+  Shirt, Footprints,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,10 +84,28 @@ const services = [
     items: ["Interior & exterior detail", "Mats, windows, vacuuming", "Clear coat protectant"],
   },
   {
+    icon: Bus,
+    title: "RV Cleaning",
+    img: vehiclePhoto.url,
+    items: ["Interior & exterior RV cleaning", "Cab, living & sleeping areas", "Ready for the road or season"],
+  },
+  {
+    icon: Plane,
+    title: "Aviation Cleaning",
+    img: vehiclePhoto.url,
+    items: ["Aircraft interior cleaning", "Cabin, cockpit & galley care", "Detailed, careful service"],
+  },
+  {
     icon: Trees,
     title: "Lawn Care",
     img: yardPhoto.url,
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
+  },
+  {
+    icon: Target,
+    title: "Carpet Spot Cleaning",
+    img: residentialPhoto.url,
+    items: ["Targeted stain treatment", "Stair cleaning available", "Full carpet cleaning not offered"],
   },
   {
     icon: Droplets,
@@ -287,7 +306,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((s) => (
               <article key={s.title} className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-44 overflow-hidden">
@@ -315,6 +334,67 @@ const Index = () => {
                 </div>
               </article>
             ))}
+          </div>
+
+          {/* Specialty Cleaning */}
+          <div className="mt-12">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Specialty Cleaning</div>
+              <h2 className="text-3xl md:text-4xl font-bold">Hats, shoes &amp; small details</h2>
+              <p className="text-muted-foreground mt-3 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+                A few extra services to help you look and feel your best. Drop off or bundle with your next clean.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+              <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+                <div className="relative h-44 overflow-hidden">
+                  <img src={residentialPhoto.url} alt="Hat Cleaning" loading="lazy" width={1200} height={900}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                    <Shirt className="h-5 w-5 text-secondary" />
+                  </div>
+                  <PhotoWatermark />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-bold text-lg">Hat Cleaning</h3>
+                    <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$20</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    <span className="font-semibold text-foreground">$20 per hat.</span> Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
+                  </p>
+                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                    Add to a clean <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </article>
+
+              <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+                <div className="relative h-44 overflow-hidden">
+                  <img src={vehiclePhoto.url} alt="Shoe Cleaning" loading="lazy" width={1200} height={900}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                    <Footprints className="h-5 w-5 text-secondary" />
+                  </div>
+                  <PhotoWatermark />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-bold text-lg">Shoe Cleaning</h3>
+                    <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$40</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    <span className="font-semibold text-foreground">$40 per pair.</span> Give your shoes a refresh with our professional shoe cleaning service. Leather conditioning is available for an additional charge. Please note that lace cleaning is not included.
+                  </p>
+                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                    Add to a clean <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </article>
+            </div>
           </div>
 
           <div className="mt-12">
@@ -889,8 +969,13 @@ const Index = () => {
                       <SelectItem value="residential">Residential Cleaning</SelectItem>
                       <SelectItem value="commercial">Commercial Cleaning</SelectItem>
                       <SelectItem value="vehicle">Vehicle Detailing</SelectItem>
+                      <SelectItem value="rv">RV Cleaning</SelectItem>
+                      <SelectItem value="aviation">Aviation Cleaning</SelectItem>
                       <SelectItem value="yard">Lawn Care</SelectItem>
                       <SelectItem value="pressure">Pressure Washing</SelectItem>
+                      <SelectItem value="carpet-spot">Carpet Spot Cleaning</SelectItem>
+                      <SelectItem value="hat">Hat Cleaning</SelectItem>
+                      <SelectItem value="shoe">Shoe Cleaning</SelectItem>
                       <SelectItem value="snow">Snow Removal</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
