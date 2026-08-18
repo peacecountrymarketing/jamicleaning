@@ -363,7 +363,7 @@ const Index = () => {
                     <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$20</span>
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
+                    <span className="font-semibold text-foreground">$20 per hat.</span> Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
                   </p>
                   <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
                     Add to a clean <ArrowRight className="h-4 w-4" />
