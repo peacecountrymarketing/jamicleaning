@@ -96,6 +96,7 @@ const services = [
     icon: Plane,
     title: "Aviation Cleaning",
     img: aviationPhoto.url,
+    imgClass: "scale-[1.15] group-hover:scale-[1.2] object-[center_45%]",
     items: ["Aircraft interior cleaning", "Cabin, cockpit & galley care", "Detailed, careful service"],
   },
   {
