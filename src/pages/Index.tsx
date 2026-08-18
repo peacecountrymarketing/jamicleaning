@@ -37,6 +37,7 @@ const commercialBefore3Img = { url: "/assets/images/commercial-before-3.jpg" };
 const newBuildBeforeImg = { url: "/assets/images/newbuild-before.jpg" };
 const newBuildAfterImg = { url: "/assets/images/newbuild-after.jpg" };
 const pressureWashingPhoto = { url: "/assets/images/pressure-washing.jpg" };
+const rvPhoto = { url: "/assets/images/rv-cleaning.webp" };
 
 const MapleLeaf = ({ className }: { className?: string }) => (
   <img
@@ -86,7 +87,7 @@ const services = [
   {
     icon: Bus,
     title: "RV Cleaning",
-    img: vehiclePhoto.url,
+    img: rvPhoto.url,
     items: ["Interior & exterior RV cleaning", "Cab, living & sleeping areas", "Ready for the road or season"],
   },
   {
