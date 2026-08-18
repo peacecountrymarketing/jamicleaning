@@ -969,8 +969,13 @@ const Index = () => {
                       <SelectItem value="residential">Residential Cleaning</SelectItem>
                       <SelectItem value="commercial">Commercial Cleaning</SelectItem>
                       <SelectItem value="vehicle">Vehicle Detailing</SelectItem>
+                      <SelectItem value="rv">RV Cleaning</SelectItem>
+                      <SelectItem value="aviation">Aviation Cleaning</SelectItem>
                       <SelectItem value="yard">Lawn Care</SelectItem>
                       <SelectItem value="pressure">Pressure Washing</SelectItem>
+                      <SelectItem value="carpet-spot">Carpet Spot Cleaning</SelectItem>
+                      <SelectItem value="hat">Hat Cleaning</SelectItem>
+                      <SelectItem value="shoe">Shoe Cleaning</SelectItem>
                       <SelectItem value="snow">Snow Removal</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
