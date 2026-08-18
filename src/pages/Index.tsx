@@ -314,7 +314,7 @@ const Index = () => {
             {services.map((s) => (
               <article key={s.title} className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-44 overflow-hidden">
-                  <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900
+                  <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900}
                     className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${s.imgClass || ""}`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
                   <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
