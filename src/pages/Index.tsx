@@ -3,7 +3,8 @@ import {
   Phone, Mail, MapPin, Clock, Shield, Award, CheckCircle2, ArrowRight,
   Home, Building2, Car, Trees, Star, Sparkles, ClipboardList, CalendarCheck,
   Menu, X, Infinity as InfinityIcon, Droplets, Hotel, HardHat, Stethoscope,
-  Briefcase, ShoppingBag, Truck, Hammer, Users, ImageIcon,
+  Briefcase, ShoppingBag, Truck, Hammer, Users, ImageIcon, Plane, Bus, Target,
+  Shirt, Footprints,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
