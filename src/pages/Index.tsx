@@ -39,6 +39,7 @@ const newBuildAfterImg = { url: "/assets/images/newbuild-after.jpg" };
 const pressureWashingPhoto = { url: "/assets/images/pressure-washing.jpg" };
 const rvPhoto = { url: "/assets/images/rv-cleaning.webp" };
 const aviationPhoto = { url: "/assets/images/aviation-cleaning.jpg" };
+const carpetSpotPhoto = { url: "/assets/images/carpet-spot-cleaning.jpg" };
 
 const MapleLeaf = ({ className }: { className?: string }) => (
   <img
@@ -106,7 +107,7 @@ const services = [
   {
     icon: Target,
     title: "Carpet Spot Cleaning",
-    img: residentialPhoto.url,
+    img: carpetSpotPhoto.url,
     items: ["Targeted stain treatment", "Stair cleaning available", "Full carpet cleaning not offered"],
   },
   {
