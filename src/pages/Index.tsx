@@ -87,7 +87,7 @@ const services = [
   {
     icon: Bus,
     title: "RV Cleaning",
-    img: vehiclePhoto.url,
+    img: rvPhoto.url,
     items: ["Interior & exterior RV cleaning", "Cab, living & sleeping areas", "Ready for the road or season"],
   },
   {
