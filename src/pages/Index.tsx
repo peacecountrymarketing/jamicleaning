@@ -109,7 +109,7 @@ const services = [
     icon: Target,
     title: "Carpet Spot Cleaning",
     img: carpetSpotPhoto.url,
-    imgClass: "scale-[1.35] group-hover:scale-[1.4] object-[center_100%] origin-bottom",
+    imgClass: "scale-[1.85] group-hover:scale-[1.92] object-[center_92%] origin-bottom",
     items: ["Targeted stain treatment", "Stair cleaning available", "Full carpet cleaning not offered"],
   },
   {
