@@ -342,80 +342,66 @@ const Index = () => {
                 </div>
               </article>
             ))}
-          </div>
+            <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+              <div className="relative h-44 overflow-hidden bg-muted">
+                <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
+                  className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                  <Shirt className="h-5 w-5 text-secondary" />
+                </div>
+                <PhotoWatermark />
+              </div>
+              <div className="p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-bold text-lg">Hat Cleaning</h3>
+                  <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$20</span>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  <span className="font-semibold text-foreground">$20 per hat.</span> Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
+                </p>
+                <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                  Add to a clean <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </article>
 
-          {/* Specialty Cleaning */}
-          <div className="mt-12">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Specialty Cleaning</div>
-              <h2 className="text-3xl md:text-4xl font-bold">Hats, shoes &amp; small details</h2>
-              <p className="text-muted-foreground mt-3 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-                A few extra services to help you look and feel your best. Drop off or bundle with your next clean.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-              <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-44 overflow-hidden bg-muted">
-                  <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
-                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
-                    <Shirt className="h-5 w-5 text-secondary" />
-                  </div>
-                  <PhotoWatermark />
+            <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+              <div className="relative h-44 overflow-hidden grid grid-cols-2 gap-px bg-border">
+                <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
+                  <img
+                    src={shoeBeforeAsset.url}
+                    alt="Dirty shoe before cleaning"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground z-10">Before</span>
                 </div>
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-bold text-lg">Hat Cleaning</h3>
-                    <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$20</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    <span className="font-semibold text-foreground">$20 per hat.</span> Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
-                  </p>
-                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
-                    Add to a clean <ArrowRight className="h-4 w-4" />
-                  </a>
+                <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
+                  <img
+                    src={shoeAfterAsset.url}
+                    alt="Cleaned shoe after cleaning"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground z-10">After</span>
                 </div>
-              </article>
-
-              <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-44 overflow-hidden grid grid-cols-2 gap-px bg-border">
-                  <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                    <img
-                      src={shoeBeforeAsset.url}
-                      alt="Dirty shoe before cleaning"
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground z-10">Before</span>
-                  </div>
-                  <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                    <img
-                      src={shoeAfterAsset.url}
-                      alt="Cleaned shoe after cleaning"
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground z-10">After</span>
-                  </div>
-                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold z-10">
-                    <Footprints className="h-5 w-5 text-secondary" />
-                  </div>
+                <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold z-10">
+                  <Footprints className="h-5 w-5 text-secondary" />
                 </div>
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-bold text-lg">Shoe Cleaning</h3>
-                    <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$40</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    <span className="font-semibold text-foreground">$40 per pair.</span> Give your shoes a refresh with our professional shoe cleaning service. Leather conditioning is available for an additional charge. Please note that lace cleaning is not included.
-                  </p>
-                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
-                    Add to a clean <ArrowRight className="h-4 w-4" />
-                  </a>
+              </div>
+              <div className="p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-bold text-lg">Shoe Cleaning</h3>
+                  <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$40</span>
                 </div>
-              </article>
-            </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  <span className="font-semibold text-foreground">$40 per pair.</span> Give your shoes a refresh with our professional shoe cleaning service. Leather conditioning is available for an additional charge. Please note that lace cleaning is not included.
+                </p>
+                <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                  Add to a clean <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </article>
           </div>
 
           <div className="mt-12">
