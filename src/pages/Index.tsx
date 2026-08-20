@@ -337,11 +337,13 @@ const Index = () => {
                   <span className="inline-block px-3 py-1 mb-2 text-[10px] md:text-xs font-bold text-primary-foreground bg-secondary uppercase tracking-widest rounded">
                     Primary Service
                   </span>
-                  <div className="mb-2">
-                    <span className="inline-flex items-center rounded-md bg-primary-foreground/95 text-primary px-2.5 py-1 text-xs md:text-sm font-bold shadow-sm">
-                      {s.price.startsWith("$") ? `Starting at ${s.price}` : s.price}
-                    </span>
-                  </div>
+                  {!s.price.toLowerCase().includes("custom") && (
+                    <div className="mb-2">
+                      <span className="inline-flex items-center rounded-md bg-primary-foreground/95 text-primary px-2.5 py-1 text-xs md:text-sm font-bold shadow-sm">
+                        Starting at {s.price}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="text-3xl md:text-4xl font-bold text-primary-foreground uppercase tracking-tight">{s.title.replace(" Cleaning", "")}</h3>
                   <ul className="flex flex-wrap gap-2 mt-3 mb-5">
                     {s.items.map((i) => (
@@ -369,9 +371,11 @@ const Index = () => {
                 <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                   <s.icon className="h-4 w-4 text-secondary" />
                 </div>
-                <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">
-                  {s.price.startsWith("$") ? `Starting at ${s.price}` : s.price}
-                </span>
+                {!s.price.toLowerCase().includes("custom") && (
+                  <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">
+                    Starting at {s.price}
+                  </span>
+                )}
                 <PhotoWatermark />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                   <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">{s.title}</h4>
