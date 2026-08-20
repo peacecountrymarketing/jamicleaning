@@ -337,11 +337,13 @@ const Index = () => {
                   <span className="inline-block px-3 py-1 mb-2 text-[10px] md:text-xs font-bold text-primary-foreground bg-secondary uppercase tracking-widest rounded">
                     Primary Service
                   </span>
-                  <div className="mb-2">
-                    <span className="inline-flex items-center rounded-md bg-primary-foreground/95 text-primary px-2.5 py-1 text-xs md:text-sm font-bold shadow-sm">
-                      {s.price.startsWith("$") ? `Starting at ${s.price}` : s.price}
-                    </span>
-                  </div>
+                  {!s.price.toLowerCase().includes("custom") && (
+                    <div className="mb-2">
+                      <span className="inline-flex items-center rounded-md bg-primary-foreground/95 text-primary px-2.5 py-1 text-xs md:text-sm font-bold shadow-sm">
+                        Starting at {s.price}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="text-3xl md:text-4xl font-bold text-primary-foreground uppercase tracking-tight">{s.title.replace(" Cleaning", "")}</h3>
                   <ul className="flex flex-wrap gap-2 mt-3 mb-5">
                     {s.items.map((i) => (
