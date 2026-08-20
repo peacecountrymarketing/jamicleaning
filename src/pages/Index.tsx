@@ -367,7 +367,7 @@ const Index = () => {
             {/* Hat Cleaning */}
             <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
               <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
-                className="absolute inset-0 w-full h-full object-cover scale-[1.05] object-[center_42%] group-hover:scale-[1.12] transition-transform duration-500" />
+                className="absolute inset-0 w-full h-full object-cover scale-[1.05] object-[center_58%] group-hover:scale-[1.12] transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 group-hover:from-primary group-hover:via-primary/60 transition-colors" />
               <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                 <Shirt className="h-4 w-4 text-secondary" />
