@@ -406,7 +406,7 @@ const Index = () => {
                 <div className="relative flex-1 overflow-hidden">
                   <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
                 </div>
-                <div className="relative flex-1 overflow-hidden border-l border-white/25">
+                <div className="relative flex-1 overflow-hidden border-l-2 border-white/40">
                   <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
                 </div>
               </div>
