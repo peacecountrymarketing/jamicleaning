@@ -14,6 +14,7 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
+import hatBeforeAfterAsset from "@/assets/hat-before-after.webp.asset.json";
 const heroImg = "/assets/images/hero-cleaning.jpg";
 const residentialImg = "/assets/images/residential.jpg";
 const residentialPhoto = { url: "/assets/images/residential-cleaning.jpg" };
@@ -354,9 +355,8 @@ const Index = () => {
             <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
               <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-44 overflow-hidden">
-                  <img src={residentialPhoto.url} alt="Hat Cleaning" loading="lazy" width={1200} height={900}
+                  <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
                   <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                     <Shirt className="h-5 w-5 text-secondary" />
                   </div>
