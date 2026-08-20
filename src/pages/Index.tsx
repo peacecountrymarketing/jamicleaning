@@ -314,21 +314,22 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map((s) => (
-              <article key={s.title} className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-44 overflow-hidden">
+          {/* Hero services: Residential & Commercial */}
+          <div className="grid md:grid-cols-2 gap-5 mb-8">
+            {services.slice(0, 2).map((s) => (
+              <article key={s.title} className="group relative rounded-2xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold transition-all duration-300">
+                <div className="relative h-52 md:h-60 overflow-hidden">
                   <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900}
                     className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${s.imgClass || ""}`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
-                    <s.icon className="h-5 w-5 text-secondary" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent" />
+                  <div className="absolute top-4 left-4 h-12 w-12 rounded-xl bg-background/95 flex items-center justify-center shadow-card-bold">
+                    <s.icon className="h-6 w-6 text-secondary" />
                   </div>
-                  <PhotoWatermark />
+                  <PhotoWatermark className="bottom-4 right-4" />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-3">{s.title}</h3>
-                  <ul className="space-y-2 mb-5 text-sm text-muted-foreground">
+                <div className="p-6 md:p-8">
+                  <h3 className="font-bold text-2xl md:text-3xl mb-3">{s.title}</h3>
+                  <ul className="space-y-2 mb-6 text-muted-foreground">
                     {s.items.map((i) => (
                       <li key={i} className="flex gap-2">
                         <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
@@ -336,150 +337,102 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                  <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-secondary hover:gap-3 transition-all">
                     Get a quote <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </article>
             ))}
-            <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-44 overflow-hidden bg-muted">
-                <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
-                  className="w-full h-full object-cover scale-[1.35] object-[center_40%] group-hover:scale-[1.42] transition-transform duration-500" />
-                <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
-                  <Shirt className="h-5 w-5 text-secondary" />
-                </div>
-                <PhotoWatermark />
-              </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg">Hat Cleaning</h3>
-                  <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$20</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  <span className="font-semibold text-foreground">$20 per hat.</span> Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
-                  Add to a clean <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-            </article>
-
-            <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-44 overflow-hidden grid grid-cols-2 gap-px bg-border">
-                <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                  <img
-                    src={shoeBeforeAsset.url}
-                    alt="Dirty shoe before cleaning"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground z-10">Before</span>
-                </div>
-                <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                  <img
-                    src={shoeAfterAsset.url}
-                    alt="Cleaned shoe after cleaning"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground z-10">After</span>
-                </div>
-                <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold z-10">
-                  <Footprints className="h-5 w-5 text-secondary" />
-                </div>
-              </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg">Shoe Cleaning</h3>
-                  <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$40</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  <span className="font-semibold text-foreground">$40 per pair.</span> Give your shoes a refresh with our professional shoe cleaning service. Leather conditioning is available for an additional charge. Please note that lace cleaning is not included.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
-                  Add to a clean <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-            </article>
           </div>
 
-          <div className="mt-12">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3 flex items-center justify-center gap-2">
-                <InfinityIcon className="h-4 w-4 text-secondary" /> Built For Both <InfinityIcon className="h-4 w-4 text-secondary" />
-              </div>
-              <h2 className="text-3xl md:text-5xl font-bold">Every space, one trusted team.</h2>
-              <p className="text-muted-foreground mt-3 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-                From homes and Airbnbs to offices, hospitals, and oilfield camps, we clean it all.
-              </p>
+          {/* More services */}
+          <div className="mb-2">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="h-px flex-1 bg-border" />
+              <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground">Also available</span>
+              <div className="h-px flex-1 bg-border" />
             </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* For Homes */}
-              <div className="rounded-xl overflow-hidden bg-primary text-primary-foreground shadow-bold">
-                <div className="p-6 md:p-8 border-b border-primary-foreground/10 flex items-center gap-3">
-                  <Home className="h-8 w-8 text-accent" />
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-accent font-bold">Residential</div>
-                    <h3 className="text-2xl md:text-3xl font-bold">For Homes</h3>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-px bg-primary-foreground/10">
-                  {[
-                    { icon: Home, label: "Recurring Home Cleans" },
-                    { icon: Sparkles, label: "Deep Cleaning" },
-                    { icon: Truck, label: "Move-In / Move-Out Cleaning" },
-                    { icon: Hotel, label: "Airbnb Turnovers" },
-                    { icon: Hammer, label: "Post-Construction Cleaning" },
-                    { icon: Droplets, label: "Window Cleaning" },
-                  ].map((s) => (
-                    <div key={s.label} className="bg-primary p-4 flex items-center gap-3">
-                      <s.icon className="h-5 w-5 text-accent flex-shrink-0" />
-                      <span className="text-sm font-semibold">{s.label}</span>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {services.slice(2).map((s) => (
+                <article key={s.title} className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative h-36 overflow-hidden">
+                    <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900}
+                      className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${s.imgClass || ""}`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                    <div className="absolute top-2 left-2 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                      <s.icon className="h-4 w-4 text-secondary" />
                     </div>
-                  ))}
-                </div>
-                <div className="p-6 md:p-8">
-                  <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-accent hover:gap-3 transition-all">
-                    Book a home clean <ArrowRight className="h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-
-              {/* For Businesses */}
-              <div className="rounded-xl overflow-hidden bg-secondary text-secondary-foreground shadow-bold">
-                <div className="p-6 md:p-8 border-b border-secondary-foreground/10 flex items-center gap-3">
-                  <Building2 className="h-8 w-8" />
-                  <div>
-                    <div className="text-xs uppercase tracking-widest font-bold opacity-80">Commercial & Industrial</div>
-                    <h3 className="text-2xl md:text-3xl font-bold">For Businesses</h3>
+                    <PhotoWatermark />
                   </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-base mb-2">{s.title}</h3>
+                    <ul className="space-y-1.5 mb-4 text-sm text-muted-foreground">
+                      {s.items.slice(0, 2).map((i) => (
+                        <li key={i} className="flex gap-2">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-secondary flex-shrink-0 mt-0.5" />
+                          <span>{i}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                      Get a quote <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </article>
+              ))}
+
+              {/* Hat Cleaning */}
+              <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+                <div className="relative h-36 overflow-hidden bg-muted">
+                  <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
+                    className="w-full h-full object-cover scale-[1.35] object-[center_40%] group-hover:scale-[1.42] transition-transform duration-500" />
+                  <div className="absolute top-2 left-2 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                    <Shirt className="h-4 w-4 text-secondary" />
+                  </div>
+                  <PhotoWatermark />
                 </div>
-                <div className="grid grid-cols-2 gap-px bg-secondary-foreground/10">
-                  {[
-                    { icon: Briefcase, label: "Office Cleaning" },
-                    { icon: ShoppingBag, label: "Retail Spaces" },
-                    { icon: HardHat, label: "Oilfield & Industrial" },
-                    { icon: Stethoscope, label: "Healthcare Facility Cleaning" },
-                    { icon: Hammer, label: "Post-Construction Cleaning" },
-                    { icon: Droplets, label: "Pressure Washing" },
-                  ].map((s) => (
-                    <div key={s.label} className="bg-secondary p-4 flex items-center gap-3">
-                      <s.icon className="h-5 w-5 flex-shrink-0" />
-                      <span className="text-sm font-semibold">{s.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="p-6 md:p-8">
-                  <p className="text-sm opacity-90 mb-3">
-                    Healthcare Facility Cleaning: our owners are certified in Bloodborne Pathogens safety training.
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-bold text-base">Hat Cleaning</h3>
+                    <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-2.5 py-0.5 text-xs font-bold text-secondary">$20</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    $20 per hat. Refresh your favourite caps and headwear.
                   </p>
-                  <a href="#contact" className="inline-flex items-center gap-2 font-semibold hover:gap-3 transition-all">
-                    Schedule a Walkthrough <ArrowRight className="h-4 w-4" />
+                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                    Add to a clean <ArrowRight className="h-3.5 w-3.5" />
                   </a>
                 </div>
-              </div>
+              </article>
+
+              {/* Shoe Cleaning */}
+              <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
+                <div className="relative h-36 overflow-hidden grid grid-cols-2 gap-px bg-border">
+                  <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
+                    <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-primary text-primary-foreground z-10">Before</span>
+                  </div>
+                  <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
+                    <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground z-10">After</span>
+                  </div>
+                  <div className="absolute top-2 left-2 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold z-10">
+                    <Footprints className="h-4 w-4 text-secondary" />
+                  </div>
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-bold text-base">Shoe Cleaning</h3>
+                    <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-2.5 py-0.5 text-xs font-bold text-secondary">$40</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    $40 per pair. Leather conditioning available; laces not included.
+                  </p>
+                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                    Add to a clean <ArrowRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
         </div>
