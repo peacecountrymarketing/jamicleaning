@@ -402,8 +402,8 @@ const Index = () => {
 
             {/* Shoe Cleaning */}
             <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
-              <div className="absolute inset-0 grid grid-cols-2 gap-px bg-border">
-                <div className="relative overflow-hidden">
+              <div className="absolute inset-0 grid grid-cols-2">
+                <div className="relative overflow-hidden border-r border-border">
                   <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
                 </div>
                 <div className="relative overflow-hidden">
