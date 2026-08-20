@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import hatBeforeAfterAsset from "@/assets/hat-before-after.webp.asset.json";
+import shoeBeforeAsset from "@/assets/shoe-before.jpg.asset.json";
 const heroImg = "/assets/images/hero-cleaning.jpg";
 const residentialImg = "/assets/images/residential.jpg";
 const residentialPhoto = { url: "/assets/images/residential-cleaning.jpg" };
