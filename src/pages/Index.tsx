@@ -402,11 +402,11 @@ const Index = () => {
 
             {/* Shoe Cleaning */}
             <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
-              <div className="absolute inset-0 grid grid-cols-2">
-                <div className="relative overflow-hidden border-r border-border">
+              <div className="absolute inset-0 flex">
+                <div className="relative flex-1 overflow-hidden">
                   <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
                 </div>
-                <div className="relative overflow-hidden">
+                <div className="relative flex-1 overflow-hidden border-l border-white/25">
                   <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
                 </div>
               </div>
@@ -415,6 +415,7 @@ const Index = () => {
                 <Footprints className="h-4 w-4 text-secondary" />
               </div>
               <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">Starting at $40</span>
+              <PhotoWatermark />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Shoe Cleaning</h4>
               </div>
