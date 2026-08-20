@@ -385,7 +385,7 @@ const Index = () => {
               <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-36 overflow-hidden bg-muted">
                   <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
-                    className="w-full h-full object-cover scale-[1.35] object-[center_40%] group-hover:scale-[1.42] transition-transform duration-500" />
+                    className="w-full h-full object-cover scale-[1.1] object-[center_40%] group-hover:scale-[1.16] transition-transform duration-500" />
                   <div className="absolute top-2 left-2 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                     <Shirt className="h-4 w-4 text-secondary" />
                   </div>
