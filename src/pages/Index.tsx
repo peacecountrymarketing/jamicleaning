@@ -404,10 +404,10 @@ const Index = () => {
             <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
               <div className="absolute inset-0 grid grid-cols-2 gap-px bg-border">
                 <div className="relative overflow-hidden">
-                  <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.92]" loading="lazy" />
                 </div>
                 <div className="relative overflow-hidden">
-                  <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.92]" loading="lazy" />
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 group-hover:from-primary group-hover:via-primary/60 transition-colors" />
