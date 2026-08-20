@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import hatBeforeAfterAsset from "@/assets/hat-before-after.webp.asset.json";
+import shoeBeforeAsset from "@/assets/shoe-before.jpg.asset.json";
 const heroImg = "/assets/images/hero-cleaning.jpg";
 const residentialImg = "/assets/images/residential.jpg";
 const residentialPhoto = { url: "/assets/images/residential-cleaning.jpg" };
@@ -379,9 +380,13 @@ const Index = () => {
               <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
                 <div className="relative h-44 overflow-hidden grid grid-cols-2 gap-px bg-border">
                   <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                    <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
-                    <span className="text-xs text-muted-foreground">Before photo<br/>coming soon</span>
-                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground">Before</span>
+                    <img
+                      src={shoeBeforeAsset.url}
+                      alt="Dirty shoe before cleaning"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground z-10">Before</span>
                   </div>
                   <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
                     <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
