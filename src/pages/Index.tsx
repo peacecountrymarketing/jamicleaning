@@ -75,24 +75,28 @@ const services = [
     icon: Home,
     title: "Residential Cleaning",
     img: residentialPhoto.url,
+    price: "$45/hr per employee",
     items: ["Kitchens, bathrooms & floors", "Recurring or one-time visits", "Move-in / move-out ready"],
   },
   {
     icon: Building2,
     title: "Commercial Cleaning",
     img: commercialPhoto.url,
+    price: "Custom quote",
     items: ["Offices, retail & oilfield", "Sanitation-focused work", "Dependable scheduling"],
   },
   {
     icon: Car,
     title: "Vehicle Detailing",
     img: vehiclePhoto.url,
+    price: "Custom quote",
     items: ["Interior & exterior detail", "Mats, windows, vacuuming", "Clear coat protectant"],
   },
   {
     icon: Bus,
     title: "RV Cleaning",
     img: rvPhoto.url,
+    price: "Custom quote",
     items: ["Interior & exterior RV cleaning", "Cab, living & sleeping areas", "Ready for the road or season"],
   },
   {
@@ -100,12 +104,14 @@ const services = [
     title: "Aviation Cleaning",
     img: aviationPhoto.url,
     imgClass: "scale-[1.15] group-hover:scale-[1.2] object-[center_45%]",
+    price: "Custom quote",
     items: ["Aircraft interior cleaning", "Cabin, cockpit & galley care", "Detailed, careful service"],
   },
   {
     icon: Trees,
     title: "Lawn Care",
     img: yardPhoto.url,
+    price: "Custom pricing",
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
   },
   {
@@ -113,12 +119,14 @@ const services = [
     title: "Carpet Spot Cleaning",
     img: carpetSpotPhoto.url,
     imgClass: "scale-[1.85] group-hover:scale-[1.92] object-[center_92%] origin-bottom",
+    price: "Custom quote",
     items: ["Targeted stain treatment", "Stair cleaning available", "Full carpet cleaning not offered"],
   },
   {
     icon: Droplets,
     title: "Pressure Washing",
     img: pressureWashingPhoto.url,
+    price: "Custom quote",
     items: ["Driveways & sidewalks", "Drive-thrus & entrances", "Building exteriors"],
   },
 ];
@@ -326,9 +334,14 @@ const Index = () => {
                 </div>
                 <PhotoWatermark />
                 <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                  <span className="inline-block px-3 py-1 mb-3 text-[10px] md:text-xs font-bold text-primary-foreground bg-secondary uppercase tracking-widest rounded">
+                  <span className="inline-block px-3 py-1 mb-2 text-[10px] md:text-xs font-bold text-primary-foreground bg-secondary uppercase tracking-widest rounded">
                     Primary Service
                   </span>
+                  <div className="mb-2">
+                    <span className="inline-flex items-center rounded-md bg-primary-foreground/95 text-primary px-2.5 py-1 text-xs md:text-sm font-bold shadow-sm">
+                      {s.price.startsWith("$") ? `Starting at ${s.price}` : s.price}
+                    </span>
+                  </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-primary-foreground uppercase tracking-tight">{s.title.replace(" Cleaning", "")}</h3>
                   <ul className="flex flex-wrap gap-2 mt-3 mb-5">
                     {s.items.map((i) => (
@@ -356,6 +369,9 @@ const Index = () => {
                 <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                   <s.icon className="h-4 w-4 text-secondary" />
                 </div>
+                <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">
+                  {s.price.startsWith("$") ? `Starting at ${s.price}` : s.price}
+                </span>
                 <PhotoWatermark />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                   <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">{s.title}</h4>
@@ -372,7 +388,7 @@ const Index = () => {
               <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                 <Shirt className="h-4 w-4 text-secondary" />
               </div>
-              <span className="absolute top-3 right-3 inline-flex items-center rounded-full bg-secondary/90 text-secondary-foreground px-2.5 py-0.5 text-xs font-bold">$20</span>
+              <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">Starting at $20</span>
               <PhotoWatermark />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Hat Cleaning</h4>
@@ -394,7 +410,7 @@ const Index = () => {
               <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                 <Footprints className="h-4 w-4 text-secondary" />
               </div>
-              <span className="absolute top-3 right-3 inline-flex items-center rounded-full bg-secondary/90 text-secondary-foreground px-2.5 py-0.5 text-xs font-bold">$40</span>
+              <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">Starting at $40</span>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Shoe Cleaning</h4>
               </div>
