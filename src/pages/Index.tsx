@@ -14,9 +14,9 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import hatBeforeAfterAsset from "@/assets/hat-before-after.webp.asset.json";
-import shoeBeforeAsset from "@/assets/shoe-before.jpg.asset.json";
-import shoeAfterAsset from "@/assets/shoe-after.jpg.asset.json";
+const hatBeforeAfterAsset = { url: "/assets/images/hat-before-after.webp" };
+const shoeBeforeAsset = { url: "/assets/images/shoe-before.jpg" };
+const shoeAfterAsset = { url: "/assets/images/shoe-after.jpg" };
 const heroImg = "/assets/images/hero-cleaning.jpg";
 const residentialImg = "/assets/images/residential.jpg";
 const residentialPhoto = { url: "/assets/images/residential-cleaning.jpg" };
