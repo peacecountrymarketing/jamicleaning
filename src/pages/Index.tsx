@@ -401,13 +401,13 @@ const Index = () => {
             </article>
 
             {/* Shoe Cleaning */}
-            <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
-              <div className="absolute inset-0 flex">
+            <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card hover:-translate-y-1 transition-all duration-300">
+              <div className="absolute inset-0 flex after:absolute after:inset-y-0 after:left-1/2 after:w-0.5 after:-translate-x-1/2 after:bg-background/70 after:z-10">
                 <div className="relative flex-1 overflow-hidden">
-                  <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
+                  <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 </div>
-                <div className="relative flex-1 overflow-hidden border-l-2 border-white/40">
-                  <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover scale-[0.86]" loading="lazy" />
+                <div className="relative flex-1 overflow-hidden">
+                  <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 group-hover:from-primary group-hover:via-primary/60 transition-colors" />
