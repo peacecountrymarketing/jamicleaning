@@ -369,6 +369,9 @@ const Index = () => {
                 <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                   <s.icon className="h-4 w-4 text-secondary" />
                 </div>
+                <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">
+                  {s.price.startsWith("$") ? `Starting at ${s.price}` : s.price}
+                </span>
                 <PhotoWatermark />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                   <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">{s.title}</h4>
