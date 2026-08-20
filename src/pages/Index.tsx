@@ -75,24 +75,28 @@ const services = [
     icon: Home,
     title: "Residential Cleaning",
     img: residentialPhoto.url,
+    price: "$45/hr per employee",
     items: ["Kitchens, bathrooms & floors", "Recurring or one-time visits", "Move-in / move-out ready"],
   },
   {
     icon: Building2,
     title: "Commercial Cleaning",
     img: commercialPhoto.url,
+    price: "Custom quote",
     items: ["Offices, retail & oilfield", "Sanitation-focused work", "Dependable scheduling"],
   },
   {
     icon: Car,
     title: "Vehicle Detailing",
     img: vehiclePhoto.url,
+    price: "Custom quote",
     items: ["Interior & exterior detail", "Mats, windows, vacuuming", "Clear coat protectant"],
   },
   {
     icon: Bus,
     title: "RV Cleaning",
     img: rvPhoto.url,
+    price: "Custom quote",
     items: ["Interior & exterior RV cleaning", "Cab, living & sleeping areas", "Ready for the road or season"],
   },
   {
@@ -100,12 +104,14 @@ const services = [
     title: "Aviation Cleaning",
     img: aviationPhoto.url,
     imgClass: "scale-[1.15] group-hover:scale-[1.2] object-[center_45%]",
+    price: "Custom quote",
     items: ["Aircraft interior cleaning", "Cabin, cockpit & galley care", "Detailed, careful service"],
   },
   {
     icon: Trees,
     title: "Lawn Care",
     img: yardPhoto.url,
+    price: "Custom pricing",
     items: ["Mowing, edging & trimming", "Weed spraying & aeration", "Snow removal & cleanup"],
   },
   {
@@ -113,12 +119,14 @@ const services = [
     title: "Carpet Spot Cleaning",
     img: carpetSpotPhoto.url,
     imgClass: "scale-[1.85] group-hover:scale-[1.92] object-[center_92%] origin-bottom",
+    price: "Custom quote",
     items: ["Targeted stain treatment", "Stair cleaning available", "Full carpet cleaning not offered"],
   },
   {
     icon: Droplets,
     title: "Pressure Washing",
     img: pressureWashingPhoto.url,
+    price: "Custom quote",
     items: ["Driveways & sidewalks", "Drive-thrus & entrances", "Building exteriors"],
   },
 ];
