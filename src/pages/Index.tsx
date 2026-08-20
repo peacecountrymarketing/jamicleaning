@@ -377,14 +377,20 @@ const Index = () => {
               </article>
 
               <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-44 overflow-hidden">
-                  <img src={vehiclePhoto.url} alt="Shoe Cleaning" loading="lazy" width={1200} height={900}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                <div className="relative h-44 overflow-hidden grid grid-cols-2 gap-px bg-border">
+                  <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
+                    <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
+                    <span className="text-xs text-muted-foreground">Before photo<br/>coming soon</span>
+                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground">Before</span>
+                  </div>
+                  <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
+                    <ImageIcon className="h-7 w-7 text-muted-foreground/60" aria-hidden="true" />
+                    <span className="text-xs text-muted-foreground">After photo<br/>coming soon</span>
+                    <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground">After</span>
+                  </div>
+                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold z-10">
                     <Footprints className="h-5 w-5 text-secondary" />
                   </div>
-                  <PhotoWatermark />
                 </div>
                 <div className="p-5">
                   <div className="flex items-center justify-between mb-3">
