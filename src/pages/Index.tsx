@@ -388,7 +388,7 @@ const Index = () => {
               <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                 <Shirt className="h-4 w-4 text-secondary" />
               </div>
-              <span className="absolute top-3 right-3 inline-flex items-center rounded-full bg-secondary/90 text-secondary-foreground px-2.5 py-0.5 text-xs font-bold">$20</span>
+              <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">Starting at $20</span>
               <PhotoWatermark />
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Hat Cleaning</h4>
@@ -410,7 +410,7 @@ const Index = () => {
               <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
                 <Footprints className="h-4 w-4 text-secondary" />
               </div>
-              <span className="absolute top-3 right-3 inline-flex items-center rounded-full bg-secondary/90 text-secondary-foreground px-2.5 py-0.5 text-xs font-bold">$40</span>
+              <span className="absolute bottom-3 left-3 z-10 inline-flex items-center rounded-md bg-secondary/90 text-secondary-foreground px-2 py-0.5 text-[10px] md:text-xs font-bold shadow-sm">Starting at $40</span>
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                 <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Shoe Cleaning</h4>
               </div>
