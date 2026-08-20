@@ -304,103 +304,101 @@ const Index = () => {
       {/* SERVICES */}
       <section id="services" className="py-6 md:py-10">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-            <div>
-              <div className="text-xs uppercase tracking-widest font-bold text-secondary mb-3">Our Services</div>
-              <h2 className="text-3xl md:text-5xl font-bold max-w-2xl">Choose the service you need</h2>
-            </div>
-            <p className="text-muted-foreground max-w-md">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter">
+              Expert <span className="text-secondary">Cleaning</span> Services
+            </h2>
+            <div className="w-24 h-1.5 bg-secondary mx-auto mt-4 rounded-full" />
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
               One team for the spaces you live, work, drive, and relax in. Book one, or bundle a few.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map((s) => (
-              <article key={s.title} className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-44 overflow-hidden">
-                  <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900}
-                    className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${s.imgClass || ""}`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                  <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
-                    <s.icon className="h-5 w-5 text-secondary" />
-                  </div>
-                  <PhotoWatermark />
+          {/* Primary Services */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 mb-6">
+            {services.slice(0, 2).map((s) => (
+              <article key={s.title} className="group relative h-80 md:h-96 overflow-hidden rounded-xl shadow-bold border-b-4 border-secondary">
+                <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900}
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${s.imgClass || ""}`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+                <div className="absolute top-4 left-4 h-12 w-12 rounded-xl bg-background/95 flex items-center justify-center shadow-card-bold">
+                  <s.icon className="h-6 w-6 text-secondary" />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-3">{s.title}</h3>
-                  <ul className="space-y-2 mb-5 text-sm text-muted-foreground">
+                <PhotoWatermark />
+                <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+                  <span className="inline-block px-3 py-1 mb-3 text-[10px] md:text-xs font-bold text-primary-foreground bg-secondary uppercase tracking-widest rounded">
+                    Primary Service
+                  </span>
+                  <h3 className="text-3xl md:text-4xl font-bold text-primary-foreground uppercase tracking-tight">{s.title.replace(" Cleaning", "")}</h3>
+                  <ul className="flex flex-wrap gap-2 mt-3 mb-5">
                     {s.items.map((i) => (
-                      <li key={i} className="flex gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                      <li key={i} className="flex items-center gap-1.5 text-sm text-primary-foreground/90 bg-primary-foreground/10 backdrop-blur-sm px-3 py-1 rounded-full">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-secondary flex-shrink-0" />
                         <span>{i}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
+                  <a href="#contact" className="inline-flex items-center gap-2 bg-primary-foreground text-primary font-bold px-6 py-3 rounded-lg hover:bg-secondary hover:text-secondary-foreground transition-colors">
                     Get a quote <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </article>
             ))}
-            <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-44 overflow-hidden bg-muted">
-                <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
-                  className="w-full h-full object-cover scale-[1.05] object-[center_42%] group-hover:scale-[1.12] transition-transform duration-500" />
-                <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
-                  <Shirt className="h-5 w-5 text-secondary" />
+          </div>
+
+          {/* Secondary Services */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {services.slice(2).map((s) => (
+              <article key={s.title} className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
+                <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900}
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${s.imgClass || ""}`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 group-hover:from-primary group-hover:via-primary/60 transition-colors" />
+                <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                  <s.icon className="h-4 w-4 text-secondary" />
                 </div>
                 <PhotoWatermark />
-              </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg">Hat Cleaning</h3>
-                  <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$20</span>
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                  <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">{s.title}</h4>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  <span className="font-semibold text-foreground">$20 per hat.</span> Have your hats professionally cleaned and refreshed. A simple way to extend the life of your favourite caps and headwear.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
-                  Add to a clean <ArrowRight className="h-4 w-4" />
-                </a>
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-secondary transition-colors" />
+              </article>
+            ))}
+
+            {/* Hat Cleaning */}
+            <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
+              <img src={hatBeforeAfterAsset.url} alt="Hat Cleaning before and after" loading="lazy" width={1200} height={900}
+                className="absolute inset-0 w-full h-full object-cover scale-[1.05] object-[center_42%] group-hover:scale-[1.12] transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 group-hover:from-primary group-hover:via-primary/60 transition-colors" />
+              <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                <Shirt className="h-4 w-4 text-secondary" />
               </div>
+              <span className="absolute top-3 right-3 inline-flex items-center rounded-full bg-secondary/90 text-secondary-foreground px-2.5 py-0.5 text-xs font-bold">$20</span>
+              <PhotoWatermark />
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Hat Cleaning</h4>
+              </div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-secondary transition-colors" />
             </article>
 
-            <article className="group rounded-xl overflow-hidden bg-card border border-border shadow-card-bold hover:shadow-bold hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-44 overflow-hidden grid grid-cols-2 gap-px bg-border">
-                <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                  <img
-                    src={shoeBeforeAsset.url}
-                    alt="Dirty shoe before cleaning"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-primary text-primary-foreground z-10">Before</span>
+            {/* Shoe Cleaning */}
+            <article className="group relative h-44 md:h-52 overflow-hidden rounded-lg shadow-card border border-border hover:border-secondary hover:-translate-y-1 transition-all duration-300">
+              <div className="absolute inset-0 grid grid-cols-2 gap-px bg-border">
+                <div className="relative overflow-hidden">
+                  <img src={shoeBeforeAsset.url} alt="Dirty shoe before cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 </div>
-                <div className="relative bg-muted flex flex-col items-center justify-center gap-2 text-center px-2 overflow-hidden">
-                  <img
-                    src={shoeAfterAsset.url}
-                    alt="Cleaned shoe after cleaning"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider bg-secondary text-secondary-foreground z-10">After</span>
-                </div>
-                <div className="absolute top-3 left-3 h-10 w-10 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold z-10">
-                  <Footprints className="h-5 w-5 text-secondary" />
+                <div className="relative overflow-hidden">
+                  <img src={shoeAfterAsset.url} alt="Cleaned shoe after cleaning" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg">Shoe Cleaning</h3>
-                  <span className="inline-flex items-center rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-sm font-bold text-secondary">$40</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  <span className="font-semibold text-foreground">$40 per pair.</span> Give your shoes a refresh with our professional shoe cleaning service. Leather conditioning is available for an additional charge. Please note that lace cleaning is not included.
-                </p>
-                <a href="#contact" className="inline-flex items-center gap-1 text-sm font-semibold text-secondary hover:gap-2 transition-all">
-                  Add to a clean <ArrowRight className="h-4 w-4" />
-                </a>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10 group-hover:from-primary group-hover:via-primary/60 transition-colors" />
+              <div className="absolute top-3 left-3 h-9 w-9 rounded-lg bg-background/95 flex items-center justify-center shadow-card-bold">
+                <Footprints className="h-4 w-4 text-secondary" />
               </div>
+              <span className="absolute top-3 right-3 inline-flex items-center rounded-full bg-secondary/90 text-secondary-foreground px-2.5 py-0.5 text-xs font-bold">$40</span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                <h4 className="text-white font-bold text-base md:text-lg uppercase tracking-wide">Shoe Cleaning</h4>
+              </div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent group-hover:bg-secondary transition-colors" />
             </article>
           </div>
 
