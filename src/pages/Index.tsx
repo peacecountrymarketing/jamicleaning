@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import HousecallBookingButton from "@/components/HousecallBookingButton";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
@@ -68,6 +69,7 @@ const PhotoWatermark = ({ className = "" }: { className?: string }) => (
 );
 
 const PHONE_1 = "780-897-3077";
+const PHONE_2 = "780-897-7444";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
 const services = [
@@ -189,9 +191,12 @@ const Index = () => {
           <p className="opacity-90 hidden sm:flex items-center gap-2">
             Serving Grande Prairie, Wembley, Clairmont & the County of Grande Prairie, AB
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
+            </a>
+            <a href="tel:+17808977444" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <Phone className="h-3.5 w-3.5" /> <span>Alternate phone: {PHONE_2}</span>
             </a>
             <a href={`mailto:${EMAIL}`} className="hidden sm:flex items-center gap-1.5 hover:text-accent transition-colors">
               <Mail className="h-3.5 w-3.5" /> {EMAIL}
@@ -460,9 +465,7 @@ const Index = () => {
                   ))}
                 </div>
                 <div className="p-6 md:p-8">
-                  <a href="#contact" className="inline-flex items-center gap-2 font-semibold text-accent hover:gap-3 transition-all">
-                    Book a home clean <ArrowRight className="h-4 w-4" />
-                  </a>
+                  <HousecallBookingButton label="Book a home clean" variant="link" className="h-auto p-0 font-semibold text-accent hover:text-accent/80" />
                 </div>
               </div>
 
@@ -618,7 +621,7 @@ const Index = () => {
 
               <h2 className="text-3xl md:text-5xl font-bold mb-6">Reliable service, backed by standards.</h2>
               <p className="text-primary-foreground/80 text-lg mb-8">
-                Why choose JAMI Cleaning? We handle every detail, so you can enjoy a clean space without the stress. If something is not right, we will return within 24 hours to make it right. With transparent pricing, zero late or cancellation fees, and our Re-Cleaning Guarantee trying JAMI Cleaning is practically risk-free.
+                Why choose JAMI Cleaning? We handle every detail, so you can enjoy a clean space without the stress. If something is not right, we will return within 24 hours to make it right. With transparent pricing, no cancellation fees, and our Re-Cleaning Guarantee, trying JAMI Cleaning is practically risk-free. Late fees are waived for the first month of missed payment only.
               </p>
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
                 <a href="#contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
@@ -629,7 +632,7 @@ const Index = () => {
                 { t: "Trained staff", d: "Reliable team held to high service standards." },
                 { t: "Licensed, bonded & insured", d: "Fully covered for your peace of mind." },
                 { t: "Re-cleaning guarantee", d: "We will come back to ensure cleanliness within 24 hours if you're dissatisfied." },
-                { t: "No late fees", d: "Simple, predictable billing without surprise penalties." },
+                { t: "First-month late-fee waiver", d: "Late fees are waived for the first month of missed payment only." },
                 { t: "No cancellation fees", d: "Reschedule or cancel without hassle, ever." },
                 { t: "Certified operators", d: "WHMIS, PPE, Bloodborne Pathogens, Ladder Safety." },
               ].map((f) => (
@@ -947,6 +950,15 @@ const Index = () => {
                   <div className="font-bold text-lg">{PHONE_1}</div>
                 </div>
               </a>
+              <a href="tel:+17808977444" className="flex items-center gap-4 p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 hover:border-secondary transition-colors">
+                <div className="h-11 w-11 rounded-lg bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Alternate phone</div>
+                  <div className="font-bold text-lg">{PHONE_2}</div>
+                </div>
+              </a>
               <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 p-4 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 hover:border-secondary transition-colors">
                 <div className="h-11 w-11 rounded-lg bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="h-5 w-5" />
@@ -1027,6 +1039,12 @@ const Index = () => {
               <Button type="submit" size="lg" className="mt-6 w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
                 Send Request <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              <div className="relative my-4 flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
+                <div className="h-px flex-1 bg-border" />
+                <span>or</span>
+                <div className="h-px flex-1 bg-border" />
+              </div>
+              <HousecallBookingButton size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base" />
               <p className="text-xs text-muted-foreground text-center mt-3">
                 We typically respond within one business day.
               </p>
@@ -1044,6 +1062,10 @@ const Index = () => {
               <div className="font-semibold text-foreground mb-1">
                 <div>🍁 Proudly Canadian owned & operated</div>
                 <div className="mt-3">Serving Grande Prairie, Wembley, Clairmont & the County of Grande Prairie</div>
+              </div>
+              <div className="mt-3 flex flex-col gap-1">
+                <a href={`tel:${PHONE_1}`} className="hover:text-secondary transition-colors">Primary: {PHONE_1}</a>
+                <a href="tel:+17808977444" className="hover:text-secondary transition-colors">Alternate phone: {PHONE_2}</a>
               </div>
             </div>
           </div>

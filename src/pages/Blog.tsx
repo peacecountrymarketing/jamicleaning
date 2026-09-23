@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Phone, Mail, ArrowRight, Menu, X, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import HousecallBookingButton from "@/components/HousecallBookingButton";
 const logoAsset = { url: "/assets/logos/jami-logo-new.png" };
 const logoFullAsset = { url: "/assets/logos/jami-logo-new.png" };
 
 const PHONE_1 = "780-897-3077";
+const PHONE_2 = "780-897-7444";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
 const posts = [
@@ -107,9 +109,12 @@ const Blog = () => {
           <p className="opacity-90 flex items-center gap-2">
             <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-1">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
+            </a>
+            <a href="tel:+17808977444" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <Phone className="h-3.5 w-3.5" /> Alternate phone: {PHONE_2}
             </a>
             <a href={`mailto:${EMAIL}`} className="hidden sm:flex items-center gap-1.5 hover:text-accent transition-colors">
               <Mail className="h-3.5 w-3.5" /> {EMAIL}
@@ -239,9 +244,7 @@ const Blog = () => {
                         ))}
                       </div>
                       <div className="mt-6 flex flex-wrap gap-3">
-                        <Button asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
-                          <a href="/#contact">Book a Service</a>
-                        </Button>
+                        <HousecallBookingButton label="Book a Service" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold" />
                         <Button asChild variant="outline">
                           <a href={`tel:${PHONE_1}`}><Phone className="mr-2 h-4 w-4" /> Call {PHONE_1}</a>
                         </Button>
@@ -280,6 +283,10 @@ const Blog = () => {
                 <span aria-hidden="true" className="hidden md:inline">🇨🇦</span> Proudly Canadian owned & operated
               </div>
               Grande Prairie · Wembley · Clairmont · County of GP
+              <div className="mt-2 flex flex-col gap-1">
+                <a href={`tel:${PHONE_1}`} className="hover:text-secondary transition-colors">Primary: {PHONE_1}</a>
+                <a href="tel:+17808977444" className="hover:text-secondary transition-colors">Alternate phone: {PHONE_2}</a>
+              </div>
             </div>
           </div>
           <div className="text-muted-foreground">

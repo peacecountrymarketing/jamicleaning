@@ -108,7 +108,10 @@ var CONTACT = {
   business_name: "JAMI Cleaning Inc",
   location: "Grande Prairie, Alberta",
   owners: ["Ramin Jami", "Leila Jami"],
-  phones: ["780-897-3077"],
+  phones: [
+    { label: "Primary", display: "780-897-3077", link: "tel:+17808973077" },
+    { label: "Alternate phone", display: "780-897-7444", link: "tel:+17808977444" }
+  ],
   email: "Accounting@jamicleaninginc.com",
   social: { instagram: "@jamicleaninginc" },
   hours: "Monday-Friday, 8:00 AM to 10:00 PM",
@@ -139,7 +142,7 @@ var TRUST = {
   guarantees: [
     "Re-cleaning guarantee within 24 hours if you are not satisfied",
     "No cancellation fees",
-    "No late fees",
+    "Late fees are waived for the first month of missed payment only.",
     "Transparent pricing"
   ],
   certifications: [
