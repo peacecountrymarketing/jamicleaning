@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { CalendarCheck } from "lucide-react";
 import { Button, type ButtonProps } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -52,7 +52,7 @@ const HousecallBookingButton = ({
     document.body.appendChild(script);
   }, []);
 
-  const openBooking = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const openBooking = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event);
     if (event.defaultPrevented) return;
 

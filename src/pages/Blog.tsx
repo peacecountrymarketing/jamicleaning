@@ -113,7 +113,7 @@ const Blog = () => {
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
             </a>
-            <a href="tel:+1780897744" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+            <a href="tel:+17808977444" className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> Alternate phone: {PHONE_2}
             </a>
             <a href={`mailto:${EMAIL}`} className="hidden sm:flex items-center gap-1.5 hover:text-accent transition-colors">
@@ -285,7 +285,7 @@ const Blog = () => {
               Grande Prairie · Wembley · Clairmont · County of GP
               <div className="mt-2 flex flex-col gap-1">
                 <a href={`tel:${PHONE_1}`} className="hover:text-secondary transition-colors">Primary: {PHONE_1}</a>
-                <a href="tel:+1780897744" className="hover:text-secondary transition-colors">Alternate phone: {PHONE_2}</a>
+                <a href="tel:+17808977444" className="hover:text-secondary transition-colors">Alternate phone: {PHONE_2}</a>
               </div>
             </div>
           </div>
