@@ -11,6 +11,7 @@ const logoAsset = { url: "/assets/logos/jami-logo-new.png" };
 const logoFullAsset = { url: "/assets/logos/jami-logo-new.png" };
 
 const PHONE_1 = "780-897-3077";
+const PHONE_2 = "780-897-7444";
 const EMAIL = "Accounting@jamicleaninginc.com";
 
 const faqs = [
@@ -22,7 +23,7 @@ const faqs = [
   {
     question: "How do I get a quote?",
     answer:
-      "Fill out the contact form, call 780-897-3077, or email Accounting@jamicleaninginc.com. We typically respond within one business day.",
+      "Fill out the contact form, call 780-897-3077, use our alternate phone at 780-897-7444, or email Accounting@jamicleaninginc.com. We typically respond within one business day.",
   },
   {
     question: "Do you charge cancellation fees?",
@@ -82,9 +83,12 @@ const FAQ = () => {
           <p className="opacity-90 flex items-center gap-2">
             <span aria-hidden="true">🇨🇦</span> Proudly Canadian owned & operated, serving Grande Prairie, Wembley & Clairmont
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-1">
             <a href={`tel:${PHONE_1}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
               <Phone className="h-3.5 w-3.5" /> {PHONE_1}
+            </a>
+            <a href="tel:+1780897744" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <Phone className="h-3.5 w-3.5" /> Alternate phone: {PHONE_2}
             </a>
             <a href={`mailto:${EMAIL}`} className="hidden sm:flex items-center gap-1.5 hover:text-accent transition-colors">
               <Mail className="h-3.5 w-3.5" /> {EMAIL}
@@ -224,6 +228,10 @@ const FAQ = () => {
                 <span aria-hidden="true" className="hidden md:inline">🇨🇦</span> Proudly Canadian owned & operated
               </div>
               Grande Prairie · Wembley · Clairmont · County of GP
+              <div className="mt-2 flex flex-col gap-1">
+                <a href={`tel:${PHONE_1}`} className="hover:text-secondary transition-colors">Primary: {PHONE_1}</a>
+                <a href="tel:+1780897744" className="hover:text-secondary transition-colors">Alternate phone: {PHONE_2}</a>
+              </div>
             </div>
           </div>
           <div className="text-muted-foreground">

@@ -10,7 +10,7 @@ const TRUST = {
   guarantees: [
     "Re-cleaning guarantee within 24 hours if you are not satisfied",
     "No cancellation fees",
-    "No late fees",
+    "Late fees are waived for the first month of missed payment only.",
     "Transparent pricing",
   ],
   certifications: [
