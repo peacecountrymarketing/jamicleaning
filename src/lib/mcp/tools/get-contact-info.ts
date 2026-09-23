@@ -6,7 +6,7 @@ const CONTACT = {
   owners: ["Ramin Jami", "Leila Jami"],
   phones: [
     { label: "Primary", display: "780-897-3077", link: "tel:+17808973077" },
-    { label: "Alternate phone", display: "780-897-7444", link: "tel:+17808977444" },
+    { label: "Alternate phone", display: "780-897-7444", link: "tel:+1780897744" },
   ],
   email: "Accounting@jamicleaninginc.com",
   social: { instagram: "@jamicleaninginc" },
