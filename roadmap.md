@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Remove Lovable sign-in and resolve the external-domain Google sign-in missing page.
+
 - [x] Add Peace Country Marketing admin access and verify Google sign-in availability.
 
 - [x] Add secure admin login and approved account access.
