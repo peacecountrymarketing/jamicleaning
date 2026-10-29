@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Add Peace Country Marketing admin access and verify Google sign-in availability.
+
 - [x] Add secure admin login and approved account access.
 - [x] Save website form submissions and display them in admin.
 - [x] Add real visitor analytics and maintenance request tracking.
