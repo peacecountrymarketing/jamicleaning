@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Simplify app password requirements and add show/hide controls to login and reset.
+- [x] Simplify app password requirements and verify show/hide controls on login and reset; retain Cloud password security.
 
 - [x] Replace Google handoff with same-domain email/password login for GitHub hosting; verify login presentation, signed-in tabs and sign-out locally.
 
