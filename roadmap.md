@@ -1,6 +1,6 @@
 # Roadmap
 
-- [x] Remove Lovable sign-in and verify the external-domain handoff to hosted admin; external deployment and Google account completion remain unverified.
+- [ ] Replace Google handoff with same-domain email/password login for GitHub hosting and verify the updated admin page.
 
 - [x] Add Peace Country Marketing admin access and verify Google sign-in availability.
 
