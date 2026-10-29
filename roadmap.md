@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Simplify app password requirements and add show/hide controls to login and reset.
+
 - [x] Replace Google handoff with same-domain email/password login for GitHub hosting; verify login presentation, signed-in tabs and sign-out locally.
 
 - [x] Add Peace Country Marketing admin access and verify Google sign-in availability.
