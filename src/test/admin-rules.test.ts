@@ -1,7 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { ADMIN_EMAIL, MAINTENANCE_RECIPIENT, contactSchema, maintenanceSchema } from '@/lib/admin-validation';
+import { isApprovedAdminEmail, MAINTENANCE_RECIPIENT, contactSchema, maintenanceSchema } from '@/lib/admin-validation';
 describe('JAMI admin requirements', () => {
-  it('uses the approved JAMI account', () => expect(ADMIN_EMAIL).toBe('accounting@jamicleaninginc.com'));
+  it('retains the original JAMI account', () => expect(isApprovedAdminEmail('accounting@jamicleaninginc.com')).toBe(true));
+  it('allows the additional JAMI account', () => expect(isApprovedAdminEmail('jramin0521@gmail.com')).toBe(true));
+  it('rejects unapproved accounts', () => expect(isApprovedAdminEmail('other@example.com')).toBe(false));
   it('addresses maintenance to Peace Country Marketing', () => expect(MAINTENANCE_RECIPIENT).toBe('peacecountrymarketing@gmail.com'));
   it('accepts actual contact input and rejects invalid contact', () => {
     const input = { name: 'JAMI Test', contact: '780-897-3077', service: 'residential', timing: 'week', message: 'Kitchen clean' };

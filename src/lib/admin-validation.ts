@@ -1,7 +1,8 @@
 import { z } from 'zod';
 
 export const MAINTENANCE_RECIPIENT = 'peacecountrymarketing@gmail.com';
-export const ADMIN_EMAIL = 'accounting@jamicleaninginc.com';
+export const ADMIN_EMAILS = ['accounting@jamicleaninginc.com', 'jramin0521@gmail.com'] as const;
+export const isApprovedAdminEmail = (email: string) => ADMIN_EMAILS.some(approved => approved === email.trim().toLowerCase());
 export const contactSchema = z.object({
   name: z.string().trim().min(1, 'Enter your name.').max(100),
   contact: z.string().trim().min(3).max(255).refine(value => z.string().email().safeParse(value).success || /^\+?[\d\s().-]{7,25}$/.test(value), 'Enter a valid phone number or email.'),
