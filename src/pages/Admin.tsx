@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Mail, BarChart3, Wrench, LogOut, RefreshCw, ArrowLeft, Send, ShieldCheck } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { lovable } from '@/integrations/lovable/index';
-import '@lovable.dev/cloud-auth-js/styles.css';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -14,6 +13,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { toast } from 'sonner';
 import { isApprovedAdminEmail, MAINTENANCE_RECIPIENT, maintenanceSchema } from '@/lib/admin-validation';
 import type { Tables } from '@/integrations/supabase/types';
+import { HOSTED_ADMIN_URL, needsHostedGoogleSignIn } from '@/lib/admin-auth';
 
 type Analytics = { views: number; visitors: number; pages: { path: string; views: number }[]; daily: { day: string; views: number }[] };
 const date = (value: string) => new Date(value).toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short' });
@@ -91,11 +91,20 @@ export default function Admin() {
     const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/reset-password` });
     setNotice(error ? error.message : 'If an account exists, a password reset link has been sent.'); setBusy(false);
   };
-  const oauth = async (provider: 'google' | 'lovable') => {
-    setBusy(true);
-    const result = await lovable.auth.signInWithOAuth(provider, { redirect_uri: `${window.location.origin}/auth/callback` });
-    if (result.error) setNotice(result.error.message);
-    setBusy(false);
+  const oauth = async () => {
+    if (needsHostedGoogleSignIn(window.location.hostname)) {
+      window.location.assign(HOSTED_ADMIN_URL);
+      return;
+    }
+    setBusy(true); setNotice('');
+    try {
+      const result = await lovable.auth.signInWithOAuth('google', { redirect_uri: `${window.location.origin}/auth/callback` });
+      if (result.error) setNotice(result.error.message);
+    } catch {
+      setNotice('Google sign-in could not start. Please try again.');
+    } finally {
+      setBusy(false);
+    }
   };
   const updateStatus = async (id: string, status: string, table: 'contact_submissions' | 'maintenance_requests') => {
     const { error } = await supabase.from(table).update({ status }).eq('id', id);
@@ -122,7 +131,7 @@ export default function Admin() {
         <form onSubmit={signIn} className="space-y-5"><div className="space-y-2"><Label htmlFor="admin-email">Email</Label><Input id="admin-email" type="email" value={email} onChange={e => setEmail(e.target.value)} required autoComplete="username" /></div><div className="space-y-2"><Label htmlFor="admin-password">Password</Label><Input id="admin-password" type="password" value={password} onChange={e => setPassword(e.target.value)} minLength={8} required autoComplete="current-password" /></div>
           <Button className="w-full" disabled={busy}>Sign in</Button>
         </form><div className="flex justify-between gap-2 mt-2"><Button variant="link" disabled={busy} onClick={forgot}>Forgot password?</Button><Button variant="link" disabled={busy} onClick={activate}>Activate JAMI account</Button></div>
-        <div className="border-t mt-5 pt-5 space-y-3"><Button variant="outline" className="w-full" disabled={busy} onClick={() => oauth('google')}>Sign in with Google</Button><Button type="button" className="lovable-auth-button w-full" disabled={busy} onClick={() => oauth('lovable')}>Sign in with Lovable</Button></div>
+        <div className="border-t mt-5 pt-5"><Button type="button" variant="outline" className="w-full" disabled={busy} onClick={oauth}>Sign in with Google</Button></div>
         {notice && <p role="status" className="mt-5 text-sm text-foreground break-words">{notice}</p>}
       </main> : !allowed ? <main className="max-w-xl mx-auto px-5 py-16"><h1 className="text-3xl font-bold">Admin access required</h1><p className="mt-4 text-muted-foreground">This account does not have JAMI admin access. Sign in using the approved JAMI account.</p></main> :
       <main className="max-w-7xl mx-auto px-5 py-8"><div className="flex justify-between items-center gap-4 mb-7"><div><p className="text-sm font-semibold text-secondary">JAMI CLEANING INC.</p><h1 className="text-3xl font-bold">Admin overview</h1><p className="text-muted-foreground text-sm mt-2 break-all">{user.email}</p></div><Button variant="outline" size="icon" title="Refresh admin information" aria-label="Refresh admin information" disabled={loading} onClick={load}><RefreshCw className={loading ? 'animate-spin' : ''} /></Button></div>
