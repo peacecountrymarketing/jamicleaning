@@ -5,12 +5,13 @@ import { Mail, BarChart3, Wrench, LogOut, RefreshCw, ArrowLeft, Send, ShieldChec
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { PasswordInput } from '@/components/ui/password-input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { toast } from 'sonner';
-import { isApprovedAdminEmail, MAINTENANCE_RECIPIENT, maintenanceSchema } from '@/lib/admin-validation';
+import { isApprovedAdminEmail, MAINTENANCE_RECIPIENT, maintenanceSchema, passwordSchema } from '@/lib/admin-validation';
 import type { Tables } from '@/integrations/supabase/types';
 
 type Analytics = { views: number; visitors: number; pages: { path: string; views: number }[]; daily: { day: string; views: number }[] };
@@ -77,7 +78,7 @@ export default function Admin() {
   const activate = async () => {
     const accountEmail = email.trim().toLowerCase();
     if (!isApprovedAdminEmail(accountEmail)) { setNotice('Use an approved JAMI email address.'); return; }
-    if (password.length < 8) { setNotice('Use a password with at least 8 characters.'); return; }
+    if (!passwordSchema.safeParse(password).success) { setNotice('Enter a password.'); return; }
     setBusy(true);
     const { error } = await supabase.auth.signUp({ email: accountEmail, password, options: { emailRedirectTo: `${window.location.origin}/auth/callback` } });
     setNotice(error ? error.message : 'Check your email inbox to confirm your account, then sign in.');
@@ -111,7 +112,7 @@ export default function Admin() {
     </div></header>
     {checking ? <p className="p-12 text-center" role="status">Checking your account…</p> : !user ?
       <main className="max-w-md mx-auto px-5 py-12"><ShieldCheck className="h-10 w-10 text-secondary mb-4" /><h1 className="text-3xl font-bold mb-2">JAMI Admin</h1><p className="text-muted-foreground mb-8">Sign in to your JAMI account.</p>
-        <form onSubmit={signIn} className="space-y-5"><div className="space-y-2"><Label htmlFor="admin-email">Email</Label><Input id="admin-email" type="email" value={email} onChange={e => setEmail(e.target.value)} required autoComplete="username" /></div><div className="space-y-2"><Label htmlFor="admin-password">Password</Label><Input id="admin-password" type="password" value={password} onChange={e => setPassword(e.target.value)} minLength={8} required autoComplete="current-password" /></div>
+        <form onSubmit={signIn} className="space-y-5"><div className="space-y-2"><Label htmlFor="admin-email">Email</Label><Input id="admin-email" type="email" value={email} onChange={e => setEmail(e.target.value)} required autoComplete="username" /></div><div className="space-y-2"><Label htmlFor="admin-password">Password</Label><PasswordInput id="admin-password" value={password} onChange={e => setPassword(e.target.value)} required autoComplete="current-password" /></div>
           <Button className="w-full" disabled={busy}>Sign in</Button>
         </form><div className="flex justify-between gap-2 mt-2"><Button variant="link" disabled={busy} onClick={forgot}>Forgot password?</Button><Button variant="link" disabled={busy} onClick={activate}>Activate JAMI account</Button></div>
         {notice && <p role="status" className="mt-5 text-sm text-foreground break-words">{notice}</p>}

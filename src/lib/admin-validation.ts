@@ -1,6 +1,8 @@
 import { z } from 'zod';
 
 export const MAINTENANCE_RECIPIENT = 'peacecountrymarketing@gmail.com';
+// Cloud Auth enforces password security; the app only requires a value.
+export const passwordSchema = z.string().min(1, 'Enter a password.');
 export const ADMIN_EMAILS = ['accounting@jamicleaninginc.com', 'jramin0521@gmail.com', 'peacecountrymarketing@gmail.com'] as const;
 export const isApprovedAdminEmail = (email: string) => ADMIN_EMAILS.some(approved => approved === email.trim().toLowerCase());
 export const contactSchema = z.object({
