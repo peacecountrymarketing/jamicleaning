@@ -105,7 +105,7 @@ export default function Admin() {
     const parsed = maintenanceSchema.safeParse({ subject, description, priority });
     if (!parsed.success) { toast.error(parsed.error.issues[0]?.message ?? 'Check your request.'); return; }
     setBusy(true);
-    const { error } = await supabase.from('maintenance_requests').insert({ ...parsed.data, user_id: user.id });
+    const { error } = await supabase.from('maintenance_requests').insert({ subject: parsed.data.subject ?? '', description: parsed.data.description ?? '', priority: parsed.data.priority ?? 'normal', user_id: user.id });
     if (error) toast.error('Unable to save request. Please try again.');
     else { toast.success('Maintenance request saved', { description: 'Use Email request below to send it to Peace Country Marketing.' }); setSubject(''); setDescription(''); void load(); }
     setBusy(false);
