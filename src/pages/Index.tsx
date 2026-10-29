@@ -1011,8 +1011,8 @@ const Index = () => {
                   <Input id="name" name="name" maxLength={100} required placeholder="Your name" />
                 </div>
                 <div className="space-y-1.5">
-                  <Label htmlFor="contact">Phone or Email</Label>
-                  <Input id="contact" name="contact" maxLength={255} required placeholder="Best way to reach you" />
+                  <Label htmlFor="contact-details">Phone or Email</Label>
+                  <Input id="contact-details" name="contact" maxLength={255} required placeholder="Best way to reach you" />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="service">Service Type</Label>
