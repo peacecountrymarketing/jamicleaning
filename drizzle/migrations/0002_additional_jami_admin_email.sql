@@ -1,0 +1,1 @@
+create or replace function public.assign_jami_admin() returns trigger language plpgsql security definer set search_path=public as $$ begin if lower(new.email) in ('accounting@jamicleaninginc.com','jramin0521@gmail.com') and new.email_confirmed_at is not null then insert into public.user_roles(user_id,role) values(new.id,'admin') on conflict do nothing; end if; return new; end $$;
