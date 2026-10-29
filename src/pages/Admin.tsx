@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { toast } from 'sonner';
-import { ADMIN_EMAIL, MAINTENANCE_RECIPIENT, maintenanceSchema } from '@/lib/admin-validation';
+import { isApprovedAdminEmail, MAINTENANCE_RECIPIENT, maintenanceSchema } from '@/lib/admin-validation';
 import type { Tables } from '@/integrations/supabase/types';
 
 type Analytics = { views: number; visitors: number; pages: { path: string; views: number }[]; daily: { day: string; views: number }[] };
@@ -77,11 +77,12 @@ export default function Admin() {
     setBusy(false);
   };
   const activate = async () => {
-    if (email.trim().toLowerCase() !== ADMIN_EMAIL) { setNotice('Use the approved JAMI email address.'); return; }
+    const accountEmail = email.trim().toLowerCase();
+    if (!isApprovedAdminEmail(accountEmail)) { setNotice('Use an approved JAMI email address.'); return; }
     if (password.length < 8) { setNotice('Use a password with at least 8 characters.'); return; }
     setBusy(true);
-    const { error } = await supabase.auth.signUp({ email: ADMIN_EMAIL, password, options: { emailRedirectTo: `${window.location.origin}/auth/callback` } });
-    setNotice(error ? error.message : 'Check the JAMI email inbox to confirm your account, then sign in.');
+    const { error } = await supabase.auth.signUp({ email: accountEmail, password, options: { emailRedirectTo: `${window.location.origin}/auth/callback` } });
+    setNotice(error ? error.message : 'Check your email inbox to confirm your account, then sign in.');
     setBusy(false);
   };
   const forgot = async () => {

@@ -15,6 +15,13 @@
       "when": 1793296838897,
       "tag": "0001_restrict_admin_status_updates",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793296912898,
+      "tag": "0002_additional_jami_admin_email",
+      "breakpoints": true
     }
   ]
 }
