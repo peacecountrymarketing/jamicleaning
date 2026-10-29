@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Remove Lovable sign-in and verify the external-domain handoff to hosted admin; external deployment and Google account completion remain unverified.
+
 - [x] Add Peace Country Marketing admin access and verify Google sign-in availability.
 
 - [x] Add secure admin login and approved account access.
