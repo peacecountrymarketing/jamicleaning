@@ -1,10 +1,11 @@
 # Roadmap
 
-- [ ] Add secure admin login and approved account access.
-- [ ] Save website form submissions and display them in admin.
-- [ ] Add real visitor analytics and maintenance request tracking.
+- [x] Add secure admin login and approved account access.
+- [x] Save website form submissions and display them in admin.
+- [x] Add real visitor analytics and maintenance request tracking.
 - [ ] Enable maintenance email delivery to peacecountrymarketing@gmail.com (requires sender domain).
-- [ ] Verify public submission and signed-in admin flows.
+- [x] Verify public submission storage, admin login desktop/mobile, and validation tests.
+- [ ] Verify signed-in admin flows (blocked until JAMI activates and confirms its account).
 
 - [x] Integrate Housecall Pro booking and connect existing booking actions.
 - [x] Restore the alternate phone across prominent contact areas and public contact data.
