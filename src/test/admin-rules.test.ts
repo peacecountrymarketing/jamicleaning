@@ -3,6 +3,7 @@ import { isApprovedAdminEmail, MAINTENANCE_RECIPIENT, contactSchema, maintenance
 describe('JAMI admin requirements', () => {
   it('retains the original JAMI account', () => expect(isApprovedAdminEmail('accounting@jamicleaninginc.com')).toBe(true));
   it('allows the additional JAMI account', () => expect(isApprovedAdminEmail('jramin0521@gmail.com')).toBe(true));
+  it('allows Peace Country Marketing admin access', () => expect(isApprovedAdminEmail('peacecountrymarketing@gmail.com')).toBe(true));
   it('rejects unapproved accounts', () => expect(isApprovedAdminEmail('other@example.com')).toBe(false));
   it('addresses maintenance to Peace Country Marketing', () => expect(MAINTENANCE_RECIPIENT).toBe('peacecountrymarketing@gmail.com'));
   it('accepts actual contact input and rejects invalid contact', () => {
