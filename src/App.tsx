@@ -8,6 +8,10 @@ import FAQ from "./pages/FAQ.tsx";
 import Blog from "./pages/Blog.tsx";
 import Book from "./pages/Book.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Admin from "./pages/Admin";
+import AuthCallback from "./pages/AuthCallback";
+import ResetPassword from "./pages/ResetPassword";
+import PageTracking from "./components/PageTracking";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +21,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PageTracking />
         <Routes>
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/" element={<Index />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
