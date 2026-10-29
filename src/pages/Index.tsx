@@ -15,6 +15,8 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
+import { supabase } from '@/integrations/supabase/client';
+import { contactSchema } from '@/lib/admin-validation';
 const hatBeforeAfterAsset = { url: "/assets/images/hat-before-after.webp" };
 const shoeBeforeAsset = { url: "/assets/images/shoe-before.jpg" };
 const shoeAfterAsset = { url: "/assets/images/shoe-after.jpg" };
@@ -176,11 +178,23 @@ const reviews = [
 
 const Index = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Request received", { description: "We'll follow up shortly with availability." });
-    (e.target as HTMLFormElement).reset();
+    if (sending) return;
+    const form = e.currentTarget;
+    const values = new FormData(form);
+    const parsed = contactSchema.safeParse(Object.fromEntries(['name', 'contact', 'service', 'timing', 'message'].map(key => [key, String(values.get(key) ?? '')])));
+    if (!parsed.success) { toast.error(parsed.error.issues[0]?.message ?? 'Please check your request.'); return; }
+    setSending(true);
+    try {
+      const { error } = await supabase.functions.invoke('submit-contact', { body: { ...parsed.data, website: String(values.get('website') ?? '') } });
+      if (error) { toast.error('Unable to save your request. Please try again or call us.'); return; }
+      toast.success('Request received', { description: "We'll follow up shortly with availability." });
+      form.reset();
+    } catch { toast.error('Unable to save your request. Please try again or call us.'); }
+    finally { setSending(false); }
   };
 
   return (
@@ -990,14 +1004,15 @@ const Index = () => {
 
           <div className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="bg-background text-foreground rounded-2xl p-6 md:p-8 shadow-bold">
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" required placeholder="Your name" />
+                  <Input id="name" name="name" maxLength={100} required placeholder="Your name" />
                 </div>
                 <div className="space-y-1.5">
-                  <Label htmlFor="contact">Phone or Email</Label>
-                  <Input id="contact" name="contact" required placeholder="Best way to reach you" />
+                  <Label htmlFor="contact-details">Phone or Email</Label>
+                  <Input id="contact-details" name="contact" maxLength={255} required placeholder="Best way to reach you" />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="service">Service Type</Label>
@@ -1034,10 +1049,10 @@ const Index = () => {
               </div>
               <div className="space-y-1.5 mt-4">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" rows={4} placeholder="Tell us about the space and what you need..." />
+                <Textarea id="message" name="message" maxLength={3000} rows={4} placeholder="Tell us about the space and what you need..." />
               </div>
-              <Button type="submit" size="lg" className="mt-6 w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
-                Send Request <ArrowRight className="ml-2 h-4 w-4" />
+              <Button type="submit" size="lg" disabled={sending} className="mt-6 w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-base">
+                {sending ? 'Sending…' : 'Send Request'} <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <div className="relative my-4 flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
                 <div className="h-px flex-1 bg-border" />
@@ -1071,6 +1086,7 @@ const Index = () => {
           </div>
           <div className="text-muted-foreground text-center md:text-right">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved
+            <a href="/admin" className="block mt-2 text-xs hover:text-secondary">JAMI Admin</a>
           </div>
         </div>
       </footer>
