@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Enrich the signed-in admin overview with live summaries, activity chart, recent inquiries and shortcuts; verify desktop and mobile.
+- [x] Enrich the signed-in admin overview with live summaries, activity chart, recent inquiries and shortcuts; verify desktop and mobile.
 
 - [x] Simplify app password requirements and verify show/hide controls on login and reset; retain Cloud password security.
 
