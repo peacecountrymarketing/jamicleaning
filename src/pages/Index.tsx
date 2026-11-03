@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import HousecallBookingButton from "@/components/HousecallBookingButton";
+import { HOUSECALL_BOOKING_URL } from "@/hooks/use-housecall-pro";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
@@ -244,6 +245,9 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <Button asChild className="hidden sm:inline-flex bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-[16px] h-10 px-4">
               <a href="#contact">Request a Quote <ArrowRight className="ml-1 h-4 w-4" /></a>
+            </Button>
+            <Button asChild className="hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-[16px] h-10 px-4">
+              <a href={HOUSECALL_BOOKING_URL} target="_blank" rel="noopener noreferrer">Book Online <CalendarCheck className="ml-1 h-4 w-4" /></a>
             </Button>
             <button
               className="lg:hidden p-2"
