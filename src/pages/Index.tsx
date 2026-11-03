@@ -270,6 +270,7 @@ const Index = () => {
               <a href="/faq" onClick={() => setMobileOpen(false)}>FAQ</a>
               <a href="/blog" onClick={() => setMobileOpen(false)}>Blog</a>
               <a href="#contact" onClick={() => setMobileOpen(false)}>Contact</a>
+              <a href={HOUSECALL_BOOKING_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary">Book Online →</a>
             </nav>
           </div>
         )}
