@@ -1086,7 +1086,7 @@ const Index = () => {
           </div>
           <div className="text-muted-foreground text-center md:text-right">
             @jamicleaninginc · © {new Date().getFullYear()} All rights reserved
-            <a href="/admin" className="block mt-2 text-xs hover:text-secondary">JAMI Admin</a>
+            <a href="/admin" className="block mt-2 text-sm hover:text-secondary">JAMI Admin</a>
           </div>
         </div>
       </footer>
